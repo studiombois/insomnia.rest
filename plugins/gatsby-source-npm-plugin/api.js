@@ -20,12 +20,19 @@ const NPM_API_DWNINFO = (period, pkg) =>
   `https://api.npmjs.org/downloads/point/${period}/${pkg}`;
 
 function getLastYearRange() {
-  const date = new Date();
-  const currentYear = date.getFullYear();
-  const currentMonth = date.getMonth() + 1;
-  const currentDay = date.getDay();
-  const lastYear = currentYear - 1;
-  return `${lastYear}-${currentMonth}-${currentDay}:${currentYear}-${currentMonth}-${currentDay}`;
+  const now = new Date();
+  const nowYear = now.getFullYear();
+  const nowMonth = now.getMonth() + 1;
+  const nowDay = now.getDate();
+
+  const daysToLookBack = 365;
+  const msToLookBack = daysToLookBack * 24 * 60 * 60 * 1000;
+  const pastDate = new Date(now.getTime() - msToLookBack);
+  const pastYear = pastDate.getFullYear();
+  const pastMonth = pastDate.getMonth() + 1;
+  const pastDay = pastDate.getDate();
+
+  return `${pastYear}-${pastMonth}-${pastDay}:${nowYear}-${nowMonth}-${nowDay}`;
 }
 
 async function getDetail(pkg) {
@@ -220,6 +227,7 @@ module.exports = {
     { filter, allowDeprecated = false, perFetch = 100 }
   ) {
     let results = await fetch(query, allowDeprecated, filter, 0, perFetch);
+
     let currentOffset = perFetch;
     let total = results.totalResults;
 

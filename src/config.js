@@ -59,6 +59,10 @@ export const menus = {
       key: 'blog',
       url: '/blog/'
     }, {
+      name: 'Theme Creator',
+      key: 'theme-gen',
+      url: '/theme-creator/'
+    }, {
       name: 'Changelog',
       key: 'changelog',
       url: '/changelog/',
