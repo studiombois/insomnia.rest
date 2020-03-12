@@ -9,20 +9,32 @@ const dirChangelog = 'static';
 
 /** Returns last day of last month in YYYY-MM-DD format */
 function endDate() {
-  return moment().subtract(1, 'months').endOf('month').format('YYYY-MM-DD');
+  return moment()
+    .subtract(1, 'months')
+    .endOf('month')
+    .format('YYYY-MM-DD');
 }
 
 (async function run() {
   try {
     // Do this first in case another one fails
     const changelog = generateChangelog();
-    fs.writeFileSync(path.join(dirChangelog, 'changelog.json'), JSON.stringify(changelog));
-    fs.writeFileSync(path.join(dirAssets, 'changelog.json'), JSON.stringify(changelog));
+    fs.writeFileSync(
+      path.join(dirChangelog, 'changelog.json'),
+      JSON.stringify(changelog)
+    );
+    fs.writeFileSync(
+      path.join(dirAssets, 'changelog.json'),
+      JSON.stringify(changelog)
+    );
 
     // Fetch contributors
     const contributors = await fetchContributors();
     const contributorsBody = JSON.stringify(contributors, null, '\t');
-    fs.writeFileSync(path.join(dirAssets, 'contributors.json'), contributorsBody);
+    fs.writeFileSync(
+      path.join(dirAssets, 'contributors.json'),
+      contributorsBody
+    );
     console.log('Wrote metrics to ' + dirAssets);
   } catch (err) {
     console.log('Failed to fetch metrics:', err.message);
@@ -36,14 +48,17 @@ async function fetchContributors() {
     function next(page = 1) {
       const options = {
         method: 'GET',
-        url: 'https://gschier:@api.github.com/repos/getinsomnia/insomnia/contributors',
+        url:
+          'https://gschier:@api.github.com/repos/getinsomnia/insomnia/contributors',
         qs: { page },
         headers: { 'User-Agent': `insomnia/website` }
       };
 
       request(options, function(err, response, body) {
         if (response.statusCode < 200 || response.statusCode >= 300) {
-          return reject(new Error('Contributors request failed: ' + response.body));
+          return reject(
+            new Error('Contributors request failed: ' + response.body)
+          );
         }
 
         const newContributors = JSON.parse(body);
@@ -83,7 +98,7 @@ function generateChangelog() {
       fixes: frontmatter.fixes || []
     });
   }
-  return items.sort((a, b) => (
-    new Date(b.date).getTime() - new Date(a.date).getTime()
-  ));
+  return items.sort(
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+  );
 }

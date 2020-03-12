@@ -73,9 +73,8 @@ class Home extends React.Component {
         const trialDays = Math.ceil(trialEndMillis / 1000 / 60 / 60 / 24);
         notice = (
           <p className="notice info">
-            You have <strong>{trialDays}</strong> day{trialDays === 1
-            ? ''
-            : 's'} on your trial
+            You have <strong>{trialDays}</strong> day
+            {trialDays === 1 ? '' : 's'} on your trial
           </p>
         );
       }
@@ -83,10 +82,8 @@ class Home extends React.Component {
       if (isTrialing && !isTrialOver) {
         notice = (
           <p className="notice info">
-            You still have <strong>{trialDays}</strong> day{trialDays === 1
-            ? ''
-            : 's'}{' '}
-            left on your free trial
+            You still have <strong>{trialDays}</strong> day
+            {trialDays === 1 ? '' : 's'} left on your free trial
             <br />
             <br />
             <Link to="/app/subscribe/" className="button button--compact">
@@ -130,14 +127,19 @@ class Home extends React.Component {
       return null;
     }
 
-    return <p className="notice info">Please verify your account <VerifyButton /></p>;
+    return (
+      <p className="notice info">
+        Please verify your account <VerifyButton />
+      </p>
+    );
   }
 
   render() {
     const { whoami, billingDetails } = this.props;
     const description = billingDetails && billingDetails.description;
 
-    const periodEnd = billingDetails && new Date(billingDetails.subPeriodEnd).toDateString();
+    const periodEnd =
+      billingDetails && new Date(billingDetails.subPeriodEnd).toDateString();
 
     let billingLink = null;
     if (!billingDetails) {
@@ -184,9 +186,7 @@ class Home extends React.Component {
         <p>Here are some things you might want to do.</p>
         <div className="d-flex d-flex-space-between d-flex-wrap">
           {billingLink && (
-            <button className="button mt-3">
-              {billingLink}
-            </button>
+            <button className="button mt-3">{billingLink}</button>
           )}
           <button className="button mt-3">
             <Link to="/app/teams/">Manage Teams</Link>
@@ -227,7 +227,7 @@ Home.propTypes = {
     isVerified: PropTypes.bool.isRequired,
     isPremium: PropTypes.bool.isRequired,
     appNumLaunches: PropTypes.number.isRequired,
-    canManageTeams: PropTypes.bool.isRequired,
+    canManageTeams: PropTypes.bool.isRequired
   }).isRequired,
   billingDetails: PropTypes.shape({
     description: PropTypes.string.isRequired,
@@ -237,8 +237,8 @@ Home.propTypes = {
     subTrialEnd: PropTypes.string.isRequired,
     subCancelled: PropTypes.bool.isRequired,
     subPeriodEnd: PropTypes.string.isRequired,
-    subPercentOff: PropTypes.number.isRequired,
-  }),
+    subPercentOff: PropTypes.number.isRequired
+  })
 };
 
 export default () => (

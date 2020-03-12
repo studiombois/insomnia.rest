@@ -1,6 +1,7 @@
 const siteMetadata = {
   title: 'Insomnia',
-  description: 'A powerful REST API Client with cookie management, ' +
+  description:
+    'A powerful REST API Client with cookie management, ' +
     'environment variables, code generation, and authentication for Mac, ' +
     'Window, and Linux',
   siteUrl: 'https://insomnia.rest/',
@@ -106,10 +107,7 @@ module.exports = {
             ...rest
           };
         },
-        feeds: [
-          feedOptions('blog'),
-          feedOptions('changelog')
-        ]
+        feeds: [feedOptions('blog'), feedOptions('changelog')]
       }
     }
   ]
@@ -121,7 +119,9 @@ function feedOptions(name) {
     site_url: siteMetadata.siteUrl,
     title: 'Insomnia Feed',
     serialize: result => {
-      const { query: { site, allFile } } = result;
+      const {
+        query: { site, allFile }
+      } = result;
       // NOTE: We should be getting siteMetadata from the query results
       // but the feed plugin is too shitty to work with multiple feeds.
       // Check on this later

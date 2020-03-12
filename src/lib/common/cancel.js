@@ -8,7 +8,7 @@ class CancelLink extends React.Component {
 
     const confirmed = confirm(
       'Are you sure? Your subscription will remain active ' +
-      'until the end of your current billing period'
+        'until the end of your current billing period'
     );
 
     if (!confirmed) {
@@ -19,8 +19,12 @@ class CancelLink extends React.Component {
     window.location.reload();
   };
 
-  render () {
-    return <Link to="#" onClick={this._handleClick}>Cancel Subscription</Link>
+  render() {
+    return (
+      <Link to="#" onClick={this._handleClick}>
+        Cancel Subscription
+      </Link>
+    );
   }
 }
 

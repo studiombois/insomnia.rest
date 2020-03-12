@@ -32,7 +32,11 @@ export default class extends React.Component {
 
     // Fallback to referrer but don't track self-referrals. Also don't set referrer
     // if signupSource already exists. We don't want to accidentally overwrite the ref
-    if (!localStorage.signupSource && document.referrer && document.referrer.indexOf('https://insomnia.rest') !== 0) {
+    if (
+      !localStorage.signupSource &&
+      document.referrer &&
+      document.referrer.indexOf('https://insomnia.rest') !== 0
+    ) {
       localStorage.signupSource = document.referrer;
     }
   }
@@ -42,16 +46,14 @@ export default class extends React.Component {
     const { isLoggedIn } = this.state;
     return (
       <React.Fragment>
-        <Title/>
+        <Title />
         <Helmet>
-          <meta name="description" content={site && site.description}/>
-          <body data-pathname={location.pathname}/>
+          <meta name="description" content={site && site.description} />
+          <body data-pathname={location.pathname} />
         </Helmet>
-        <Navbar loggedIn={isLoggedIn}/>
-        <main role="main">
-          {children()}
-        </main>
-        <Footer/>
+        <Navbar loggedIn={isLoggedIn} />
+        <main role="main">{children()}</main>
+        <Footer />
       </React.Fragment>
     );
   }

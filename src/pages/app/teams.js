@@ -14,7 +14,7 @@ class Teams extends React.Component {
   state = {
     error: '',
     activeTeam: null,
-    loadingCreateTeam: false,
+    loadingCreateTeam: false
   };
 
   componentDidMount() {
@@ -83,7 +83,8 @@ class Teams extends React.Component {
           <p>Manage who is on your team.</p>
           <p className="notice info">
             <strong>Upgrade to Teams</strong> to manage your own team
-            <br /><br />
+            <br />
+            <br />
             <Link to="/app/subscribe/#teams" className="button button--compact">
               Upgrade to Teams
             </Link>
@@ -95,9 +96,13 @@ class Teams extends React.Component {
 
       // Sort the accounts to put the user first. NOTE: We're making a copy since
       // sort modifies the original.
-      const accounts = [...activeTeam.accounts].sort(a => a.id === whoami.accountId ? -1 : 1);
+      const accounts = [...activeTeam.accounts].sort(a =>
+        a.id === whoami.accountId ? -1 : 1
+      );
 
-      const isCurrentUserAdmin = activeTeam.accounts.find(a => a.id === whoami.accountId).isAdmin;
+      const isCurrentUserAdmin = activeTeam.accounts.find(
+        a => a.id === whoami.accountId
+      ).isAdmin;
 
       inner = (
         <div>
@@ -113,7 +118,8 @@ class Teams extends React.Component {
             membersRemaining={membersRemaining}
           />
           <div className="form-control">
-            <label>Team Members
+            <label>
+              Team Members
               <ul>
                 {accounts.map(account => {
                   let label = '';
@@ -126,35 +132,44 @@ class Teams extends React.Component {
                   return (
                     <li key={account.id}>
                       <div className="d-flex d-flex-space-between">
-                      <span>
-                        {account.firstName} {account.lastName}
-                        {' '}
-                        <small>({account.email})</small>
-                        {label && <small className="super-subtle"> ({label})</small>}
-                      </span>
-                        {' '}
+                        <span>
+                          {account.firstName} {account.lastName}{' '}
+                          <small>({account.email})</small>
+                          {label && (
+                            <small className="super-subtle"> ({label})</small>
+                          )}
+                        </span>{' '}
                         {isCurrentUserAdmin && account.id !== whoami.accountId && (
                           <span>
-                          <RemoveTeamAccountLink onRemove={this.props.handleReload}
-                                                 teamId={activeTeam.id}
-                                                 ownerAccountId={activeTeam.ownerAccountId}
-                                                 teamName={activeTeam.name}
-                                                 className="small error"
-                                                 accountId={account.id}
-                                                 accountName={`${account.firstName} ${account.lastName}`.trim()}>
+                            <RemoveTeamAccountLink
+                              onRemove={this.props.handleReload}
+                              teamId={activeTeam.id}
+                              ownerAccountId={activeTeam.ownerAccountId}
+                              teamName={activeTeam.name}
+                              className="small error"
+                              accountId={account.id}
+                              accountName={`${account.firstName} ${
+                                account.lastName
+                              }`.trim()}>
                               (remove)
-                            </RemoveTeamAccountLink>
-                            {' '}
-                            <PromoteTeamMemberLink onPromote={this.props.handleReload}
-                                                   teamId={activeTeam.id}
-                                                   ownerAccountId={activeTeam.ownerAccountId}
-                                                   teamName={activeTeam.name}
-                                                   className="small"
-                                                   accountId={account.id}
-                                                   isAdmin={!!activeTeam.accounts.find(a => account.id === a.id && a.isAdmin)}
-                                                   accountName={`${account.firstName} ${account.lastName}`.trim()}
+                            </RemoveTeamAccountLink>{' '}
+                            <PromoteTeamMemberLink
+                              onPromote={this.props.handleReload}
+                              teamId={activeTeam.id}
+                              ownerAccountId={activeTeam.ownerAccountId}
+                              teamName={activeTeam.name}
+                              className="small"
+                              accountId={account.id}
+                              isAdmin={
+                                !!activeTeam.accounts.find(
+                                  a => account.id === a.id && a.isAdmin
+                                )
+                              }
+                              accountName={`${account.firstName} ${
+                                account.lastName
+                              }`.trim()}
                             />
-                        </span>
+                          </span>
                         )}
                         {account.id === whoami.accountId && (
                           <small className="super-subtle">(your account)</small>
@@ -172,8 +187,8 @@ class Teams extends React.Component {
       // This should never happen...
       inner = (
         <p className="notice info">
-          Uh oh! Your account does not have a default team. Please
-          contact <strong>support@insomnia.rest</strong>
+          Uh oh! Your account does not have a default team. Please contact{' '}
+          <strong>support@insomnia.rest</strong>
         </p>
       );
     }
@@ -189,14 +204,17 @@ class Teams extends React.Component {
   renderTeamActionLink(team) {
     const { whoami } = this.props;
 
-    const isAdmin = team.accounts.find(a => a.isAdmin && a.id === whoami.accountId);
+    const isAdmin = team.accounts.find(
+      a => a.isAdmin && a.id === whoami.accountId
+    );
 
     if (!isAdmin) {
       return (
-        <LeaveTeamLink onLeave={this.props.handleReload}
-                       teamId={team.id}
-                       teamName={team.name}
-                       className="small pull-right">
+        <LeaveTeamLink
+          onLeave={this.props.handleReload}
+          teamId={team.id}
+          teamName={team.name}
+          className="small pull-right">
           leave
         </LeaveTeamLink>
       );
@@ -213,9 +231,7 @@ class Teams extends React.Component {
       );
     }
 
-    return (
-      <span className="small pull-right">(Editing)</span>
-    );
+    return <span className="small pull-right">(Editing)</span>;
   }
 
   renderTeams() {
@@ -225,24 +241,18 @@ class Teams extends React.Component {
     return (
       <div>
         <h2>Your Teams</h2>
-        <p>
-          These are the teams you are on.
-        </p>
+        <p>These are the teams you are on.</p>
 
         {teams.length ? (
           <ul>
             {teams.map(team => (
               <li key={team.id}>
-                {team.name}
-                {' '}
-                {this.renderTeamActionLink(team)}
+                {team.name} {this.renderTeamActionLink(team)}
               </li>
             ))}
           </ul>
         ) : (
-          <p className="info notice">
-            You are not on any teams yet.
-          </p>
+          <p className="info notice">You are not on any teams yet.</p>
         )}
 
         {whoami.canManageTeams && teams.length === 0 && (
@@ -279,21 +289,25 @@ Teams.propTypes = {
     email: PropTypes.string.isRequired,
     canManageTeams: PropTypes.bool.isRequired,
     quantityOverride: PropTypes.number,
-    maxTeamMembers: PropTypes.number.isRequired,
+    maxTeamMembers: PropTypes.number.isRequired
   }).isRequired,
-  teams: PropTypes.arrayOf(PropTypes.shape({
-    id: PropTypes.string.isRequired,
-    accounts: PropTypes.arrayOf(PropTypes.shape({
-      isAdmin: PropTypes.bool.isRequired,
-      firstName: PropTypes.string.isRequired,
-      lastName: PropTypes.string.isRequired,
-      email: PropTypes.string.isRequired,
+  teams: PropTypes.arrayOf(
+    PropTypes.shape({
       id: PropTypes.string.isRequired,
-    })).isRequired,
-  })).isRequired,
+      accounts: PropTypes.arrayOf(
+        PropTypes.shape({
+          isAdmin: PropTypes.bool.isRequired,
+          firstName: PropTypes.string.isRequired,
+          lastName: PropTypes.string.isRequired,
+          email: PropTypes.string.isRequired,
+          id: PropTypes.string.isRequired
+        })
+      ).isRequired
+    })
+  ).isRequired
 };
 
-export default (pageProps) => (
+export default pageProps => (
   <App title="Manage Teams" subTitle="Collaborate within Insomnia">
     {props => <Teams {...props} {...pageProps} />}
   </App>

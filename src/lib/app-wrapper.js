@@ -12,7 +12,7 @@ class App extends React.Component {
     whoami: null,
     billingDetails: null,
     teams: [],
-    reloadCount: 0,
+    reloadCount: 0
   };
 
   componentDidMount() {
@@ -29,12 +29,12 @@ class App extends React.Component {
 
   async init(isReloading) {
     if (this.props.noAuth) {
-      this.setState({initialized: true});
+      this.setState({ initialized: true });
       return;
     }
 
     if (!isReloading) {
-      this.setState({initialized: true, loading: true});
+      this.setState({ initialized: true, loading: true });
     }
 
     // Fetch Account info
@@ -64,20 +64,24 @@ class App extends React.Component {
     const teams = await session.listTeams();
 
     const reloadCount = this.state.reloadCount + 1;
-    this.setState({reloadCount, whoami, teams, billingDetails, loading: false});
-  };
+    this.setState({
+      reloadCount,
+      whoami,
+      teams,
+      billingDetails,
+      loading: false
+    });
+  }
 
   renderBody() {
     if (!this.state.initialized || this.state.loading) {
-      return (
-        <div className="center text-lg subtle">
-          Loading...
-        </div>
-      );
+      return <div className="center text-lg subtle">Loading...</div>;
     }
 
     return (
-      <section className="container container--skinny" key={this.state.reloadCount}>
+      <section
+        className="container container--skinny"
+        key={this.state.reloadCount}>
         {this.props.children({
           whoami: this.state.whoami,
           billingDetails: this.state.billingDetails,
@@ -91,7 +95,7 @@ class App extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <article style={{minHeight: '25rem'}}>
+        <article style={{ minHeight: '25rem' }}>
           <header className="container container--skinny header--big">
             <h1>{this.props.title}</h1>
             <p className="text-lg">{this.props.subTitle}</p>
@@ -114,7 +118,7 @@ App.propTypes = {
   title: PropTypes.string.isRequired,
   subTitle: PropTypes.string.isRequired,
   noAuth: PropTypes.bool,
-  hideFooter: PropTypes.bool,
+  hideFooter: PropTypes.bool
 };
 
 export default App;

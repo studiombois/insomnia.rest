@@ -20,8 +20,7 @@ export default ({
               className="button"
               type="application/rss+xml"
               target="_blank"
-              title="RSS"
-            >
+              title="RSS">
               Subscribe via RSS
             </a>
           </p>
@@ -34,7 +33,7 @@ export default ({
           node: {
             childMarkdownRemark: { frontmatter }
           }
-        }) => frontmatter.channel !== "beta" && frontmatter.channel !== "alpha"
+        }) => frontmatter.channel !== 'beta' && frontmatter.channel !== 'alpha'
       )
       .sort((a, b) => {
         const tsA = new Date(
@@ -96,8 +95,7 @@ export default ({
                   <Link
                     key={tag}
                     className="button tags__tag"
-                    to={`tags/${tag}`}
-                  >
+                    to={`tags/${tag}`}>
                     {tag}
                   </Link>
                 ))}

@@ -41,7 +41,10 @@ class ImportButton extends React.Component {
     }
 
     return (
-      <a target={target} href={href} className={classnames('button', className)}>
+      <a
+        target={target}
+        href={href}
+        className={classnames('button', className)}>
         {buttonText} {suffix || 'API Workspace'}
       </a>
     );

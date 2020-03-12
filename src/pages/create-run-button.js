@@ -7,9 +7,9 @@ export default () => (
   <React.Fragment>
     <article>
       <Title>Create Run Button</Title>
-      <SocialCards title="Insomnia" summary="Create Run Button" isBanner/>
+      <SocialCards title="Insomnia" summary="Create Run Button" isBanner />
       <section className="container">
-        <CreateRunLink/>
+        <CreateRunLink />
       </section>
     </article>
   </React.Fragment>

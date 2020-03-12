@@ -11,26 +11,30 @@ class RemoveAccountLink extends React.Component {
   async _handleClick(e) {
     e.preventDefault();
 
-    const {teamName, teamId, accountName, accountId, onRemove} = this.props;
+    const { teamName, teamId, accountName, accountId, onRemove } = this.props;
 
-    if (!confirm(`Are you sure you want to remove ${accountName} from ${teamName}?`)) {
+    if (
+      !confirm(
+        `Are you sure you want to remove ${accountName} from ${teamName}?`
+      )
+    ) {
       return;
     }
 
-    this.setState({loading: true});
+    this.setState({ loading: true });
 
     try {
       await session.removeFromTeam(teamId, accountId);
       await onRemove();
     } catch (err) {
       alert(`Failed to remove from team: ${err.message}`);
-      this.setState({loading: false});
+      this.setState({ loading: false });
     }
-  };
+  }
 
   render() {
-    const {children, className, ownerAccountId, accountId} = this.props;
-    const {loading} = this.state;
+    const { children, className, ownerAccountId, accountId } = this.props;
+    const { loading } = this.state;
 
     // Can't remove team owner from team
     if (accountId === ownerAccountId) {
@@ -51,7 +55,7 @@ RemoveAccountLink.propTypes = {
   teamName: PropTypes.string.isRequired,
   accountName: PropTypes.string.isRequired,
   accountId: PropTypes.string.isRequired,
-  ownerAccountId: PropTypes.string.isRequired,
+  ownerAccountId: PropTypes.string.isRequired
 };
 
 export default RemoveAccountLink;

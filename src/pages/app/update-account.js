@@ -15,7 +15,7 @@ class ChangeAccountDetails extends React.Component {
       newFirstName: whoami.firstName,
       newLastName: whoami.lastName,
       loginError: '',
-      error: '',
+      error: ''
     };
   }
 
@@ -42,67 +42,93 @@ class ChangeAccountDetails extends React.Component {
         this.state.password,
         this.state.newEmail,
         this.state.newFirstName,
-        this.state.newLastName,
+        this.state.newLastName
       );
       window.location = '/app/account/';
     } catch (err) {
       console.error('Failed to update details', err.stack);
       this.setState({ error: err.message, loading: false });
     }
-  };
+  }
 
   render() {
-    const { error, loginError, loading, newEmail, newFirstName, newLastName } = this.state;
+    const {
+      error,
+      loginError,
+      loading,
+      newEmail,
+      newFirstName,
+      newLastName
+    } = this.state;
     console.log(this.state);
     return (
       <form onSubmit={this._handleSubmit.bind(this)}>
         <div className="form-row">
           <div className="form-control">
-            <label>First Name
-              <input type="text"
-                     name="newFirstName"
-                     defaultValue={newFirstName}
-                     required
-                     onChange={this._handleUpdateInput.bind(this)} />
+            <label>
+              First Name
+              <input
+                type="text"
+                name="newFirstName"
+                defaultValue={newFirstName}
+                required
+                onChange={this._handleUpdateInput.bind(this)}
+              />
             </label>
           </div>
           <div className="form-control">
-            <label>Last Name
-              <input type="text"
-                     name="newLastName"
-                     defaultValue={newLastName}
-                     required
-                     onChange={this._handleUpdateInput.bind(this)} />
+            <label>
+              Last Name
+              <input
+                type="text"
+                name="newLastName"
+                defaultValue={newLastName}
+                required
+                onChange={this._handleUpdateInput.bind(this)}
+              />
             </label>
           </div>
         </div>
         <div className="form-control">
-          <label>Email
-            <input type="email"
-                   name="newEmail"
-                   defaultValue={newEmail}
-                   required
-                   onChange={this._handleUpdateInput.bind(this)}
-                   placeholder="new@domain.com" />
+          <label>
+            Email
+            <input
+              type="email"
+              name="newEmail"
+              defaultValue={newEmail}
+              required
+              onChange={this._handleUpdateInput.bind(this)}
+              placeholder="new@domain.com"
+            />
           </label>
         </div>
-        <hr className="hr--skinny"/>
+        <hr className="hr--skinny" />
         <div className="form-control">
-          <label>Confirm Password {loginError ?
-            <small className="error">({loginError})</small> : null}
-            <input type="password"
-                   name="password"
-                   required
-                   autoFocus
-                   onChange={this._handleUpdateInput.bind(this)} />
+          <label>
+            Confirm Password{' '}
+            {loginError ? (
+              <small className="error">({loginError})</small>
+            ) : null}
+            <input
+              type="password"
+              name="password"
+              required
+              autoFocus
+              onChange={this._handleUpdateInput.bind(this)}
+            />
           </label>
         </div>
         {error ? <div className="form-control error">** {error}</div> : null}
         <div className="form-control padding-top-sm right">
-          {loading ?
-            <button type="button" disabled className="button">Saving...</button> :
-            <button type="submit" className="button">Save</button>
-          }
+          {loading ? (
+            <button type="button" disabled className="button">
+              Saving...
+            </button>
+          ) : (
+            <button type="submit" className="button">
+              Save
+            </button>
+          )}
         </div>
       </form>
     );
@@ -113,13 +139,14 @@ ChangeAccountDetails.propTypes = {
   whoami: PropTypes.shape({
     email: PropTypes.string.isRequired,
     firstName: PropTypes.string.isRequired,
-    lastName: PropTypes.string.isRequired,
-  }).isRequired,
+    lastName: PropTypes.string.isRequired
+  }).isRequired
 };
 
 export default () => (
-  <App title="Update Account" subTitle="The details tied to your Insomnia account">
+  <App
+    title="Update Account"
+    subTitle="The details tied to your Insomnia account">
     {props => <ChangeAccountDetails {...props} />}
   </App>
 );
-

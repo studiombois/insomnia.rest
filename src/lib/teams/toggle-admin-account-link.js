@@ -11,22 +11,22 @@ class ToggleAdminAccountLink extends React.Component {
   async _handleClick(e) {
     e.preventDefault();
 
-    const {teamId, accountId, onRemove} = this.props;
+    const { teamId, accountId, onRemove } = this.props;
 
-    this.setState({loading: true});
+    this.setState({ loading: true });
 
     try {
       await session.toggleAdminStatus(teamId, accountId);
       await onRemove();
     } catch (err) {
       alert(`Failed to remove from team: ${err.message}`);
-      this.setState({loading: false});
+      this.setState({ loading: false });
     }
-  };
+  }
 
   render() {
-    const {children, className} = this.props;
-    const {loading} = this.state;
+    const { children, className } = this.props;
+    const { loading } = this.state;
     return (
       <Link to="#" onClick={this._handleClick.bind(this)} className={className}>
         {loading ? 'removing...' : children}
@@ -38,7 +38,7 @@ class ToggleAdminAccountLink extends React.Component {
 ToggleAdminAccountLink.propTypes = {
   onRemove: PropTypes.func.isRequired,
   teamId: PropTypes.string.isRequired,
-  accountId: PropTypes.string.isRequired,
+  accountId: PropTypes.string.isRequired
 };
 
 export default ToggleAdminAccountLink;

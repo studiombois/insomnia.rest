@@ -1,6 +1,6 @@
 import React from 'react';
 import classnames from 'classnames';
-import {links} from '../config';
+import { links } from '../config';
 import Link from './link';
 
 class DownloadButton extends React.Component {
@@ -14,13 +14,13 @@ class DownloadButton extends React.Component {
   componentDidMount() {
     const isMobile = window.innerWidth <= 800 && window.innerHeight <= 600;
     this.setState({
-      platform: isMobile ? 'Mobile' : navigator.platform.toLowerCase(),
+      platform: isMobile ? 'Mobile' : navigator.platform.toLowerCase()
     });
   }
 
   render() {
-    const {platform} = this.state;
-    const {className, children} = this.props;
+    const { platform } = this.state;
+    const { className, children } = this.props;
 
     let href = links.download;
 
@@ -46,4 +46,4 @@ class DownloadButton extends React.Component {
   }
 }
 
-export default DownloadButton
+export default DownloadButton;

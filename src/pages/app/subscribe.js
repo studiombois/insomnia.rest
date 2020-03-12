@@ -19,10 +19,10 @@ const planIdMap = {
 };
 
 class Subscribe extends React.Component {
-  constructor (props) {
+  constructor(props) {
     super(props);
 
-    const {billingDetails, whoami} = props;
+    const { billingDetails, whoami } = props;
 
     const quantity = Math.max(
       minTeamSize,
@@ -53,11 +53,11 @@ class Subscribe extends React.Component {
       cvc: '',
       zip: '',
       error: '',
-      memo: billingDetails ? billingDetails.subMemo : '',
+      memo: billingDetails ? billingDetails.subMemo : ''
     };
   }
 
-  componentDidMount () {
+  componentDidMount() {
     const s = document.createElement('script');
     s.src = 'https://js.stripe.com/v2/';
     document.body.appendChild(s);
@@ -75,7 +75,7 @@ class Subscribe extends React.Component {
     });
   }
 
-  _handleCardNumberChange (e) {
+  _handleCardNumberChange(e) {
     // Using timeout or else target.value will not have been updated yet
     const value = e.target.value.trim();
     if (!value) {
@@ -127,9 +127,9 @@ class Subscribe extends React.Component {
 
     // this.setState({cardType: cardType === 'Unknown' ? '' : cardType});
     if (cardType.toLowerCase() !== 'unknown') {
-      this.setState({cardType});
+      this.setState({ cardType });
     } else {
-      this.setState({cardType: ''});
+      this.setState({ cardType: '' });
     }
 
     // Only update number if it changed from the user's original to prevent cursor jump
@@ -146,14 +146,14 @@ class Subscribe extends React.Component {
     this._handleUpdateInput(e);
   }
 
-  _handleUpdateInput (e) {
+  _handleUpdateInput(e) {
     const value =
       e.target.type === 'checkbox' ? e.target.checked : e.target.value;
 
-    this.setState({[e.target.name]: value, error: ''});
+    this.setState({ [e.target.name]: value, error: '' });
   }
 
-  async _handleSubmit (e) {
+  async _handleSubmit(e) {
     e.preventDefault();
 
     const {
@@ -167,25 +167,25 @@ class Subscribe extends React.Component {
       planType,
       planCycle,
       memo,
-      quantity: quantityRaw,
+      quantity: quantityRaw
     } = this.state;
 
     if (!useExistingBilling && !fullName.trim()) {
-      this.setState({error: 'Card Error: No name provided'});
+      this.setState({ error: 'Card Error: No name provided' });
       return;
     }
 
     if (!useExistingBilling && !zip.trim()) {
-      this.setState({error: 'Card Error: No zip/postal provided'});
+      this.setState({ error: 'Card Error: No zip/postal provided' });
       return;
     }
 
     if (!useExistingBilling && !cvc.trim()) {
-      this.setState({error: 'Card Error: No cvc provided'});
+      this.setState({ error: 'Card Error: No cvc provided' });
       return;
     }
 
-    this.setState({loading: true});
+    this.setState({ loading: true });
 
     const params = {
       cvc,
@@ -209,7 +209,7 @@ class Subscribe extends React.Component {
         await session.subscribe(tokenId, planId, quantity, memo);
         window.location = '/app/account/';
       } catch (err) {
-        this.setState({error: err.message, loading: false});
+        this.setState({ error: err.message, loading: false });
         localStorage.setItem(subErrorKey, subErrors + 1);
       }
     };
@@ -231,15 +231,15 @@ class Subscribe extends React.Component {
           const msg = response.error
             ? response.error.message
             : 'Unknown error (112)';
-          this.setState({error: `Card Error: ${msg}`});
+          this.setState({ error: `Card Error: ${msg}` });
         }
 
-        this.setState({loading: false});
+        this.setState({ loading: false });
       });
     }
   }
 
-  static _calculatePrice (planType, planCycle, quantity) {
+  static _calculatePrice(planType, planCycle, quantity) {
     quantity = Math.max(quantity, minTeamSize);
     const priceIndex = planCycle === planCycleMonthly ? 0 : 1;
     const price =
@@ -250,15 +250,15 @@ class Subscribe extends React.Component {
     return price[priceIndex];
   }
 
-  static _getPlanDescription (planType, planCycle, quantity) {
+  static _getPlanDescription(planType, planCycle, quantity) {
     const cycle = planCycle === planCycleMonthly ? 'month' : 'year';
     const price = Subscribe._calculatePrice(planType, planCycle, quantity);
 
     return `$${price} / ${cycle}`;
   }
 
-  renderBillingNotice () {
-    const {whoami, billingDetails} = this.props;
+  renderBillingNotice() {
+    const { whoami, billingDetails } = this.props;
 
     const trialEndDate = new Date(whoami.trialEnd * 1000);
     const trialEndMillis = trialEndDate.getTime() - Date.now();
@@ -267,10 +267,8 @@ class Subscribe extends React.Component {
     if (!billingDetails && trialDays > 0) {
       return (
         <p className="notice info">
-          You still have <strong>{trialDays}</strong> day{trialDays === 1
-          ? ''
-          : 's'}{' '}
-          left on your free trial
+          You still have <strong>{trialDays}</strong> day
+          {trialDays === 1 ? '' : 's'} left on your free trial
         </p>
       );
     }
@@ -278,7 +276,7 @@ class Subscribe extends React.Component {
     return null;
   }
 
-  render () {
+  render() {
     const {
       loading,
       error,
@@ -290,10 +288,10 @@ class Subscribe extends React.Component {
       quantity,
       useExistingBilling,
       fullName,
-      memo,
+      memo
     } = this.state;
 
-    const {billingDetails} = this.props;
+    const { billingDetails } = this.props;
 
     let subscribeBtn = null;
     if (loading && billingDetails) {
@@ -312,12 +310,12 @@ class Subscribe extends React.Component {
       subscribeBtn = (
         <React.Fragment>
           <button type="submit" className="button">
-            Change to {' '}
+            Change to{' '}
             {Subscribe._getPlanDescription(planType, planCycle, quantity)}
           </button>
           <p className="text-xs subtle">
-            *Upgrades are billed immediately and downgrades will apply
-            a credit on the next invoice
+            *Upgrades are billed immediately and downgrades will apply a credit
+            on the next invoice
           </p>
         </React.Fragment>
       );
@@ -378,7 +376,11 @@ class Subscribe extends React.Component {
                 onChange={this._handleUpdateInput.bind(this)}
                 value={planCycleMonthly}
               />
-              {Subscribe._getPlanDescription(planType, planCycleMonthly, quantity)}
+              {Subscribe._getPlanDescription(
+                planType,
+                planCycleMonthly,
+                quantity
+              )}
             </label>
           </div>
           <div className="form-control">
@@ -390,11 +392,15 @@ class Subscribe extends React.Component {
                 onChange={this._handleUpdateInput.bind(this)}
                 value={planCycleYearly}
               />
-              {Subscribe._getPlanDescription(planType, planCycleYearly, quantity)}
+              {Subscribe._getPlanDescription(
+                planType,
+                planCycleYearly,
+                quantity
+              )}
             </label>
           </div>
         </div>
-        <hr className="hr--skinny"/>
+        <hr className="hr--skinny" />
         {billingDetails && billingDetails.hasCard ? (
           <div className="form-control">
             <label>
@@ -410,7 +416,7 @@ class Subscribe extends React.Component {
         ) : null}
 
         {useExistingBilling ? (
-          <div/>
+          <div />
         ) : (
           <div>
             <div className="form-control">
@@ -441,7 +447,7 @@ class Subscribe extends React.Component {
             <div className="form-row">
               <div className="form-control">
                 <label>Expiration Date</label>
-                <br/>
+                <br />
                 <select
                   name="expireMonth"
                   title="expire month"
@@ -520,7 +526,7 @@ class Subscribe extends React.Component {
           </div>
         )}
 
-        <hr className="hr--skinny"/>
+        <hr className="hr--skinny" />
         <div className="form-control">
           <label>
             Additional Information for invoice (Address, VAT, etc)
@@ -537,11 +543,9 @@ class Subscribe extends React.Component {
           <small className="form-control error">** {error}</small>
         ) : null}
 
-        <div className="form-control right padding-top-sm">
-          {subscribeBtn}
-        </div>
+        <div className="form-control right padding-top-sm">{subscribeBtn}</div>
 
-        <hr className="hr--skinny"/>
+        <hr className="hr--skinny" />
         <p className="small subtle center">
           Payments secured by{' '}
           <Link to="https://stripe.com" target="_blank">
@@ -562,8 +566,8 @@ Subscribe.propTypes = {
     subMemo: PropTypes.string.isRequired,
     hasCard: PropTypes.bool.isRequired,
     lastFour: PropTypes.string.isRequired,
-    isBillingAdmin: PropTypes.bool.isRequired,
-  }),
+    isBillingAdmin: PropTypes.bool.isRequired
+  })
 };
 
 export default () => (

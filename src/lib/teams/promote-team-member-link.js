@@ -11,27 +11,22 @@ class PromoteTeamMemberLink extends React.Component {
   async _handleClick(e) {
     e.preventDefault();
 
-    const {
-      teamId,
-      accountId,
-      isAdmin,
-      onPromote,
-    } = this.props;
+    const { teamId, accountId, isAdmin, onPromote } = this.props;
 
-    this.setState({loading: true});
+    this.setState({ loading: true });
 
     try {
       await session.changeTeamAdminStatus(teamId, accountId, !isAdmin);
       await onPromote();
     } catch (err) {
       alert(`Failed to remove from team: ${err.message}`);
-      this.setState({loading: false});
+      this.setState({ loading: false });
     }
-  };
+  }
 
   render() {
-    const {className, isAdmin, ownerAccountId, accountId} = this.props;
-    const {loading} = this.state;
+    const { className, isAdmin, ownerAccountId, accountId } = this.props;
+    const { loading } = this.state;
 
     // Cannot promote owner (always an admin)
     if (ownerAccountId === accountId) {
@@ -53,7 +48,7 @@ PromoteTeamMemberLink.propTypes = {
   teamId: PropTypes.string.isRequired,
   isAdmin: PropTypes.bool.isRequired,
   accountId: PropTypes.string.isRequired,
-  ownerAccountId: PropTypes.string.isRequired,
+  ownerAccountId: PropTypes.string.isRequired
 };
 
 export default PromoteTeamMemberLink;

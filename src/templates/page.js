@@ -2,7 +2,11 @@ import React from 'react';
 import Title from '../partials/title';
 import Contributors from '../partials/contributors';
 
-export default ({data: {markdownRemark: {frontmatter, html}}}) => (
+export default ({
+  data: {
+    markdownRemark: { frontmatter, html }
+  }
+}) => (
   <React.Fragment>
     <Title>{frontmatter.title}</Title>
     <article>
@@ -24,7 +28,8 @@ export default ({data: {markdownRemark: {frontmatter, html}}}) => (
                 This post is part of the&nbsp;
                 <a href={`/series/${frontmatter.series[0]}`}>
                   {frontmatter.series[0]}
-                </a> series
+                </a>{' '}
+                series
               </p>
             </div>
           </div>
@@ -32,17 +37,17 @@ export default ({data: {markdownRemark: {frontmatter, html}}}) => (
       )}
       <section className="content container">
         <div className="row">
-          <div className="col-12" dangerouslySetInnerHTML={{__html: html}}/>
+          <div className="col-12" dangerouslySetInnerHTML={{ __html: html }} />
         </div>
       </section>
     </article>
-    <Contributors/>
+    <Contributors />
   </React.Fragment>
 );
 
 export const pageQuery = graphql`
   query PageBySlug($slug: String!) {
-    markdownRemark(frontmatter: {slug: {eq: $slug}}) {
+    markdownRemark(frontmatter: { slug: { eq: $slug } }) {
       html
       frontmatter {
         slug

@@ -7,7 +7,7 @@ class SignOutLink extends React.Component {
     e.preventDefault();
     await session.logout();
     window.location = '/app/logout/';
-  };
+  }
 
   render() {
     return (

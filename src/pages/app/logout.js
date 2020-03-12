@@ -9,9 +9,11 @@ class Logout extends React.Component {
           <p className="text-lg">You are now logged out</p>
         </header>
         <section>
-          <img src="https://media.giphy.com/media/jUwpNzg9IcyrK/giphy.gif"
-               style={{maxWidth: '20rem'}}
-               alt="Homer Simpson receding into a bush"/>
+          <img
+            src="https://media.giphy.com/media/jUwpNzg9IcyrK/giphy.gif"
+            style={{ maxWidth: '20rem' }}
+            alt="Homer Simpson receding into a bush"
+          />
         </section>
       </article>
     );

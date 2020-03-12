@@ -13,7 +13,7 @@ const themes = [
   'Warning',
   'Danger',
   'Surprise',
-  'Info',
+  'Info'
 ];
 
 const areas = [
@@ -21,7 +21,7 @@ const areas = [
   { label: 'Pane', key: 'pane' },
   { label: 'Pane Header', key: 'paneHeader' },
   { label: 'Sidebar', key: 'sidebar' },
-  { label: 'Sidebar header', key: 'sidebarHeader' },
+  { label: 'Sidebar header', key: 'sidebarHeader' }
 ];
 
 const getRgba = (rgb, a) => `rgba(${rgb.r}, ${rgb.g}, ${rgb.b}, ${a})`;
@@ -34,10 +34,10 @@ const DEFAULT_INSOMNIA_THEME = {
     warning: '#d79921',
     danger: '#eb5746',
     surprise: '#d3869b',
-    info: '#83a598',
+    info: '#83a598'
   },
   foreground: {
-    default: '#ddd',
+    default: '#ddd'
   },
   highlight: {
     default: 'rgba(130, 130, 130, 1)',
@@ -46,7 +46,7 @@ const DEFAULT_INSOMNIA_THEME = {
     sm: 'rgba(130, 130, 130, 0.25)',
     md: 'rgba(130, 130, 130, 0.35)',
     lg: 'rgba(130, 130, 130, 0.5)',
-    xl: 'rgba(130, 130, 130, 0.8)',
+    xl: 'rgba(130, 130, 130, 0.8)'
   },
   styles: {
     dialog: {},
@@ -59,19 +59,19 @@ const DEFAULT_INSOMNIA_THEME = {
     pane: {},
     paneHeader: {
       background: {
-        default: '#303030',
-      },
+        default: '#303030'
+      }
     },
     sidebar: {},
     sidebarHeader: {
       background: {
-        default: '#8352cc',
-      },
+        default: '#8352cc'
+      }
     },
     sidebarList: {},
     tooltip: {},
-    transparentOverlay: {},
-  },
+    transparentOverlay: {}
+  }
 };
 
 export default class ThemeCreator extends React.Component {
@@ -79,7 +79,7 @@ export default class ThemeCreator extends React.Component {
     theme: DEFAULT_INSOMNIA_THEME,
     displayName: 'My Custom Theme',
     name: 'custom-theme',
-    activeKey: 0,
+    activeKey: 0
   };
 
   handleHighlightChange(color, areaName) {
@@ -93,7 +93,7 @@ export default class ThemeCreator extends React.Component {
       sm: getRgba(rgb, 0.25),
       md: getRgba(rgb, 0.35),
       lg: getRgba(rgb, 0.5),
-      xl: getRgba(rgb, 0.8),
+      xl: getRgba(rgb, 0.8)
     };
 
     if (areaName) {
@@ -103,9 +103,9 @@ export default class ThemeCreator extends React.Component {
           ...theme.styles,
           [areaName]: {
             ...theme.styles[areaName],
-            highlight: newHighlight,
-          },
-        },
+            highlight: newHighlight
+          }
+        }
       };
 
       this.setState({ theme: newTheme });
@@ -114,7 +114,7 @@ export default class ThemeCreator extends React.Component {
 
     const newTheme = {
       ...theme,
-      highlight: newHighlight,
+      highlight: newHighlight
     };
 
     this.setState({ theme: newTheme });
@@ -133,10 +133,10 @@ export default class ThemeCreator extends React.Component {
             ...theme.styles[areaName],
             [layerName]: {
               ...theme.styles[areaName][layerName],
-              [themeName]: hex,
-            },
-          },
-        },
+              [themeName]: hex
+            }
+          }
+        }
       };
 
       this.setState({ theme: newTheme });
@@ -147,8 +147,8 @@ export default class ThemeCreator extends React.Component {
       ...theme,
       [layerName]: {
         ...theme[layerName],
-        [themeName]: hex,
-      },
+        [themeName]: hex
+      }
     };
 
     this.setState({ theme: newTheme });
@@ -157,7 +157,7 @@ export default class ThemeCreator extends React.Component {
   handleUpdateInput(e) {
     this.setState({
       displayName: e.target.value,
-      name: e.target.value.toLowerCase().replace(' ', '-'),
+      name: e.target.value.toLowerCase().replace(' ', '-')
     });
   }
 
@@ -200,15 +200,25 @@ export default class ThemeCreator extends React.Component {
               {areas.map(({ label, key }) => (
                 <Tab label={label} key={key} className="test">
                   <div className="padding-top-sm row">
-
                     <div className="col-6 ml-0">
                       <h1>Foreground</h1>
                       <div className="row">
                         <ColorPicker
                           label="Text"
                           className={colorClasses}
-                          onChange={c => this.handleChange(c, activeArea, 'foreground', 'default')}
-                          color={themeForArea.foreground ? themeForArea.foreground.default : undefined}
+                          onChange={c =>
+                            this.handleChange(
+                              c,
+                              activeArea,
+                              'foreground',
+                              'default'
+                            )
+                          }
+                          color={
+                            themeForArea.foreground
+                              ? themeForArea.foreground.default
+                              : undefined
+                          }
                         />
                       </div>
                     </div>
@@ -219,8 +229,14 @@ export default class ThemeCreator extends React.Component {
                         <ColorPicker
                           label="Base"
                           className={colorClasses}
-                          onChange={c => this.handleHighlightChange(c, activeArea)}
-                          color={themeForArea.highlight ? themeForArea.highlight.default : undefined}
+                          onChange={c =>
+                            this.handleHighlightChange(c, activeArea)
+                          }
+                          color={
+                            themeForArea.highlight
+                              ? themeForArea.highlight.default
+                              : undefined
+                          }
                         />
                       </div>
                     </div>
@@ -234,8 +250,19 @@ export default class ThemeCreator extends React.Component {
                           key={t}
                           className={colorClasses}
                           label={t}
-                          onChange={c => this.handleChange(c, activeArea, 'background', t.toLowerCase())}
-                          color={themeForArea.background ? themeForArea.background[t.toLowerCase()] : undefined}
+                          onChange={c =>
+                            this.handleChange(
+                              c,
+                              activeArea,
+                              'background',
+                              t.toLowerCase()
+                            )
+                          }
+                          color={
+                            themeForArea.background
+                              ? themeForArea.background[t.toLowerCase()]
+                              : undefined
+                          }
                         />
                       ))}
                     </div>
@@ -245,7 +272,11 @@ export default class ThemeCreator extends React.Component {
             </Tabs>
             <div className="right padding-top-sm form-row">
               <div className="form-control m-0 mr-1">
-                <input type="text" defaultValue={displayName} onChange={e => this.handleUpdateInput(e)} />
+                <input
+                  type="text"
+                  defaultValue={displayName}
+                  onChange={e => this.handleUpdateInput(e)}
+                />
               </div>
               <InstallButton theme={this.state} />
             </div>
@@ -263,15 +294,25 @@ const SvgPreview = ({ theme }) => {
   const paneH = theme.styles.paneHeader || {};
 
   return (
-    <svg width="100%" height="100%" viewBox="0 0 500 300" style={{
-      borderRadius: 5,
-      overflow: 'hidden',
-      boxShadow: `0 0 30px -10px ${theme.background.default}`,
-    }}>
+    <svg
+      width="100%"
+      height="100%"
+      viewBox="0 0 500 300"
+      style={{
+        borderRadius: 5,
+        overflow: 'hidden',
+        boxShadow: `0 0 30px -10px ${theme.background.default}`
+      }}>
       <g fill={theme.background.default}>
         {/* Panes */}
         <g>
-          <rect x="0" y="0" width="100%" height="100%" fill={(pane.background || {}).default} />
+          <rect
+            x="0"
+            y="0"
+            width="100%"
+            height="100%"
+            fill={(pane.background || {}).default}
+          />
           <rect
             x="25%"
             y="0"
@@ -283,7 +324,13 @@ const SvgPreview = ({ theme }) => {
 
         {/* Sidebar */}
         <g>
-          <rect x="0" y="0" width="25%" height="100%" fill={(sidebar.background || {}).default} />
+          <rect
+            x="0"
+            y="0"
+            width="25%"
+            height="100%"
+            fill={(sidebar.background || {}).default}
+          />
           <rect
             x="0"
             y="0"
@@ -294,26 +341,98 @@ const SvgPreview = ({ theme }) => {
         </g>
 
         {/* Lines */}
-        <line x1="25%" x2="100%" y1="10%" y2="10%" strokeWidth="1" stroke={theme.highlight.md} />
-        <line x1="62%" x2="62%" y1="0" y2="100%" strokeWidth="1" stroke={theme.highlight.md} />
-        <line x1="25%" x2="25%" y1="0" y2="100%" strokeWidth="1" stroke={theme.highlight.md} />
-        <line x1="0" x2="25%" y1="10%" y2="10%" strokeWidth="1" stroke={theme.highlight.md} />
+        <line
+          x1="25%"
+          x2="100%"
+          y1="10%"
+          y2="10%"
+          strokeWidth="1"
+          stroke={theme.highlight.md}
+        />
+        <line
+          x1="62%"
+          x2="62%"
+          y1="0"
+          y2="100%"
+          strokeWidth="1"
+          stroke={theme.highlight.md}
+        />
+        <line
+          x1="25%"
+          x2="25%"
+          y1="0"
+          y2="100%"
+          strokeWidth="1"
+          stroke={theme.highlight.md}
+        />
+        <line
+          x1="0"
+          x2="25%"
+          y1="10%"
+          y2="10%"
+          strokeWidth="1"
+          stroke={theme.highlight.md}
+        />
 
         {/* Colors */}
-        <rect x="30%" y="85%" width="5%" height="8%" fill={theme.background.default} />
-        <rect x="40%" y="85%" width="5%" height="8%" fill={theme.background.success} />
-        <rect x="50%" y="85%" width="5%" height="8%" fill={theme.background.notice} />
-        <rect x="60%" y="85%" width="5%" height="8%" fill={theme.background.warning} />
-        <rect x="70%" y="85%" width="5%" height="8%" fill={theme.background.danger} />
-        <rect x="80%" y="85%" width="5%" height="8%" fill={theme.background.surprise} />
-        <rect x="90%" y="85%" width="5%" height="8%" fill={theme.background.info} />
+        <rect
+          x="30%"
+          y="85%"
+          width="5%"
+          height="8%"
+          fill={theme.background.default}
+        />
+        <rect
+          x="40%"
+          y="85%"
+          width="5%"
+          height="8%"
+          fill={theme.background.success}
+        />
+        <rect
+          x="50%"
+          y="85%"
+          width="5%"
+          height="8%"
+          fill={theme.background.notice}
+        />
+        <rect
+          x="60%"
+          y="85%"
+          width="5%"
+          height="8%"
+          fill={theme.background.warning}
+        />
+        <rect
+          x="70%"
+          y="85%"
+          width="5%"
+          height="8%"
+          fill={theme.background.danger}
+        />
+        <rect
+          x="80%"
+          y="85%"
+          width="5%"
+          height="8%"
+          fill={theme.background.surprise}
+        />
+        <rect
+          x="90%"
+          y="85%"
+          width="5%"
+          height="8%"
+          fill={theme.background.info}
+        />
       </g>
     </svg>
   );
 };
 
 const InstallButton = ({ theme }) => {
-  const url = `insomnia://plugins/theme?theme=${encodeURIComponent(JSON.stringify(theme))}`;
+  const url = `insomnia://plugins/theme?theme=${encodeURIComponent(
+    JSON.stringify(theme)
+  )}`;
 
   return (
     <Link to={url} className="button m-0 ml-1" style={{ maxWidth: '150px' }}>

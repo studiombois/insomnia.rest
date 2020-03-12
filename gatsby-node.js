@@ -1,17 +1,17 @@
 const path = require('path');
 const crypto = require('crypto');
 
-module.exports.onCreateNode = ({node, boundActionCreators}) => {
-  const {createNodeField} = boundActionCreators;
+module.exports.onCreateNode = ({ node, boundActionCreators }) => {
+  const { createNodeField } = boundActionCreators;
 
   // Add slug to Node so we can query on it
   if (node.internal.type === 'MarkdownRemark') {
     // console.log('__NODE', node);
-    const {frontmatter} = node;
+    const { frontmatter } = node;
     createNodeField({
       node,
       name: 'slug',
-      value: frontmatter.slug,
+      value: frontmatter.slug
     });
   }
 
@@ -19,14 +19,14 @@ module.exports.onCreateNode = ({node, boundActionCreators}) => {
     createNodeField({
       node,
       name: 'name',
-      value: node.name,
+      value: node.name
     });
   }
 };
 
-module.exports.createPages = async function (data) {
-  const {graphql, boundActionCreators} = data;
-  const {createPage, createNode} = boundActionCreators;
+module.exports.createPages = async function(data) {
+  const { graphql, boundActionCreators } = data;
+  const { createPage, createNode } = boundActionCreators;
   const templateBlogPost = path.resolve('./src/templates/blog.js');
   const templateChangelog = path.resolve('./src/templates/changelog.js');
   const templatePage = path.resolve('./src/templates/page.js');
@@ -35,7 +35,9 @@ module.exports.createPages = async function (data) {
 
   const result = await graphql(`
     {
-      allFile(filter: {sourceInstanceName: {regex: "/blog|changelog|page/"}}) {
+      allFile(
+        filter: { sourceInstanceName: { regex: "/blog|changelog|page/" } }
+      ) {
         edges {
           node {
             sourceInstanceName
@@ -70,7 +72,7 @@ module.exports.createPages = async function (data) {
   const tagCounts = {};
   const seriesCounts = {};
   for (const edge of result.data.allFile.edges) {
-    const {frontmatter} = edge.node.childMarkdownRemark;
+    const { frontmatter } = edge.node.childMarkdownRemark;
     let urlPath;
     let template = templatePage;
 
@@ -99,26 +101,26 @@ module.exports.createPages = async function (data) {
       context: {
         // So we can use the $slug variable in GraphQL queries
         slug: frontmatter.slug || ''
-      },
+      }
     });
   }
 
   const tagCountObjects = Object.keys(tagCounts)
-    .map(tag => ({tag, count: tagCounts[tag]}))
+    .map(tag => ({ tag, count: tagCounts[tag] }))
     .sort((a, b) => b.count - a.count);
 
   const seriesCountObjects = Object.keys(seriesCounts)
-    .map(series => ({series, count: seriesCounts[series]}))
+    .map(series => ({ series, count: seriesCounts[series] }))
     .sort((a, b) => b.count - a.count);
 
-  for (const {tag, count} of tagCountObjects) {
+  for (const { tag, count } of tagCountObjects) {
     createPage({
       path: `/tags/${tag}`,
       component: templateTag,
       context: {
         tag: tag,
-        count: count,
-      },
+        count: count
+      }
     });
 
     createNode({
@@ -134,19 +136,19 @@ module.exports.createPages = async function (data) {
         contentDigest: crypto
           .createHash(`md5`)
           .update(JSON.stringify(tag))
-          .digest(`hex`),
-      },
+          .digest(`hex`)
+      }
     });
   }
 
-  for (const {series, count} of seriesCountObjects) {
+  for (const { series, count } of seriesCountObjects) {
     createPage({
       path: `/series/${series}`,
       component: templateSeries,
       context: {
         series: series,
-        count: count,
-      },
+        count: count
+      }
     });
 
     createNode({
@@ -162,11 +164,11 @@ module.exports.createPages = async function (data) {
         contentDigest: crypto
           .createHash(`md5`)
           .update(JSON.stringify(series))
-          .digest(`hex`),
-      },
+          .digest(`hex`)
+      }
     });
   }
-  
+
   const template = path.resolve('./src/templates/plugin.js');
   const results = await graphql(`
     query myQuery {
@@ -187,7 +189,7 @@ module.exports.createPages = async function (data) {
       component: template,
       context: {
         slug: pkg.name || ''
-      },
-    })
-  })
+      }
+    });
+  });
 };

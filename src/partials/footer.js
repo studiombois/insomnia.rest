@@ -1,18 +1,21 @@
 import React from 'react';
-import {links, menus, site} from '../config';
+import { links, menus, site } from '../config';
 import Link from '../components/link';
 import iconSrc from '../assets/icon.svg';
 
 class Footer extends React.Component {
-  render () {
+  render() {
     return (
       <footer className="footer">
         <section>
-          <img src={iconSrc} alt="Insomnia REST Client logo"/>
+          <img src={iconSrc} alt="Insomnia REST Client logo" />
           <p className="footer__menu">
-            {menus.footer && menus.footer.map(item => (
-              <Link key={item.key} to={item.url}>{item.name}</Link>
-            ))}
+            {menus.footer &&
+              menus.footer.map(item => (
+                <Link key={item.key} to={item.url}>
+                  {item.name}
+                </Link>
+              ))}
           </p>
           <p className="text-sm footer__copy">
             &copy; {new Date().getUTCFullYear()}&nbsp;
@@ -26,4 +29,4 @@ class Footer extends React.Component {
   }
 }
 
-export default Footer
+export default Footer;

@@ -9,7 +9,7 @@ const STATE_DONE = 'done';
 class VerifyButton extends React.Component {
   state = {
     state: STATE_DEFAULT,
-    error: '',
+    error: ''
   };
 
   static _noOp(e) {
@@ -18,18 +18,18 @@ class VerifyButton extends React.Component {
 
   async _handleClick(e) {
     e.preventDefault();
-    this.setState({state: STATE_LOADING});
+    this.setState({ state: STATE_LOADING });
 
     try {
       await session.verify();
-      this.setState({state: STATE_DONE});
+      this.setState({ state: STATE_DONE });
     } catch (err) {
-      this.setState({error: err.message});
+      this.setState({ error: err.message });
     }
   }
 
   render() {
-    const {state, error} = this.state;
+    const { state, error } = this.state;
 
     if (error) {
       return (

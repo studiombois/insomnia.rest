@@ -2,13 +2,13 @@ import React from 'react';
 
 class Announcement extends React.Component {
   static defaultProps = {
-    loggedIn: false,
+    loggedIn: false
   };
 
   constructor(props) {
     super(props);
     this.state = {
-      visible: false,
+      visible: false
     };
   }
 
@@ -42,7 +42,10 @@ class Announcement extends React.Component {
         <div className="container">
           <div className="row">
             <div className="col-12">
-              <a href="#" className="close-icon" onClick={this.close.bind(this)}>
+              <a
+                href="#"
+                className="close-icon"
+                onClick={this.close.bind(this)}>
                 &times;
               </a>
               {this.props.children}
