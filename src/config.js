@@ -69,11 +69,12 @@ export const menus = {
       url: '/blog/'
     },
     {
+      /*
       name: 'Theme Creator',
       key: 'theme-gen',
       url: '/theme-creator/'
     },
-    {
+    {*/
       name: 'Changelog',
       key: 'changelog',
       url: '/changelog/'
