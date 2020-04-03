@@ -2,35 +2,30 @@ import React from 'react';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import SocialCards from '../components/social-cards';
 
-function Header(onSearch) {
+function Header() {
+  // We use function-style for SocialCards to avoid recursive deep-equals check issue
+  // https://github.com/nfl/react-helmet/issues/373
   return (
     <React.Fragment>
-      <SocialCards title="Plugin Hub" summary="Discover and install Insomnia plugins" />
-      <header className="container header--big">
+      {SocialCards({
+        key: 'plugin-hub',
+        title: 'Plugin Hub',
+        summary: 'Discover and install Insomnia plugins'
+      })}
+      <header className="text-center">
         <div className="row">
           <div className="col-12">
-            <h1>Plugins</h1>
-            <p className="text-xl">
-              Leverage the power of the community.
-              <br />
-              One plugin at a time.
+            <h1>Plugin Hub</h1>
+            <p className="text-xl">Extend Insomnia with Powerful Plugins</p>
+            <p className="text-sm">
+              <a
+                href="https://support.insomnia.rest/article/26-plugins"
+                className="create-plugin-link">
+                Interested in making your own?
+                <span className="emoji-swap default">😏</span>
+                <span className="emoji-swap on-hover">😍</span>
+              </a>
             </p>
-          </div>
-        </div>
-        <div className="row">
-          <div className="col-12">
-            <input
-              className="plugin-search br-3 text-lg d-block w-100 pr-3 pl-3 pt-2 pb-2 mb-3"
-              placeholder="Search plugins"
-              onChange={onSearch}
-            />
-            <a
-              href="https://support.insomnia.rest/article/26-plugins"
-              className="create-plugin-link">
-              Interested in making your own?
-              <span className="emoji-swap default">😏</span>
-              <span className="emoji-swap on-hover">😍</span>
-            </a>
           </div>
         </div>
       </header>
@@ -57,7 +52,7 @@ function NoMoreResults(numResults) {
         <div className="col-12">
           <p>
             {numResults
-              ? 'No more results. Don\'t see your plugin?'
+              ? "No more results. Don't see your plugin?"
               : 'No matches found'}
             <br />
             <a href="https://support.insomnia.rest/article/26-plugins">
@@ -70,21 +65,25 @@ function NoMoreResults(numResults) {
   );
 }
 
-function Plugin(pkg, period) {
+function Plugin(pkg, period, sortBy, sortOrder) {
   let displayName = Plugin.getDisplayName(pkg);
   let description = Plugin.getDescription(pkg);
   let author = Plugin.getAuthor(pkg);
 
   return (
-    <div className="plugin-wrapper mb-3 d-flex" key={pkg.name}>
-      <div className="plugin w-100 p-3">
+    <div
+      className="plugin-wrapper shadow-sm br-8 mb-3 d-flex"
+      key={pkg.name + sortBy + sortOrder}>
+      <div className="plugin br-8 w-100 pr-3 pl-3 pt-3">
         <div className="plugin-header d-flex w-100">
           <div className="plugin-logo" />
           <div className="plugin-name">
             <a href={`/plugins/${pkg.name}`}>{displayName}</a>
           </div>
           <div className="plugin-info">
-            <span className="text-small plugin-author">{author.name}</span>
+            <span className="text-small plugin-author">
+              By <b>{author.name}</b>
+            </span>
           </div>
         </div>
 
@@ -94,11 +93,15 @@ function Plugin(pkg, period) {
           {description}
         </p>
 
-        <div className="plugin-footer d-flex mb-0 text-small text-secondary">
-          <div className="plugin-version pr-3">
+        <div className="plugin-footer d-flex nml-3 nmr-3 mb-0 text-small text-secondary">
+          <div
+            className="plugin-version pr-3 pl-3 pt-2 pb-2"
+            title="Plugin Version">
             <i className="las la-code-branch" /> {pkg.npm.version}
           </div>
-          <div className="plugin-author pr-3">
+          <div
+            className="plugin-downloads pr-3 pl-3 pt-2 pb-2"
+            title="Plugin Downloads">
             <i className="las la-download" /> {pkg.downloads[period]}
           </div>
         </div>
@@ -117,8 +120,8 @@ Plugin.getAuthor = pkg => {
     email,
     avatar: {
       github: `https://github.com/${name}`,
-      gravatar: `tbd`,
-    },
+      gravatar: `tbd`
+    }
   };
 };
 
@@ -131,18 +134,73 @@ Plugin.getDescription = pkg => {
   return pkg.meta.description || pkg.npm.description;
 };
 
-function Plugins(plugins, hasMore, onNext) {
+function Plugins(
+  plugins,
+  {
+    sortOptions,
+    sortBy,
+    sortOrder,
+    hasMore,
+    onNext,
+    onSearch,
+    onSort,
+    onOrderChange
+  }
+) {
   return (
     <div className="plugins">
-      <InfiniteScroll
-        dataLength={plugins.length}
-        next={onNext}
-        hasMore={hasMore}
-        hasChildren={plugins.length > 0}
-        loader={Loader()}
-        endMessage={NoMoreResults(plugins.length)}>
-        {plugins.map(plugin => Plugin(plugin, 'lastYear'))}
-      </InfiniteScroll>
+      <div className="row">
+        <div className="col-12">
+          <input
+            className="plugin-search br-3 text-lg d-block shadow w-100 pr-2 pl-2 pt-2 pb-2 mb-3"
+            placeholder="Search Insomnia plugins..."
+            onChange={onSearch}
+          />
+        </div>
+      </div>
+      <div className="row">
+        <div className="col-12">
+          <div className="action-bar d-flex flex-center flex-content-end text-right text-xs">
+            <label className="mr-3">
+              Order{' '}
+              <select
+                onChange={onOrderChange}
+                defaultValue={sortOrder === -1 ? 'asc' : 'desc'}>
+                <option value="asc">Asc</option>
+                <option value="desc">Desc</option>
+              </select>
+            </label>
+
+            <label>
+              Sort By{' '}
+              <select onChange={onSort} defaultValue={sortBy}>
+                {Object.keys(sortOptions).map((value, index) => {
+                  return (
+                    <option value={value} key={value}>
+                      {sortOptions[value]}
+                    </option>
+                  );
+                })}
+              </select>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div className="row">
+        <div className="col-12">
+          <InfiniteScroll
+            dataLength={plugins.length}
+            next={onNext}
+            hasMore={hasMore}
+            hasChildren={plugins.length > 0}
+            loader={Loader()}
+            endMessage={NoMoreResults(plugins.length)}>
+            {plugins.map(plugin =>
+              Plugin(plugin, 'lastYear', sortBy, sortOrder)
+            )}
+          </InfiniteScroll>
+        </div>
+      </div>
     </div>
   );
 }
@@ -156,36 +214,41 @@ export default class Component extends React.Component {
       plugins: [],
       total: 0,
       offset: 0,
-      sortBy: 'downloads',
+      sortOrder: 1,
+      sortBy: 'downloadsLastYear',
+      sortOptions: {
+        downloadsLastYear: 'Downloads',
+        name: 'Name',
+        releaseDate: 'Release Date'
+      },
       trendingBy: 'lastWeek',
       hasMore: true,
-      perScroll: 25,
+      perScroll: 25
     };
   }
 
   componentDidMount() {
     const {
-      allNpmPackage: { edges },
+      allNpmPackage: { edges }
     } = this.props.data;
 
     this.plugins = edges.map(({ node: plugin }) => plugin);
+
     this.setState({
       total: this.plugins.length,
-      hasMore: this.plugins.length > 0,
+      hasMore: this.plugins.length > 0
     });
-    this.load();
+
+    this.sort();
+    this.loadMore();
   }
 
   reset() {
     this.setState({
       plugins: [],
       offset: 0,
-      hasMore: false,
+      hasMore: false
     });
-
-    setTimeout(() => {
-      this.loadMore();
-    }, 1);
   }
 
   search(evt) {
@@ -193,6 +256,9 @@ export default class Component extends React.Component {
 
     if (!query) {
       this.reset();
+      setTimeout(() => {
+        this.loadMore();
+      }, 1);
       return;
     }
 
@@ -207,7 +273,27 @@ export default class Component extends React.Component {
             .toLowerCase()
             .indexOf(query) > -1
         );
-      }),
+      })
+    });
+  }
+
+  sortByName() {
+    this.plugins = this.plugins.sort((a, b) => {
+      let an = Plugin.getDisplayName(a);
+      let bn = Plugin.getDisplayName(b);
+      return -an.localeCompare(bn);
+    });
+  }
+
+  sortByReleaseDate() {
+    this.plugins = this.plugins.sort((a, b) => {
+      let x = new Date(a.npm.released);
+      let y = new Date(b.npm.released);
+      if (this.sortOrder === 1) {
+        return x - y;
+      } else {
+        return y - x;
+      }
     });
   }
 
@@ -223,24 +309,34 @@ export default class Component extends React.Component {
     });
   }
 
-  load() {
-    const { sortBy } = this.state;
-
+  sort() {
+    const { sortBy, sortOrder } = this.state;
     switch (sortBy) {
-      case 'downloads':
+      case 'downloadsLastYear':
         this.sortByDownloads('lastYear');
+        break;
+      case 'name':
+        this.sortByName();
+        break;
+      case 'releaseDate':
+        this.sortByReleaseDate();
+        break;
     }
 
-    this.loadMore();
+    if (sortOrder === -1) {
+      this.plugins = this.plugins.reverse();
+    }
   }
 
   loadMore() {
-    let { offset, plugins, perScroll } = this.state;
+    let { offset, plugins, perScroll, loading } = this.state;
     let nextOffset = offset + perScroll;
     let nextSet = this.plugins.slice(offset, nextOffset);
 
+    if (loading) return;
+
     this.setState({
-      loading: true,
+      loading: true
     });
 
     setTimeout(() => {
@@ -248,9 +344,36 @@ export default class Component extends React.Component {
         plugins: plugins.concat(nextSet),
         offset: nextOffset,
         hasMore: this.state.total > nextOffset,
-        loading: false,
+        loading: false
       });
-    }, Math.random() * 500);
+    }, Math.random() * 100);
+  }
+
+  onSort({ target: { value } }) {
+    this.setState({
+      sortBy: value
+    });
+
+    this.reset();
+
+    setTimeout(() => {
+      this.sort();
+      setTimeout(() => this.loadMore(), 20);
+    }, 1);
+  }
+
+  onOrderChange({ target: { value } }) {
+    let order = value === 'asc' ? -1 : 1;
+
+    this.setState({
+      sortOrder: order
+    });
+
+    this.reset();
+    setTimeout(() => {
+      this.sort();
+      this.loadMore();
+    }, 20);
   }
 
   render() {
@@ -261,12 +384,17 @@ export default class Component extends React.Component {
           href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"
         />
         <div className="container mb-5">
-          {Header(this.search.bind(this))}
-          {Plugins(
-            this.state.plugins,
-            this.state.hasMore,
-            this.loadMore.bind(this),
-          )}
+          {Header()}
+          {Plugins(this.state.plugins, {
+            sortOptions: this.state.sortOptions,
+            sortBy: this.state.sortBy,
+            sortOrder: this.state.sortOrder,
+            hasMore: this.state.hasMore,
+            onNext: this.loadMore.bind(this),
+            onSearch: this.search.bind(this),
+            onSort: this.onSort.bind(this),
+            onOrderChange: this.onOrderChange.bind(this)
+          })}
         </div>
       </React.Fragment>
     );
@@ -292,6 +420,7 @@ export const pageQuery = graphql`
           npm {
             description
             version
+            released
             author {
               name
             }
