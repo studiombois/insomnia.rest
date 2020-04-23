@@ -86,10 +86,7 @@ module.exports.createPages = async function(data) {
         seriesCounts[s] = (seriesCounts[s] || 0) + 1;
       }
     } else if (edge.node.sourceInstanceName === 'changelog') {
-      urlPath = `/changelog/core/${frontmatter.slug}`;
-      template = templateChangelog;
-    } else if (edge.node.sourceInstanceName === 'changelog') {
-      urlPath = `/changelog/designer/${frontmatter.slug}`;
+      urlPath = `/changelog/${frontmatter.slug}`;
       template = templateChangelog;
     } else if (edge.node.sourceInstanceName === 'page') {
       urlPath = `/${frontmatter.slug}`;

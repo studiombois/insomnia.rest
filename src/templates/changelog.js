@@ -12,7 +12,7 @@ export default class BlogTemplate extends React.Component {
   render () {
     const {data: {markdownRemark: {frontmatter, html}}} = this.props;
     const appName = frontmatter.app === 'com.insomnia.designer' ? 'Designer' : '';
-    const titleStr = `Insomnia ${appName} v${frontmatter.slug}`;
+    const titleStr = `Insomnia ${appName} ${frontmatter.slug}`;
 
     const summary = `Release notes for version ${frontmatter.slug}`;
     return (
@@ -27,7 +27,7 @@ export default class BlogTemplate extends React.Component {
                   <h1>
                     Insomnia {appName}
                     {' '}
-                    <code>v{frontmatter.slug}</code>
+                    <code>{frontmatter.slug}</code>
                   </h1>
                   <div className="meta">
                     <time dateTime={frontmatter.date}>

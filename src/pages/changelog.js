@@ -1,8 +1,8 @@
 import React from 'react';
-import Link from '../components/link';
 import { links } from '../config';
 import ChangelogLink from '../components/changelog-link';
 import ChangelogListItem from '../components/changelog-list-item';
+import Link from '../components/link';
 
 export default ({
                   data: {
@@ -53,7 +53,7 @@ export default ({
                 <h1>
                   Insomnia {frontmatter.app === 'com.insomnia.designer' ? 'Designer' : ''}
                   {' '}
-                  <code>v{frontmatter.slug}</code>
+                  <code>{frontmatter.slug}</code>
                 </h1>
               </ChangelogLink>
               <div className="meta">
@@ -120,3 +120,29 @@ export default ({
       ))}
   </React.Fragment>
 );
+
+export const pageQuery = graphql`
+  query ChangelogCoreIndexQuery {
+    allFile(filter: { sourceInstanceName: { eq: "changelog" } }) {
+      edges {
+        node {
+          childMarkdownRemark {
+            excerpt(pruneLength: 240)
+            frontmatter {
+              app
+              date(formatString: "MMMM DD, YYYY")
+              date_iso: date
+              channel
+              fixes
+              link
+              major
+              minor
+              slug
+              summary
+            }
+          }
+        }
+      }
+    }
+  }
+`;
