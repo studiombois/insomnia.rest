@@ -19,7 +19,6 @@ export const pageQuery = graphql`
               major
               minor
               slug
-              slug
               summary
             }
           }
