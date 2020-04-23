@@ -41,10 +41,7 @@ export default class BlogTemplate extends React.Component {
           <section className="content container">
             <div className="row">
               <div className="col-12">
-                {html
-                  ? <p dangerouslySetInnerHTML={{__html: html}}/>
-                  : <p>{`Version ${frontmatter.slug} is here!`}</p>
-                }
+                {html && <p dangerouslySetInnerHTML={{__html: html}}/>}
                 <p className="center">
                   <DownloadButton/>
                   {' '}
@@ -57,7 +54,7 @@ export default class BlogTemplate extends React.Component {
                 {frontmatter.major && (
                   <React.Fragment>
                     <p><strong>Major Changes</strong></p>
-                    <ul className="ul--decorated">
+                    <ul className="ul--decorated m-0">
                       {frontmatter.major.map(c => (
                         <li key={c} className="li--major">
                           <ChangelogListItem text={c}/>

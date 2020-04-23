@@ -64,9 +64,9 @@ export default ({
           <section>
             <div className="row">
               <div className="col-12 article--preview__content">
-                <p>{excerpt || `Version ${frontmatter.slug} is here!`}</p>
+                {excerpt && <p className="mt-0">{excerpt}</p>}
                 {frontmatter.major && (
-                  <ul className="ul--decorated">
+                  <ul className="ul--decorated m-0">
                     {frontmatter.major.map(c => (
                       <li key={c} className="li--major">
                         <ChangelogListItem text={c} />
