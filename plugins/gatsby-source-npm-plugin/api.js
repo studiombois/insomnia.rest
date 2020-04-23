@@ -81,8 +81,11 @@ async function getDetail(pkg) {
     released: npm.data.time.created,
     repository: npm.data.repository,
     git,
-    // REMOVE FOR GENERIC PLUGIN
-    meta: currentPkg.insomnia || {}
+    meta: {
+      description: '',
+      unlisted: false,
+      ...currentPkg.insomnia,
+    }
   };
 }
 

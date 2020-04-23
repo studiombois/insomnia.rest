@@ -20,7 +20,8 @@ module.exports = {
       resolve: 'gatsby-source-npm-plugin',
       options: {
         query: 'insomnia',
-        filter: 'insomnia-plugin-'
+        filter: 'insomnia-plugin-',
+        perFetch: 50,
       }
     },
     {
