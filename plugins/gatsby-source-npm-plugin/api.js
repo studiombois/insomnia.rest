@@ -81,13 +81,21 @@ async function getDetail(pkg) {
     released: npm.data.time.created,
     repository: npm.data.repository,
     git,
-    // REMOVE FOR GENERIC PLUGIN
-    meta: currentPkg.insomnia || {}
+    meta: {
+      description: '',
+      unlisted: false,
+      ...currentPkg.insomnia,
+    }
   };
 }
 
 async function getDownload(period, pkg) {
-  const response = await axios(NPM_API_DWNINFO(period, pkg));
+  let response;
+  try {
+    response = await axios(NPM_API_DWNINFO(period, pkg));
+  } catch (e) {
+    response = { data: { downloads: 0 } };
+  }
   return response.data;
 }
 

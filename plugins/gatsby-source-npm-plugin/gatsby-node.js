@@ -32,7 +32,4 @@ exports.sourceNodes = async (
 
   // Process data into nodes.
   response.packages.forEach(pkg => createNode(processPackage(pkg)))
-
-  // We're done, return.
-  return
 }
