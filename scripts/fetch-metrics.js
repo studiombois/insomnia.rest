@@ -74,6 +74,7 @@ function generateChangelog() {
     const content = fs.readFileSync(p, 'utf8');
     const frontmatter = matter(content).data;
     items.push({
+      app: frontmatter.app,
       date: frontmatter.date,
       version: frontmatter.slug,
       channel: frontmatter.channel || 'stable',

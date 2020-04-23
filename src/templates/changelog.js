@@ -11,18 +11,24 @@ import Contributors from '../partials/contributors';
 export default class BlogTemplate extends React.Component {
   render () {
     const {data: {markdownRemark: {frontmatter, html}}} = this.props;
-    const title = `Insomnia v${frontmatter.slug}`;
+    const appName = frontmatter.app === 'com.insomnia.designer' ? 'Designer' : '';
+    const titleStr = `Insomnia ${appName} v${frontmatter.slug}`;
+
     const summary = `Release notes for version ${frontmatter.slug}`;
     return (
       <React.Fragment>
-        <Title>{title}</Title>
+        <Title>{titleStr}</Title>
         <article>
-          <SocialCards title={title} summary={summary}/>
+          <SocialCards title={titleStr} summary={summary}/>
           <header>
             <div className="container">
               <div className="row">
                 <div className="col-12">
-                  <h1>{title}</h1>
+                  <h1>
+                    Insomnia {appName}
+                    {' '}
+                    <code>v{frontmatter.slug}</code>
+                  </h1>
                   <div className="meta">
                     <time dateTime={frontmatter.date}>
                       {frontmatter.date}
@@ -89,7 +95,7 @@ export default class BlogTemplate extends React.Component {
           </section>
         </article>
         <section className="section--bordered container share">
-          <ShareButtons title={title}/>
+          <ShareButtons title={titleStr}/>
         </section>
         <Contributors/>
       </React.Fragment>

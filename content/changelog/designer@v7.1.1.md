@@ -1,8 +1,7 @@
 ---
-app: com.insomnia.app
-date: 2020-02-18
-title: Insomnia v7.1.1
-slug: 7.1.1
+app: com.insomnia.designer
+date: 2020-04-28
+slug: 2020.1
 fixes:
 - Fix regression causing performance issues (PR:1951:serpilacar)
 ---
