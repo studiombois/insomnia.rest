@@ -73,7 +73,22 @@ function generateChangelog() {
     }
     const content = fs.readFileSync(p, 'utf8');
     const frontmatter = matter(content).data;
+
+    let tag;
+    if (frontmatter.slug.match(/^\d\./)) {
+      // Old semver versions were of a different format
+      tag = `v${frontmatter.slug}`;
+    } else {
+      // New designer@2020.1.0 versions are like this
+      tag = frontmatter.app === 'com.insomnia.rest'
+        ? `core@${frontmatter.slug}`
+        : `designer@${frontmatter.slug}`;
+    }
+
+    const downloadRoot = `https://github.com/Kong/insomnia/releases/download/${tag}/`;
+
     items.push({
+      dlRoot: downloadRoot,
       app: frontmatter.app,
       date: frontmatter.date,
       version: frontmatter.slug,
