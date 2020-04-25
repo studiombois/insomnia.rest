@@ -1,10 +1,13 @@
 import React from 'react';
 import Link from './link';
 
-const ChangelogLink = ({children, frontmatter}) => (
-  <Link to={`/changelog/${frontmatter.slug}`}>
-    {children || frontmatter.title}
-  </Link>
-);
+const ChangelogLink = ({ children, frontmatter }) => {
+  const app = frontmatter.app === 'com.insomnia.designer' ? 'designer' : 'core';
+  return (
+    <Link to={`/changelog/${app}/${frontmatter.slug}`}>
+      {children || frontmatter.title}
+    </Link>
+  );
+};
 
-export default ChangelogLink
+export default ChangelogLink;

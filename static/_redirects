@@ -35,6 +35,9 @@
 /changelog/7.0.2/                                                /changelog/7.0.3/
 /changelog/7.0.4/                                                /changelog/7.0.5/
 
+# New changelog routes
+/changelog/:version                                              /changelog/core/:version
+
 # Legacy Docs
 /documentation/support-and-feedback/*       /support/
 /documentation/installation/*               https://support.insomnia.rest/article/23-installation

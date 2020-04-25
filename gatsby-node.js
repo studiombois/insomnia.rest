@@ -41,6 +41,7 @@ module.exports.createPages = async function(data) {
             sourceInstanceName
             childMarkdownRemark {
               frontmatter {
+                app
                 date(formatString: "MMMM DD, YYYY")
                 date_iso: date
                 channel
@@ -86,7 +87,8 @@ module.exports.createPages = async function(data) {
         seriesCounts[s] = (seriesCounts[s] || 0) + 1;
       }
     } else if (edge.node.sourceInstanceName === 'changelog') {
-      urlPath = `/changelog/${frontmatter.slug}`;
+      const app = frontmatter.app === 'com.insomnia.designer' ? 'designer' : 'core';
+      urlPath = `/changelog/${app}/${frontmatter.slug}`;
       template = templateChangelog;
     } else if (edge.node.sourceInstanceName === 'page') {
       urlPath = `/${frontmatter.slug}`;
