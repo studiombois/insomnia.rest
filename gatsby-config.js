@@ -8,7 +8,7 @@ const siteMetadata = {
   name: 'Insomnia REST Client',
   author: 'Gregory Schier',
   copyright: 'Floating Keyboard Software Inc.',
-  copyrightURL: 'https://floatingkeyboard.com'
+  copyrightURL: 'https://floatingkeyboard.com',
 };
 
 module.exports = {
@@ -22,15 +22,15 @@ module.exports = {
         query: 'insomnia',
         filter: 'insomnia-plugin-',
         perFetch: 50,
-      }
+      },
     },
     {
       resolve: 'gatsby-plugin-less',
       options: {
         theme: {
           // Override Less variables here
-        }
-      }
+        },
+      },
     },
     {
       resolve: 'gatsby-plugin-favicon',
@@ -46,37 +46,37 @@ module.exports = {
           firefox: true,
           twitter: false,
           yandex: false,
-          windows: false
-        }
-      }
+          windows: false,
+        },
+      },
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'changelog',
-        path: `${__dirname}/content/changelog/`
-      }
+        path: `${__dirname}/content/changelog/`,
+      },
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'blog',
-        path: `${__dirname}/content/blog/`
-      }
+        path: `${__dirname}/content/blog/`,
+      },
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'page',
-        path: `${__dirname}/content/pages/`
-      }
+        path: `${__dirname}/content/pages/`,
+      },
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'assets',
-        path: `${__dirname}/src/assets/`
-      }
+        path: `${__dirname}/src/assets/`,
+      },
     },
     'gatsby-transformer-remark',
     `gatsby-transformer-sharp`,
@@ -90,8 +90,8 @@ module.exports = {
         background_color: '#ffffff',
         theme_color: '#675BC0',
         display: 'minimal-ui',
-        icon: 'src/assets/favicon.png'
-      }
+        icon: 'src/assets/favicon.png',
+      },
     },
     {
       resolve: 'gatsby-plugin-feed',
@@ -104,16 +104,16 @@ module.exports = {
 
           return {
             ...siteMetadata,
-            ...rest
+            ...rest,
           };
         },
         feeds: [
           feedOptions('blog'),
-          feedOptions('changelog')
-        ]
-      }
-    }
-  ]
+          feedOptions('changelog'),
+        ],
+      },
+    },
+  ],
 };
 
 function feedOptions(name) {
@@ -133,12 +133,20 @@ function feedOptions(name) {
           return tsB.getTime() - tsA.getTime();
         })
         .map(({ node: { childMarkdownRemark: { html, frontmatter } } }) => {
-          const urlPath = `${name}/${frontmatter.slug}`;
+          console.log('NODE', frontmatter);
+          let urlPath = `${name}/${frontmatter.slug}`;
+
+          if (frontmatter.app === 'com.insomnia.app') {
+            urlPath = `${name}/core/${frontmatter.slug}`;
+          } else if (frontmatter.app === 'com.insomnia.designer') {
+            urlPath = `${name}/designer/${frontmatter.slug}`;
+          }
+
           return {
             ...frontmatter,
             description: html,
             url: siteMetadata.siteUrl + urlPath,
-            guid: urlPath
+            guid: urlPath,
           };
         });
     },
@@ -150,6 +158,7 @@ function feedOptions(name) {
               childMarkdownRemark {
                 html
                 frontmatter {
+                  app
                   date
                   slug
                   title
@@ -159,6 +168,6 @@ function feedOptions(name) {
           }
         }
       }
-    `
+    `,
   };
 }
