@@ -34,7 +34,7 @@ export default ({
            node: {
              childMarkdownRemark: { frontmatter },
            },
-         }) => frontmatter.channel !== 'beta' && frontmatter.channel !== 'alpha',
+         }) => frontmatter.channel !== 'beta' && frontmatter.channel !== 'alpha' && frontmatter.app === 'com.insomnia.app',
       )
       .sort((a, b) => {
         const tsA = new Date(

@@ -133,7 +133,6 @@ function feedOptions(name) {
           return tsB.getTime() - tsA.getTime();
         })
         .map(({ node: { childMarkdownRemark: { html, frontmatter } } }) => {
-          console.log('NODE', frontmatter);
           let urlPath = `${name}/${frontmatter.slug}`;
 
           if (frontmatter.app === 'com.insomnia.app') {
