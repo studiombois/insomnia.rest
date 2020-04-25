@@ -85,7 +85,7 @@ function generateChangelog() {
         : `designer@${frontmatter.slug}`;
     }
 
-    const downloadRoot = `https://github.com/Kong/insomnia/releases/download/${tag}/`;
+    const downloadRoot = `https://github.com/Kong/insomnia/releases/download/${tag}`;
 
     items.push({
       dlRoot: downloadRoot,
