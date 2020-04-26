@@ -16,8 +16,8 @@ function endDate() {
   try {
     // Do this first in case another one fails
     const changelog = generateChangelog();
-    fs.writeFileSync(path.join(dirChangelog, 'changelog.json'), JSON.stringify(changelog));
-    fs.writeFileSync(path.join(dirAssets, 'changelog.json'), JSON.stringify(changelog));
+    fs.writeFileSync(path.join(dirChangelog, 'changelog.json'), JSON.stringify(changelog, null, '\t'));
+    fs.writeFileSync(path.join(dirAssets, 'changelog.json'), JSON.stringify(changelog, null, '\t'));
 
     // Fetch contributors
     const contributors = await fetchContributors();
@@ -38,7 +38,7 @@ async function fetchContributors() {
         method: 'GET',
         url: 'https://gschier:@api.github.com/repos/getinsomnia/insomnia/contributors',
         qs: { page },
-        headers: { 'User-Agent': `insomnia/website` }
+        headers: { 'User-Agent': `insomnia/website` },
       };
 
       request(options, function(err, response, body) {
@@ -73,22 +73,45 @@ function generateChangelog() {
     }
     const content = fs.readFileSync(p, 'utf8');
     const frontmatter = matter(content).data;
+    const isLegacyVersion = frontmatter.slug.match(/^\d\./);
+    const version = frontmatter.slug;
 
-    let tag;
-    if (frontmatter.slug.match(/^\d\./)) {
-      // Old semver versions were of a different format
-      tag = `v${frontmatter.slug}`;
+    let downloads;
+
+    if (isLegacyVersion && frontmatter.app === 'com.insomnia.app') {
+      const root = `https://github.com/Kong/insomnia/releases/download/v${version}`;
+      downloads = {
+        root,
+        mac: `${root}/Insomnia-${version}.dmg`,
+        macZip: `${root}/Insomnia-${version}-mac.zip`,
+        windows: `${root}/Insomnia.Setup.${version}.exe`,
+        linux: `${root}/Insomnia-${version}.AppImage`,
+        ubuntu: `${root}/insomnia_${version}_amd64.deb`,
+      };
+    } else if (frontmatter.app === 'com.insomnia.app') {
+      const root = `https://github.com/Kong/insomnia/releases/download/core@${version}`;
+      downloads = {
+        root,
+        mac: `${root}/Insomnia.Core-${version}.dmg`,
+        macZip: `${root}/Insomnia.Core-${version}.zip`,
+        windows: `${root}/Insomnia.Core-${version}.exe`,
+        linux: `${root}/Insomnia.Core-${version}.AppImage`,
+        ubuntu: `${root}/Insomnia.Core-${version}.deb`,
+      };
     } else {
-      // New designer@2020.1.0 versions are like this
-      tag = frontmatter.app === 'com.insomnia.rest'
-        ? `core@${frontmatter.slug}`
-        : `designer@${frontmatter.slug}`;
+      const root = `https://github.com/Kong/insomnia/releases/download/designer@${version}`;
+      downloads = {
+        root,
+        mac: `${root}/Insomnia.Designer-${version}.dmg`,
+        macZip: `${root}/Insomnia.Designer-${version}.zip`,
+        windows: `${root}/Insomnia.Designer-${version}.exe`,
+        linux: `${root}/Insomnia-${version}.AppImage`,
+        ubuntu: `${root}/Insomnia-${version}.deb`,
+      };
     }
 
-    const downloadRoot = `https://github.com/Kong/insomnia/releases/download/${tag}`;
-
     items.push({
-      dlRoot: downloadRoot,
+      downloads,
       app: frontmatter.app,
       date: frontmatter.date,
       version: frontmatter.slug,
@@ -96,7 +119,7 @@ function generateChangelog() {
       link: frontmatter.link || null,
       major: frontmatter.major || [],
       minor: frontmatter.minor || [],
-      fixes: frontmatter.fixes || []
+      fixes: frontmatter.fixes || [],
     });
   }
   return items.sort((a, b) => (
