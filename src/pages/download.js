@@ -19,8 +19,8 @@ export default class extends React.Component {
 
   render() {
     const { ref } = this.state;
-    const macLink = `https://updates.insomnia.rest/downloads/mac/latest?ref=${ref}`;
-    const winLink = `https://updates.insomnia.rest/downloads/windows/latest?ref=${ref}`;
+    const macLink = `https://updates.insomnia.rest/downloads/mac/latest?ref=${ref}&app=com.insomnia.app`;
+    const winLink = `https://updates.insomnia.rest/downloads/windows/latest?ref=${ref}&app=com.insomnia.app`;
 
     return (
       <React.Fragment>
