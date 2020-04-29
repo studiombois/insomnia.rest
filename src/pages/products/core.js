@@ -1,4 +1,5 @@
 import React from 'react';
+import DownloadLink from '../../components/download-link';
 import DownloadButton from '../../components/download-button';
 import SocialCards from '../../components/social-cards';
 import Img from 'gatsby-image';
@@ -44,13 +45,15 @@ export default ({ data }) => (
           <div className="row row-center-content">
             <div className="col-6 offering">
               <div className="graphic">
-                <img src={illustrationCore} />
+                <DownloadLink>
+                  <img src={illustrationCore} />
+                </DownloadLink>
               </div>
               <p>
                 The Desktop API client for Rest and GraphQL. Make requests,
                 inspect responses.
               </p>
-              <DownloadButton className="button">
+              <DownloadButton>
                 <img src={iconDownload} className="icon" alt="Download" />{' '}
                 Latest Release
               </DownloadButton>

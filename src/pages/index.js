@@ -1,4 +1,5 @@
 import React from 'react';
+import DownloadLink from '../components/download-link';
 import DownloadButton from '../components/download-button';
 import SocialCards from '../components/social-cards';
 import Link from '../components/link';
@@ -43,7 +44,9 @@ export default () => (
           <div className="row">
             <div className="col-6 offering">
               <div className="graphic">
-                <img src={illustrationDesigner} />
+                <DownloadLink>
+                  <img src={illustrationDesigner} />
+                </DownloadLink>
               </div>
               <h3 className="font-regular">
                 <img src={logoDesigner} className="icon" />
@@ -53,7 +56,7 @@ export default () => (
                 The Collaborative API Design Tool for designing and managing
                 OpenAPI specs.
               </p>
-              <DownloadButton className="button">
+              <DownloadButton>
                 <img src={iconDownload} className="icon" alt="Download" />{' '}
                 Latest Release
                 <span className="badge">New</span>
@@ -67,7 +70,9 @@ export default () => (
 
             <div className="col-6 offering">
               <div className="graphic">
-                <img src={illustrationCore} />
+                <DownloadLink>
+                  <img src={illustrationCore} />
+                </DownloadLink>
               </div>
               <h3 className="font-regular">
                 <img src={logoCore} className="icon" />
@@ -77,7 +82,7 @@ export default () => (
                 The Desktop API client for REST and GraphQL. Make requests,
                 inspect responses.
               </p>
-              <DownloadButton className="button">
+              <DownloadButton>
                 <img src={iconDownload} className="icon" alt="Download" />{' '}
                 Latest Release
               </DownloadButton>

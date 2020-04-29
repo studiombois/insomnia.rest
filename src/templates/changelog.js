@@ -113,6 +113,7 @@ export const pageQuery = graphql`
     markdownRemark(frontmatter: {slug: {eq: $slug}}) {
       html
       frontmatter {
+        app
         date(formatString: "MMMM DD, YYYY")
         slug
         major

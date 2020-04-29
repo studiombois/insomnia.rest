@@ -1,4 +1,5 @@
 import React from 'react';
+import DownloadLink from '../../components/download-link';
 import DownloadButton from '../../components/download-button';
 import SocialCards from '../../components/social-cards';
 import Img from 'gatsby-image';
@@ -41,7 +42,9 @@ export default ({ data }) => (
           <div className="row row-center-content">
             <div className="col-6 offering">
               <div className="graphic">
-                <img src={illustrationDesigner} />
+                <DownloadLink>
+                  <img src={illustrationDesigner} />
+                </DownloadLink>
               </div>
               <p>
                 The Collaborative API Design Tool for designing and managing

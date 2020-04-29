@@ -22,7 +22,7 @@ module.exports = {
       options: {
         query: 'insomnia',
         filter: 'insomnia-plugin-',
-        perFetch: 50
+        perFetch: 20
       }
     },
     {
@@ -118,9 +118,9 @@ module.exports = {
         head: false,
         anonymize: true,
         respectDNT: true,
-        pageTransitionDelay: 0,
-      },
-    },
+        pageTransitionDelay: 0
+      }
+    }
   ]
 };
 

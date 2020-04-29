@@ -403,7 +403,7 @@ export default class Component extends React.Component {
 
 export const pageQuery = graphql`
   query myQuery {
-    allNpmPackage(filter: {meta: {unlisted: {eq: false}, core: {eq: false}}}) {
+    allNpmPackage(filter: { meta: { core: { eq: false } } }) {
       edges {
         node {
           name
@@ -425,7 +425,7 @@ export const pageQuery = graphql`
               name
             }
             publisher {
-              username
+              name
             }
             readme
           }
