@@ -12,7 +12,10 @@ export default ({ data: { npmPackage: plugin } }) => (
       href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"
     />
     <Title>{plugin.name}</Title>
-    <SocialCards title={plugin.name} summary={`Install "${plugin.name}" in Insomnia`} />
+    <SocialCards
+      title={plugin.name}
+      summary={`Install "${plugin.name}" in Insomnia`}
+    />
 
     <article className="plugin-page">
       {Header(plugin)}
@@ -210,7 +213,7 @@ export const pageQuery = graphql`
           name
         }
         publisher {
-          username
+          name
         }
         links {
           npm

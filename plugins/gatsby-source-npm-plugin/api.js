@@ -3,17 +3,17 @@ const marked = require('marked');
 const gurl = {
   gh: require('parse-github-url'),
   gl: require('gitlab-url-parse'),
-  g: require('giturl').parse,
+  g: require('giturl').parse
 };
 
-const NPM_API_PGKINFO = name =>
-  `https://api.npms.io/v2/package/${encodeURIComponent(name)}`;
 const NPM_REG_INFO = name =>
   `http://registry.npmjs.com/${encodeURIComponent(name)}`;
-const NPM_API_SEARCH = (query, size, offset) =>
-  `https://api.npms.io/v2/search?q=${encodeURIComponent(
-    query,
-  )}&size=${size}&from=${offset}`;
+
+const NPM_JS_API_SEARCH = (query, size, offset) =>
+  `https://npmjs.com/search?q=${encodeURIComponent(
+    query
+  )}&page=${offset}&perPage=${size}`;
+
 const NPM_API_DWNINFO = (period, pkg) =>
   `https://api.npmjs.org/downloads/point/${period}/${pkg}`;
 
@@ -34,12 +34,18 @@ function getLastYearRange() {
 }
 
 async function getDetail(pkg) {
-  // const npms = await axios(NPM_API_PGKINFO(pkg.name));
   const npm = await axios(NPM_REG_INFO(pkg.name));
 
   const currentVersion = npm.data['dist-tags'].latest;
   const currentPkg = npm.data.versions[currentVersion];
-  const git = { gh: {}, gl: {} };
+  const git = {
+    isGitlab: false,
+    cdn: '',
+    username: '',
+    project: '',
+    gh: {},
+    gl: {}
+  };
 
   // Webify git url
   if (npm.data.repository && npm.data.repository.url) {
@@ -73,6 +79,17 @@ async function getDetail(pkg) {
     git.gl = gl;
   }
 
+  // Remove initial header from readme to create nicer pages
+  if (npm.data.readme) {
+    let lines = npm.data.readme.split('\n');
+
+    if (lines[0][0] === '#') {
+      lines.shift();
+    }
+
+    npm.data.readme = lines.join('\n');
+  }
+
   return {
     name: npm.data.name,
     readme: npm.data.readme,
@@ -83,8 +100,8 @@ async function getDetail(pkg) {
       description: '',
       unlisted: false,
       core: false,
-      ...currentPkg.insomnia,
-    },
+      ...currentPkg.insomnia
+    }
   };
 }
 
@@ -142,7 +159,7 @@ function buildMarkdownRenderer(pkgDetails) {
 function buildPkg(pkg, detailsMap, downloads) {
   const details = detailsMap[pkg.name];
   const readme = marked(details.readme || '', {
-    renderer: buildMarkdownRenderer(details),
+    renderer: buildMarkdownRenderer(details)
   });
   const readmeRaw = details.readme;
   const meta = details.meta;
@@ -151,13 +168,19 @@ function buildPkg(pkg, detailsMap, downloads) {
   const lastWeek = downloads.lastWeek[pkg.name];
   const lastMonth = downloads.lastMonth[pkg.name];
   const lastYear = downloads.lastYear[pkg.name];
+
+  // We do this to ensure that the date is ALWAYS of type date
+  // and to avoid a GraphQL Int value too large error
+  const date = new Date(pkg.date.ts);
+  delete pkg.date;
+
   return {
     name: pkg.name,
     downloads: {
       lastDay: lastDay ? lastDay.downloads : 0,
       lastWeek: lastWeek ? lastWeek.downloads : 0,
       lastMonth: lastMonth ? lastMonth.downloads : 0,
-      lastYear: lastYear ? lastYear.downloads : 0,
+      lastYear: lastYear ? lastYear.downloads : 0
     },
     meta,
     npm: {
@@ -165,17 +188,23 @@ function buildPkg(pkg, detailsMap, downloads) {
       git: details.git,
       repository: details.repository,
       released: details.released,
+      date,
       readme,
-      readmeRaw,
-    },
+      readmeRaw
+    }
   };
 }
 
 async function fetch(query, allowDeprecated, filter, offset, size) {
   // Fetch packages
-  const pkgsResp = await axios(NPM_API_SEARCH(query, size, offset));
+  const pkgsResp = await axios(NPM_JS_API_SEARCH(query, size, offset), {
+    headers: {
+      'x-spiferack': 1
+    }
+  });
+
   const pkgs = pkgsResp.data;
-  let results = pkgs.results;
+  let results = pkgs.objects;
 
   // Filter out packages when value exists
   if (filter) {
@@ -202,39 +231,40 @@ async function fetch(query, allowDeprecated, filter, offset, size) {
     lastDay: await getDownloads('last-day', results),
     lastWeek: await getDownloads('last-week', results),
     lastMonth: await getDownloads('last-month', results),
-    lastYear: await getDownloads(getLastYearRange(), results),
+    lastYear: await getDownloads(getLastYearRange(), results)
   };
 
   return {
     packages: results.map(obj =>
-      buildPkg(obj.package, detailsMap, downloadMap),
+      buildPkg(obj.package, detailsMap, downloadMap)
     ),
-    totalResults: pkgs.total,
+    totalResults: pkgs.total
   };
 }
 
 module.exports = {
   getPackages: async function(
     query,
-    { filter, allowDeprecated = false, perFetch = 100 },
+    { filter, allowDeprecated = false, perFetch = 20 }
   ) {
     let results = await fetch(query, allowDeprecated, filter, 0, perFetch);
+    let pages = Math.ceil(results.totalResults / perFetch);
+    let page = 0;
 
-    let currentOffset = perFetch;
-    let total = results.totalResults;
+    while (page < pages) {
+      page += 1;
 
-    while (currentOffset < total) {
       let nextPage = await fetch(
         query,
         allowDeprecated,
         filter,
-        currentOffset,
-        perFetch,
+        page,
+        perFetch
       );
-      currentOffset += perFetch;
+
       results.packages = results.packages.concat(nextPage.packages);
     }
 
     return results;
-  },
+  }
 };
