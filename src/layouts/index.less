@@ -43,14 +43,12 @@ a:hover, .button:hover {
 /* ~~~~~~~~~ */
 
 .jumbotron {
-  background: linear-gradient(165deg, #6e60cc 0%, #5c5cb8 100%);
+  background: #3F388D;
+  background-image: linear-gradient(to bottom, #3e388c 0%, #40398f 14.2857142857%, #413b92 28.5714285714%, #433c95 42.8571428571%, #443d99 57.1428571429%, #463e9c 71.4285714286%, #47409f 85.7142857143%, #4941a2 100%);
   text-align: center;
-  padding: 9rem 0 8rem 0;
-  margin-bottom: 2rem;
 }
 
 .jumbotron *:not(.button) {
-  color: #fff;
   line-height: 1.5em;
 }
 
@@ -78,7 +76,6 @@ img.jumbotron__icon {
 .jumbotron .button {
   color: #fff;
   border: 1px solid #fff;
-  margin: 4rem auto 5rem;
   font-size: 1.1em;
 }
 
@@ -105,6 +102,181 @@ img.jumbotron__icon {
   z-index: 1;
   border-radius: 0.2rem;
   box-shadow: 0 0 5rem rgba(0, 0, 0, 0.2);
+}
+
+.jumbotron-inner {
+  padding: 4rem 0 4rem 0;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.jumbotron-inner:before {
+  content: ' ';
+  display: block;
+  position: absolute;
+  bottom: -200px;
+  left: -400px;
+  right: -400px;
+  transform: rotate(-10deg);
+  z-index: 1;
+  background: rgba(0,0,0,0.03);
+  height: 300px;
+  transition: all ease-in-out .8s;
+}
+
+.jumbotron-inner:after {
+  content: ' ';
+  display: block;
+  position: absolute;
+  bottom: -200px;
+  left: -400px;
+  right: -400px;
+  transform: rotate(10deg);
+  z-index: 1;
+  background: rgba(0,0,0,0.03);
+  height: 300px;
+  transition: all ease-in-out .8s;
+}
+
+/* ==== SLOGAN ==== */
+
+@keyframes widthGrowFromLeft {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 108%;
+  }
+}
+
+.slogan {
+  text-align: center;
+  margin-bottom: 4.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.slogan h1 {
+  color: white;
+  padding: 0;
+  margin: 0.8rem 0 0.8rem;
+}
+
+.slogan h2 {
+  color: rgba(255,255,255,0.5);
+  margin: 0;
+  padding: 0;
+}
+
+.slogan u {
+  color: white;
+  text-decoration: none;
+  position: relative;
+}
+
+.slogan u::after {
+  content: ' ';
+  display: block;
+  position: absolute;
+  left: -5px;
+  right: initial;
+  bottom: 3px;
+  height: 30px;
+  background: rgba(255,255,255,0.15);
+  transform: skewX(-20deg) skewY(-2deg);
+  width: 108%;
+  animation: 1s ease-in 0s 1 widthGrowFromLeft;
+}
+
+/* ==== PRODUCT OFFERINGS ==== */
+
+.product-offerings {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.offering {
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+.offering:hover .graphic {
+  transform: scale(1.05)
+}
+
+.offering .graphic {
+  height: 160px;
+  width: 231px;
+  background: rgba(0,0,0,0.1);
+  box-shadow: 9px 10px 0px rgba(0,0,0,0.1);
+  border-radius: 6px;
+  margin: 0 auto 2rem;
+  transition: transform ease-in-out .2s;
+}
+
+.offering h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.offering h3 span {
+  color: white;
+  font-weight: 500;
+}
+
+.offering h3 .icon {
+  margin: 0 5px 0 0;
+}
+
+.offering p {
+  color: rgba(255,255,255,0.7)
+}
+
+.offering .button {
+  transition: all ease-in-out .1s;
+}
+
+.offering .button:hover {
+  background: rgba(255,255,255,0.2);
+  border-color: white;
+  color: white;
+}
+
+.offering .button:hover .badge {
+  background: rgba(255,255,255,0.3);
+}
+
+.offering .button .icon {
+  width: 14px;
+  margin-right: 5px;
+}
+
+.offering .latest-version {
+  margin: 0.2rem 0 0;
+}
+
+.offering .latest-version small {
+  color: rgba(255,255,255,0.5);
+  font-size: 0.7em !important;
+}
+
+/* ==== Badge ==== */
+
+.offering .badge {
+  display: inline;
+  background: rgba(255,255,255,0.2);
+  padding: calc(1rem / 8) calc(1rem / 4);
+  margin-left: 0.5rem;
+  border-radius: 3px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  position: relative;
+  top: -2px;
+  transition: transform ease-in-out .1s;
 }
 
 /* ~~~~~~~~~~~~ */
@@ -160,17 +332,29 @@ article a > img:hover {
 /* DOWNLOADS PAGE */
 /* ~~~~~~~~~~~~~~ */
 
+.downloads {
+  max-width: 80rem;
+  margin: auto;
+  padding-bottom: 2rem;
+}
+
 .platform-download .button {
   margin-top: 2rem;
-  width: 10rem;
 }
 
 .platform-download__icon {
   background: #ccc;
-  width: 10rem;
-  height: 10rem;
+  width: 9rem;
+  height: 9rem;
   display: block;
   margin: auto;
+  border-radius: 8px;
+}
+
+.platform-download__img {
+  img {
+    margin: 0 auto;
+  }
 }
 
 .platform-download__icon.apple {
@@ -196,6 +380,12 @@ article a > img:hover {
   height: 1em;
   color: inherit;
   line-height: 1em;
+}
+
+.icon.icon-bg {
+  background: #eee;
+  border-radius: 3px;
+  padding: 3px;
 }
 
 .button .icon {
@@ -1255,29 +1445,15 @@ body[data-logged-in="no"] .show-logged-out {
   }
 }
 
-@media only screen and (min-width: 23rem) {
-  .jumbotron {
-    margin-bottom: 7rem;
-  }
-}
-
 @media only screen and (min-width: 33.75rem) {
   .img--promo {
     max-height: 12rem;
-  }
-
-  .jumbotron {
-    margin-bottom: 12rem;
   }
 }
 
 @media only screen and (min-width: 45rem) {
   .img--promo {
     max-height: 7rem;
-  }
-
-  .jumbotron {
-    margin-bottom: 17rem;
   }
 
   .pricing {
@@ -1297,10 +1473,6 @@ body[data-logged-in="no"] .show-logged-out {
 @media only screen and (min-width: 60rem) {
   .img--promo {
     max-height: 10rem;
-  }
-
-  .jumbotron {
-    margin-bottom: 19rem;
   }
 
   .jumbotron__img-container {

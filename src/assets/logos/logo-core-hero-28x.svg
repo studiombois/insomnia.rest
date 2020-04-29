@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="28px" height="28px" viewBox="0 0 28 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>logo-core-hero-28x</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="100%" x2="50%" y2="3.061617e-15%" id="linearGradient-1">
+            <stop stop-color="#7400E1" offset="0%"></stop>
+            <stop stop-color="#4000BF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Layout-fixed" transform="translate(-864.000000, -568.000000)">
+            <g id="Group-3" transform="translate(864.000000, 565.000000)">
+                <g id="logo-core-hero-28x" transform="translate(0.000000, 3.000000)">
+                    <circle id="Oval" fill="#FFFFFF" fill-rule="nonzero" cx="14" cy="14" r="14"></circle>
+                    <path d="M14.1666667,3.5 C19.9656565,3.5 24.6666667,8.20101013 24.6666667,14 C24.6666667,19.7989899 19.9656565,24.5 14.1666667,24.5 C8.36767679,24.5 3.66666667,19.7989899 3.66666667,14 C3.66666667,12.5827649 3.94744933,11.2311101 4.4564206,9.99762966 C5.1995943,11.0096619 6.39807131,11.6666667 7.75,11.6666667 C10.0051627,11.6666667 11.8333333,9.83849606 11.8333333,7.58333333 C11.8333333,6.23140464 11.1763286,5.03292763 10.1641899,4.28977315 C11.3977768,3.78078266 12.7494316,3.5 14.1666667,3.5 Z" id="Combined-Shape" fill="url(#linearGradient-1)"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

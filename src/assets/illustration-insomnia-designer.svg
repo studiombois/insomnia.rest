@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="242px" height="162px" viewBox="0 0 242 162" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>insomnia-designer</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="insomnia-designer">
+            <polygon id="bg-illustration" fill-opacity="0.15" fill="#000000" points="2 2 240 2 240 160 2 160"></polygon>
+            <path d="M238,0 C240.209139,0 242,1.790861 242,4 L242,158 C242,160.209139 240.209139,162 238,162 L4,162 C1.790861,162 0,160.209139 0,158 L0,4 C0,1.790861 1.790861,0 4,0 L238,0 Z M238,2 L4,2 C2.9456382,2 2.08183488,2.81587779 2.00548574,3.85073766 L2,4 L2,158 C2,159.054362 2.81587779,159.918165 3.85073766,159.994514 L4,160 L238,160 C239.054362,160 239.918165,159.184122 239.994514,158.149262 L240,158 L240,4 C240,2.9456382 239.184122,2.08183488 238.149262,2.00548574 L238,2 Z" id="frame" fill="#FFFFFF" fill-rule="nonzero"></path>
+            <polygon id="Rectangle" fill="#FFFFFF" points="2 18 240 18 240 20 2 20"></polygon>
+            <polygon id="Rectangle" fill="#FFFFFF" points="19 9 39 9 39 11 19 11"></polygon>
+            <polygon id="Rectangle" fill="#FFFFFF" points="51 9 71 9 71 11 51 11"></polygon>
+            <polygon id="Rectangle" fill="#FFFFFF" points="10 30 42 30 42 34 10 34"></polygon>
+            <circle id="Oval" fill="#FFFFFF" cx="12" cy="10" r="3"></circle>
+            <path d="M211,29 L231,29 C231.552285,29 232,29.4477153 232,30 L232,34 C232,34.5522847 231.552285,35 231,35 L211,35 C210.447715,35 210,34.5522847 210,34 L210,30 C210,29.4477153 210.447715,29 211,29 Z" id="Rectangle" fill="#FFFFFF" opacity="0.600000024"></path>
+            <path d="M195,29 L205,29 C205.552285,29 206,29.4477153 206,30 L206,34 C206,34.5522847 205.552285,35 205,35 L195,35 C194.447715,35 194,34.5522847 194,34 L194,30 C194,29.4477153 194.447715,29 195,29 Z" id="Rectangle" fill="#FFFFFF" opacity="0.600000024"></path>
+            <path d="M227,7 L231,7 C231.552285,7 232,7.44771525 232,8 L232,12 C232,12.5522847 231.552285,13 231,13 L227,13 C226.447715,13 226,12.5522847 226,12 L226,8 C226,7.44771525 226.447715,7 227,7 Z" id="Rectangle" fill="#FFFFFF" opacity="0.600000024"></path>
+            <polygon id="Path-2" fill="#FFFFFF" points="43 13 45 7 47 7 45 13"></polygon>
+            <g id="card" transform="translate(10.000000, 44.000000)">
+                <rect id="Rectangle" stroke-opacity="0.5" stroke="#FFFFFF" stroke-width="2" x="1" y="1" width="36" height="46" rx="2"></rect>
+                <rect id="Rectangle" fill="#FFFFFF" opacity="0.25" x="6" y="6" width="8" height="2"></rect>
+                <polygon id="Rectangle" fill="#FFFFFF" points="6 15 28 15 28 17 6 17"></polygon>
+                <polygon id="Rectangle" fill-opacity="0.6" fill="#FFFFFF" points="11 35 32 35 32 37 11 37"></polygon>
+                <polygon id="Rectangle" fill-opacity="0.6" fill="#FFFFFF" points="11 40 28 40 28 42 11 42"></polygon>
+                <polygon id="Rectangle" fill-opacity="0.6" fill="#FFFFFF" points="6 20 16 20 16 22 6 22"></polygon>
+                <polygon id="Rectangle" fill-opacity="0.6" fill="#FFFFFF" points="6 35 8 35 8 37 6 37"></polygon>
+                <polygon id="Rectangle" fill-opacity="0.6" fill="#FFFFFF" points="6 40 8 40 8 42 6 42"></polygon>
+            </g>
+            <g id="card" transform="translate(56.000000, 44.000000)">
+                <rect id="Rectangle" stroke-opacity="0.5" stroke="#FFFFFF" stroke-width="2" x="1" y="1" width="36" height="46" rx="2"></rect>
+                <rect id="Rectangle" fill="#FFFFFF" opacity="0.25" x="6" y="6" width="8" height="2"></rect>
+                <polygon id="Rectangle" fill="#FFFFFF" points="6 15 28 15 28 17 6 17"></polygon>
+                <polygon id="Rectangle" fill-opacity="0.6" fill="#FFFFFF" points="11 35 32 35 32 37 11 37"></polygon>
+                <polygon id="Rectangle" fill-opacity="0.6" fill="#FFFFFF" points="11 40 28 40 28 42 11 42"></polygon>
+                <polygon id="Rectangle" fill-opacity="0.6" fill="#FFFFFF" points="6 20 16 20 16 22 6 22"></polygon>
+                <polygon id="Rectangle" fill-opacity="0.6" fill="#FFFFFF" points="6 35 8 35 8 37 6 37"></polygon>
+                <polygon id="Rectangle" fill-opacity="0.6" fill="#FFFFFF" points="6 40 8 40 8 42 6 42"></polygon>
+            </g>
+            <g id="card" transform="translate(102.000000, 44.000000)">
+                <rect id="Rectangle" stroke-opacity="0.5" stroke="#FFFFFF" stroke-width="2" x="1" y="1" width="36" height="46" rx="2"></rect>
+                <rect id="Rectangle" fill="#FFFFFF" opacity="0.25" x="6" y="6" width="8" height="2"></rect>
+                <polygon id="Rectangle" fill="#FFFFFF" points="6 15 28 15 28 17 6 17"></polygon>
+                <polygon id="Rectangle" fill-opacity="0.6" fill="#FFFFFF" points="11 35 32 35 32 37 11 37"></polygon>
+                <polygon id="Rectangle" fill-opacity="0.6" fill="#FFFFFF" points="11 40 28 40 28 42 11 42"></polygon>
+                <polygon id="Rectangle" fill-opacity="0.6" fill="#FFFFFF" points="6 20 16 20 16 22 6 22"></polygon>
+                <polygon id="Rectangle" fill-opacity="0.6" fill="#FFFFFF" points="6 35 8 35 8 37 6 37"></polygon>
+                <polygon id="Rectangle" fill-opacity="0.6" fill="#FFFFFF" points="6 40 8 40 8 42 6 42"></polygon>
+            </g>
+            <g id="card" transform="translate(148.000000, 44.000000)">
+                <rect id="Rectangle" stroke-opacity="0.5" stroke="#FFFFFF" stroke-width="2" x="1" y="1" width="36" height="46" rx="2"></rect>
+                <rect id="Rectangle" fill="#FFFFFF" opacity="0.25" x="6" y="6" width="8" height="2"></rect>
+                <polygon id="Rectangle" fill="#FFFFFF" points="6 15 28 15 28 17 6 17"></polygon>
+                <polygon id="Rectangle" fill-opacity="0.6" fill="#FFFFFF" points="11 35 32 35 32 37 11 37"></polygon>
+                <polygon id="Rectangle" fill-opacity="0.6" fill="#FFFFFF" points="11 40 28 40 28 42 11 42"></polygon>
+                <polygon id="Rectangle" fill-opacity="0.6" fill="#FFFFFF" points="6 20 16 20 16 22 6 22"></polygon>
+                <polygon id="Rectangle" fill-opacity="0.6" fill="#FFFFFF" points="6 35 8 35 8 37 6 37"></polygon>
+                <polygon id="Rectangle" fill-opacity="0.6" fill="#FFFFFF" points="6 40 8 40 8 42 6 42"></polygon>
+            </g>
+            <g id="card" transform="translate(10.000000, 100.000000)">
+                <rect id="Rectangle" stroke-opacity="0.5" stroke="#FFFFFF" stroke-width="2" x="1" y="1" width="36" height="46" rx="2"></rect>
+                <rect id="Rectangle" fill="#FFFFFF" opacity="0.25" x="6" y="6" width="8" height="2"></rect>
+                <polygon id="Rectangle" fill="#FFFFFF" points="6 15 28 15 28 17 6 17"></polygon>
+                <polygon id="Rectangle" fill-opacity="0.6" fill="#FFFFFF" points="11 35 32 35 32 37 11 37"></polygon>
+                <polygon id="Rectangle" fill-opacity="0.6" fill="#FFFFFF" points="11 40 28 40 28 42 11 42"></polygon>
+                <polygon id="Rectangle" fill-opacity="0.6" fill="#FFFFFF" points="6 20 16 20 16 22 6 22"></polygon>
+                <polygon id="Rectangle" fill-opacity="0.6" fill="#FFFFFF" points="6 35 8 35 8 37 6 37"></polygon>
+                <polygon id="Rectangle" fill-opacity="0.6" fill="#FFFFFF" points="6 40 8 40 8 42 6 42"></polygon>
+            </g>
+            <g id="card" transform="translate(56.000000, 100.000000)">
+                <rect id="Rectangle" stroke-opacity="0.5" stroke="#FFFFFF" stroke-width="2" x="1" y="1" width="36" height="46" rx="2"></rect>
+                <rect id="Rectangle" fill="#FFFFFF" opacity="0.25" x="6" y="6" width="8" height="2"></rect>
+                <polygon id="Rectangle" fill="#FFFFFF" points="6 15 28 15 28 17 6 17"></polygon>
+                <polygon id="Rectangle" fill-opacity="0.6" fill="#FFFFFF" points="11 35 32 35 32 37 11 37"></polygon>
+                <polygon id="Rectangle" fill-opacity="0.6" fill="#FFFFFF" points="11 40 28 40 28 42 11 42"></polygon>
+                <polygon id="Rectangle" fill-opacity="0.6" fill="#FFFFFF" points="6 20 16 20 16 22 6 22"></polygon>
+                <polygon id="Rectangle" fill-opacity="0.6" fill="#FFFFFF" points="6 35 8 35 8 37 6 37"></polygon>
+                <polygon id="Rectangle" fill-opacity="0.6" fill="#FFFFFF" points="6 40 8 40 8 42 6 42"></polygon>
+            </g>
+            <g id="card" transform="translate(102.000000, 100.000000)">
+                <rect id="Rectangle" stroke-opacity="0.5" stroke="#FFFFFF" stroke-width="2" x="1" y="1" width="36" height="46" rx="2"></rect>
+                <rect id="Rectangle" fill="#FFFFFF" opacity="0.25" x="6" y="6" width="8" height="2"></rect>
+                <polygon id="Rectangle" fill="#FFFFFF" points="6 15 28 15 28 17 6 17"></polygon>
+                <polygon id="Rectangle" fill-opacity="0.6" fill="#FFFFFF" points="11 35 32 35 32 37 11 37"></polygon>
+                <polygon id="Rectangle" fill-opacity="0.6" fill="#FFFFFF" points="11 40 28 40 28 42 11 42"></polygon>
+                <polygon id="Rectangle" fill-opacity="0.6" fill="#FFFFFF" points="6 20 16 20 16 22 6 22"></polygon>
+                <polygon id="Rectangle" fill-opacity="0.6" fill="#FFFFFF" points="6 35 8 35 8 37 6 37"></polygon>
+                <polygon id="Rectangle" fill-opacity="0.6" fill="#FFFFFF" points="6 40 8 40 8 42 6 42"></polygon>
+            </g>
+            <g id="card" transform="translate(148.000000, 100.000000)">
+                <rect id="Rectangle" stroke-opacity="0.5" stroke="#FFFFFF" stroke-width="2" x="1" y="1" width="36" height="46" rx="2"></rect>
+                <rect id="Rectangle" fill="#FFFFFF" opacity="0.25" x="6" y="6" width="8" height="2"></rect>
+                <polygon id="Rectangle" fill="#FFFFFF" points="6 15 28 15 28 17 6 17"></polygon>
+                <polygon id="Rectangle" fill-opacity="0.6" fill="#FFFFFF" points="11 35 32 35 32 37 11 37"></polygon>
+                <polygon id="Rectangle" fill-opacity="0.6" fill="#FFFFFF" points="11 40 28 40 28 42 11 42"></polygon>
+                <polygon id="Rectangle" fill-opacity="0.6" fill="#FFFFFF" points="6 20 16 20 16 22 6 22"></polygon>
+                <polygon id="Rectangle" fill-opacity="0.6" fill="#FFFFFF" points="6 35 8 35 8 37 6 37"></polygon>
+                <polygon id="Rectangle" fill-opacity="0.6" fill="#FFFFFF" points="6 40 8 40 8 42 6 42"></polygon>
+            </g>
+            <g id="card" transform="translate(194.000000, 44.000000)">
+                <rect id="Rectangle" stroke-opacity="0.5" stroke="#FFFFFF" stroke-width="2" x="1" y="1" width="36" height="46" rx="2"></rect>
+                <rect id="Rectangle" fill="#FFFFFF" opacity="0.25" x="6" y="6" width="8" height="2"></rect>
+                <polygon id="Rectangle" fill="#FFFFFF" points="6 15 28 15 28 17 6 17"></polygon>
+                <polygon id="Rectangle" fill-opacity="0.6" fill="#FFFFFF" points="11 35 32 35 32 37 11 37"></polygon>
+                <polygon id="Rectangle" fill-opacity="0.6" fill="#FFFFFF" points="11 40 28 40 28 42 11 42"></polygon>
+                <polygon id="Rectangle" fill-opacity="0.6" fill="#FFFFFF" points="6 20 16 20 16 22 6 22"></polygon>
+                <polygon id="Rectangle" fill-opacity="0.6" fill="#FFFFFF" points="6 35 8 35 8 37 6 37"></polygon>
+                <polygon id="Rectangle" fill-opacity="0.6" fill="#FFFFFF" points="6 40 8 40 8 42 6 42"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

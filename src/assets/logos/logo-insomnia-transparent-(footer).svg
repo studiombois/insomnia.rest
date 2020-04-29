@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>Combined Shape</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Layout-fixed" transform="translate(-260.000000, -2917.000000)" fill="#FFFFFF">
+            <g id="footer" transform="translate(0.000000, 2893.000000)">
+                <g id="logo-insomnia" transform="translate(260.000000, 24.000000)">
+                    <path d="M12,0 C18.627417,0 24,5.372583 24,12 C24,18.627417 18.627417,24 12,24 C5.372583,24 0,18.627417 0,12 C0,5.372583 5.372583,0 12,0 Z M12,2.4 C11.1188836,2.4 10.2654925,2.51870557 9.45604342,2.74176995 C10.6355277,3.61632107 11.4,5.0188845 11.4,6.6 C11.4,9.2509668 9.2509668,11.4 6.6,11.4 C5.0188845,11.4 3.61632107,10.6355277 2.74099687,9.45494626 C2.51870557,10.2654925 2.4,11.1188836 2.4,12 C2.4,17.3019336 6.6980664,21.6 12,21.6 C17.3019336,21.6 21.6,17.3019336 21.6,12 C21.6,6.6980664 17.3019336,2.4 12,2.4 Z" id="Combined-Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

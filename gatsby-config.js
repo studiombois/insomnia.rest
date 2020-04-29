@@ -1,6 +1,7 @@
 const siteMetadata = {
   title: 'Insomnia',
-  description: 'A powerful REST API Client with cookie management, ' +
+  description:
+    'A powerful REST API Client with cookie management, ' +
     'environment variables, code generation, and authentication for Mac, ' +
     'Window, and Linux',
   siteUrl: 'https://insomnia.rest/',
@@ -8,7 +9,7 @@ const siteMetadata = {
   name: 'Insomnia REST Client',
   author: 'Gregory Schier',
   copyright: 'Floating Keyboard Software Inc.',
-  copyrightURL: 'https://floatingkeyboard.com',
+  copyrightURL: 'https://floatingkeyboard.com'
 };
 
 module.exports = {
@@ -21,16 +22,16 @@ module.exports = {
       options: {
         query: 'insomnia',
         filter: 'insomnia-plugin-',
-        perFetch: 50,
-      },
+        perFetch: 50
+      }
     },
     {
       resolve: 'gatsby-plugin-less',
       options: {
         theme: {
           // Override Less variables here
-        },
-      },
+        }
+      }
     },
     {
       resolve: 'gatsby-plugin-favicon',
@@ -46,37 +47,37 @@ module.exports = {
           firefox: true,
           twitter: false,
           yandex: false,
-          windows: false,
-        },
-      },
+          windows: false
+        }
+      }
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'changelog',
-        path: `${__dirname}/content/changelog/`,
-      },
+        path: `${__dirname}/content/changelog/`
+      }
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'blog',
-        path: `${__dirname}/content/blog/`,
-      },
+        path: `${__dirname}/content/blog/`
+      }
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'page',
-        path: `${__dirname}/content/pages/`,
-      },
+        path: `${__dirname}/content/pages/`
+      }
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'assets',
-        path: `${__dirname}/src/assets/`,
-      },
+        path: `${__dirname}/src/assets/`
+      }
     },
     'gatsby-transformer-remark',
     `gatsby-transformer-sharp`,
@@ -90,8 +91,8 @@ module.exports = {
         background_color: '#ffffff',
         theme_color: '#675BC0',
         display: 'minimal-ui',
-        icon: 'src/assets/favicon.png',
-      },
+        icon: 'src/assets/favicon.png'
+      }
     },
     {
       resolve: 'gatsby-plugin-feed',
@@ -104,16 +105,23 @@ module.exports = {
 
           return {
             ...siteMetadata,
-            ...rest,
+            ...rest
           };
         },
-        feeds: [
-          feedOptions('blog'),
-          feedOptions('changelog'),
-        ],
+        feeds: [feedOptions('blog'), feedOptions('changelog')]
+      }
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: 'UA-8499472-33',
+        head: false,
+        anonymize: true,
+        respectDNT: true,
+        pageTransitionDelay: 0,
       },
     },
-  ],
+  ]
 };
 
 function feedOptions(name) {
@@ -122,7 +130,9 @@ function feedOptions(name) {
     site_url: siteMetadata.siteUrl,
     title: 'Insomnia Feed',
     serialize: result => {
-      const { query: { site, allFile } } = result;
+      const {
+        query: { site, allFile }
+      } = result;
       // NOTE: We should be getting siteMetadata from the query results
       // but the feed plugin is too shitty to work with multiple feeds.
       // Check on this later
@@ -145,7 +155,7 @@ function feedOptions(name) {
             ...frontmatter,
             description: html,
             url: siteMetadata.siteUrl + urlPath,
-            guid: urlPath,
+            guid: urlPath
           };
         });
     },
@@ -167,6 +177,6 @@ function feedOptions(name) {
           }
         }
       }
-    `,
+    `
   };
 }

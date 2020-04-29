@@ -1,141 +1,180 @@
 import React from 'react';
 import DownloadButton from '../components/download-button';
 import SocialCards from '../components/social-cards';
-import Img from 'gatsby-image';
 import Link from '../components/link';
 import Companies from '../partials/companies';
 import Helmet from 'react-helmet';
+import { site as config } from '../config';
 
-export default ({data}) => (
+// SVGs
+import iconDownload from '../assets/icons/icn-download.svg';
+import logoCore from '../assets/logos/logo-core-hero-28x.svg';
+import logoDesigner from '../assets/logos/logo-designer-hero-28x.svg';
+import illustrationCore from '../assets/illustration-insomnia-client.svg';
+import illustrationDesigner from '../assets/illustration-insomnia-designer.svg';
+
+export default () => (
   <React.Fragment>
     <Helmet>
-      <body data-navbar="floating"/>
+      <title>{config.name} | API Design Platform and REST Client</title>
+      <body data-navbar="floating" />
     </Helmet>
-    <SocialCards title="Insomnia" summary="Debug APIs like a human, not a robot" isBanner/>
+
+    <SocialCards
+      title="Insomnia"
+      summary="Design & Debug APIs like a human, not a robot"
+      isBanner
+    />
+
     <div className="jumbotron">
-      <div className="container">
-        <div className="row">
-          <div className="col-12 center">
-            <h1>
-              Debug APIs like a <span className="jumbotron__undie">human</span>, not a robot
-            </h1>
-            <p className="font-light text-xl no-margin-bottom">
-              Finally, a REST client you'll <i>love</i>
-            </p>
-            <DownloadButton/>
+      <div className="jumbotron-inner">
+        <div className="slogan container">
+          <div className="row">
+            <div className="col-12">
+              <h1 className="font-regular">
+                Design and debug APIs like a <u>human</u>, not a robot.
+              </h1>
+              <h2 className="font-light">Finally, a workflow you'll love.</h2>
+            </div>
           </div>
         </div>
-        <div className="jumbotron__img-container">
-          <Img sizes={data.mainImg.childImageSharp.sizes} className="jumbotron__img" alt="Insomnia REST Client"/>
+
+        <div className="product-offerings container">
+          <div className="row">
+            <div className="col-6 offering">
+              <div className="graphic">
+                <img src={illustrationDesigner} />
+              </div>
+              <h3 className="font-regular">
+                <img src={logoDesigner} className="icon" />
+                <span>Insomnia Designer</span>
+              </h3>
+              <p>
+                The Collaborative API Design Tool for designing and managing
+                OpenAPI specs.
+              </p>
+              <DownloadButton className="button">
+                <img src={iconDownload} className="icon" alt="Download" />{' '}
+                Latest Release
+                <span className="badge">New</span>
+              </DownloadButton>
+              <p className="latest-version">
+                <small>
+                  <Link to={`/changelog`}>Changelog</Link>
+                </small>
+              </p>
+            </div>
+
+            <div className="col-6 offering">
+              <div className="graphic">
+                <img src={illustrationCore} />
+              </div>
+              <h3 className="font-regular">
+                <img src={logoCore} className="icon" />
+                <span>Insomnia Core</span>
+              </h3>
+              <p>
+                The Desktop API client for REST and GraphQL. Make requests,
+                inspect responses.
+              </p>
+              <DownloadButton className="button">
+                <img src={iconDownload} className="icon" alt="Download" />{' '}
+                Latest Release
+              </DownloadButton>
+              <p className="latest-version">
+                <small>
+                  <Link to={`/changelog`}>Changelog</Link>
+                </small>
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
+
     <main role="main">
       <section className="no-margin padding-top-lg padding-bottom-lg">
-        <div className="container center">
-          <div className="row">
-            <div className="col-12">
-              <h2 className="text-xxl">
-                Powerful HTTP and GraphQL tool belt
-              </h2>
-              <p className="text-lg" style={{maxWidth: '35rem', margin: 'auto'}}>
-                <strong>Free</strong> and <strong>open source</strong> on Mac, Windows, and Linux
-              </p>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col-4 padding-top">
-              <div className="img--promo">
-                <Img sizes={data.templateImg.childImageSharp.sizes} alt="Request Templating"/>
-              </div>
-              <h3>Create HTTP requests</h3>
-              <p>
-                Specify URL, payload, headers, and authorization all in one place. Then
-                just hit send.
-              </p>
-            </div>
-            <div className="col-4 padding-top">
-              <div className="img--promo">
-                <Img sizes={data.responsesImg.childImageSharp.sizes} alt="Response Details"/>
-              </div>
-              <h3>View response details</h3>
-              <p>
-                Get all the details on every response. View status code, body,
-                headers, cookies, and more!
-              </p>
-            </div>
-            <div className="col-4 padding-top">
-              <div className="img--promo">
-                <Img sizes={data.dragImg.childImageSharp.sizes} alt="Request Organization"/>
-              </div>
-              <h3>Organize everything</h3>
-              <p>
-                Create workspaces or folders, drag-and-drop requests, and easily
-                import and export your data.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="dark no-margin padding-bottom-lg padding-top-lg">
-        <div className="container center">
-          <div className="row">
-            <div className="col-12">
-              <h2 className="text-xxl">
-                Much more than an HTTP client
-              </h2>
-              <p className="text-lg" style={{maxWidth: '35rem', margin: 'auto'}}>
-                Advanced authentication helpers, templating, and request chaining help
-                get things done faster.
-                <br/>
-                <br/>
-                <DownloadButton className="button--big"/>
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="no-margin padding-top-lg padding-bottom-lg">
         <div className="container">
+          <div className="row">
+            <div className="col-12 center">
+              <h2 className="text-xl">Design, Debug, and Deploy APIs</h2>
+              <p>Workflows and Tools to make API Development Easier</p>
+            </div>
+          </div>
           <div className="row row-center-y">
-            <div className="col-5">
-              <h3 className="text-xl">Reusable Values</h3>
+            <div className="col-4">
+              <img src={logoCore} className="icon icon-bg" />
+              <h3 className="text-md">Create Requests</h3>
               <p>
-                Reuse API keys or session IDs. <strong>Define environment
-                variables</strong> globally or switch between sub-environments for a seamless
-                development/production workflow.
+                Quickly create and group requests, specify environment
+                variables, authentication, generate code snippets, and more...
+              </p>
+              <p>
+                <Link to={`/products/core`}>Insomnia Core &rarr;</Link>
               </p>
             </div>
-            <div className="col-7">
-              <Img sizes={data.environmentsImg.childImageSharp.sizes} alt="Environments"/>
+
+            <div className="col-4">
+              <img src={logoCore} className="icon icon-bg" />
+              <h3 className="text-md">View Responses</h3>
+              <p>
+                Get all the details on responses. View the whole request
+                timeline, status codes, body, headers, cookies, and more.
+              </p>
+              <p>
+                <Link to={`/products/core`}>Insomnia Core &rarr;</Link>
+              </p>
+            </div>
+
+            <div className="col-4">
+              <img src={logoCore} className="icon icon-bg" />
+              <h3 className="text-md">Organize Everything</h3>
+              <p>
+                Create workspaces, folders, environments, drag-and-drop
+                requests, and easily import and export your data.
+              </p>
+              <p>
+                <Link to={`/products/core`}>Insomnia Core &rarr;</Link>
+              </p>
             </div>
           </div>
-          <div className="row row-center-y padding-top">
-            <div className="col-5">
-              <h3 className="text-xl">Code Snippet Generation</h3>
+
+          <div className="row row-center-y">
+            <div className="col-4">
+              <img src={logoDesigner} className="icon icon-bg" />
+              <h3 className="text-md">Design APIs</h3>
               <p>
-                Generate http code for <strong>over thirty
-                language libraries</strong>, including Curl, NodeJS, Go, Swift,
-                Python, Java, C, and others.
+                Create, edit, lint, debug, preview, and manage all of your
+                OpenAPI specs in one collaborative API design editor.
+              </p>
+              <p>
+                <Link to={`/products/designer`}>Insomnia Designer &rarr;</Link>
               </p>
             </div>
-            <div className="col-7">
-              <Img sizes={data.codeImg.childImageSharp.sizes} alt="Code Generation"/>
-            </div>
-          </div>
-          <div className="row row-center-y padding-top">
-            <div className="col-5">
-              <h3 className="text-xl">Beautiful Interface</h3>
+
+            <div className="col-4">
+              <img src={logoDesigner} className="icon icon-bg" />
+              <h3 className="text-md">Configure Gateways</h3>
               <p>
-                Get started quickly with Insomnia's
-                intuitive interface, and choose from <strong>nine unique
-                themes</strong> to tailor the experience to <i>you</i>.
+                Generate configuration for common API gateways such as the Kong
+                API Gateway, and Kong for Kubernetes.
+              </p>
+              <p>
+                <Link to={`/products/designer`}>Insomnia Designer &rarr;</Link>
               </p>
             </div>
-            <div className="col-7">
-              <Img sizes={data.themesImg.childImageSharp.sizes} alt="Color Themes"/>
+
+            <div className="col-4">
+              <img src={logoDesigner} className="icon icon-bg" />
+              <h3 className="text-md">Deploy Specs</h3>
+              <p>
+                Sync your API designs with source control such as Github /
+                Gitlab, and deploy directly to API Gateways such as Kong with
+                one click.
+              </p>
+              <p>
+                <Link to={`/products/designer`}>Insomnia Designer &rarr;</Link>
+              </p>
             </div>
           </div>
         </div>
@@ -144,17 +183,19 @@ export default ({data}) => (
         <div className="container">
           <div className="row">
             <div className="col-12 center">
-              <h2>More than 400,000 developers trust Insomnia</h2>
+              <h2>More than 800,000 developers trust Insomnia</h2>
               <div className="padding-top">
-                <Companies/>
-                <br/>
-                <br/>
+                <Companies />
+                <br />
+                <br />
                 <DownloadButton className="button--big">
-                  Download App
+                  Download
                 </DownloadButton>
                 &nbsp;&nbsp;
-                <Link to="/teams" className="button button--big button--no-outline">
-                  Team Edition
+                <Link
+                  to="/teams"
+                  className="button button--big button--no-outline">
+                  Teams Edition
                 </Link>
               </div>
             </div>
@@ -172,7 +213,9 @@ export default ({data}) => (
           <div className="row feature-list">
             <div className="col-6">
               <ul>
-                <li><Link to="/graphql/">GraphQL</Link> support</li>
+                <li>
+                  <Link to="/graphql/">GraphQL</Link> support
+                </li>
                 <li>OAuth 1.0 and 2.0 auth</li>
                 <li>Multipart form builder</li>
                 <li>Query parameter builder</li>
@@ -191,7 +234,9 @@ export default ({data}) => (
             </div>
             <div className="col-6">
               <ul>
-                <li>Import from <code style={{color: '#333'}}>curl</code></li>
+                <li>
+                  Import from <code style={{ color: '#333' }}>curl</code>
+                </li>
                 <li>Digest, Basic, NTLM Auth</li>
                 <li>Nunjucks templating</li>
                 <li>Configurable timeout</li>
@@ -209,41 +254,15 @@ export default ({data}) => (
               </ul>
             </div>
           </div>
-          <br/>
+          <br />
           <div className="center">
             <p>Go on, give it a try. You won't regret it.</p>
-            <br/>
-            <DownloadButton className="button--big"/>
+            <br />
+            <DownloadButton className="button--big" />
           </div>
-          <br/>
+          <br />
         </div>
       </section>
     </main>
   </React.Fragment>
 );
-
-export const pageQuery = graphql`
-  query GatsbyImageQuery {
-    mainImg: file(relativePath: { eq: "screens/main.png" }) {
-      childImageSharp { sizes(maxWidth: 880) { ...GatsbyImageSharpSizes_withWebp } }
-    }
-    templateImg: file(relativePath: { eq: "screens/template.png" }) {
-      childImageSharp { sizes(maxWidth: 250) { ...GatsbyImageSharpSizes_withWebp_tracedSVG } }
-    }
-    responsesImg: file(relativePath: { eq: "screens/responses.png" }) {
-      childImageSharp { sizes(maxWidth: 250) { ...GatsbyImageSharpSizes_withWebp_tracedSVG } }
-    }
-    dragImg: file(relativePath: { eq: "screens/drag.png" }) {
-      childImageSharp { sizes(maxWidth: 250) { ...GatsbyImageSharpSizes_withWebp_tracedSVG } }
-    }
-    environmentsImg: file(relativePath: { eq: "screens/big/environments.png" }) {
-      childImageSharp { sizes(maxWidth: 400) { ...GatsbyImageSharpSizes_withWebp_tracedSVG } }
-    }
-    codeImg: file(relativePath: { eq: "screens/big/code.png" }) {
-      childImageSharp { sizes(maxWidth: 400) { ...GatsbyImageSharpSizes_withWebp_tracedSVG } }
-    }
-    themesImg: file(relativePath: { eq: "screens/big/themes.png" }) {
-      childImageSharp { sizes(maxWidth: 400) { ...GatsbyImageSharpSizes_withWebp_tracedSVG } }
-    }
-  }
-`;

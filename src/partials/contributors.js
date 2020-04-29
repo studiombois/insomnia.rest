@@ -9,29 +9,30 @@ class Contributors extends React.Component {
   };
 
   load() {
-    this.setState({contributors});
+    this.setState({ contributors });
   }
 
   render() {
-    const {contributors} = this.state;
+    const { contributors } = this.state;
     return (
       <section className="dark github-contributors">
-        <Waypoint
-          onEnter={this.load.bind(this)}
-        />
+        <Waypoint onEnter={this.load.bind(this)} />
         <div>
-          Thanks to all {contributors.length} <Link to="https://github.com/Kong/insomnia/graphs/contributors">contributors</Link>
-          {' '}
+          Thanks to all {contributors.length}{' '}
+          <Link to="https://github.com/Kong/insomnia/graphs/contributors">
+            contributors
+          </Link>{' '}
           🎉👏
         </div>
         <div className="github-contributors__users">
           {contributors.map(c => (
-            <Link key={c.login}
-               to={`https://github.com/${c.login}`}
-               title={`${c.contributions} contributions from ${c.login}`}
-               target="_blank"
-               className="github-contributors__avatar"
-               style={{backgroundImage: `url('${c.avatar_url}&s=30')`}}>
+            <Link
+              key={c.login}
+              to={`https://github.com/${c.login}`}
+              title={`${c.contributions} contributions from ${c.login}`}
+              target="_blank"
+              className="github-contributors__avatar"
+              style={{ backgroundImage: `url('${c.avatar_url}&s=64')` }}>
               &nbsp;
             </Link>
           ))}

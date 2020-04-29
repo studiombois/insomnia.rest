@@ -7,14 +7,18 @@ import Companies from '../partials/companies';
 export default () => (
   <React.Fragment>
     <Title>Pricing</Title>
-    <SocialCards title="Insomnia" summary="Enhance the power of the app" isBanner/>
+    <SocialCards
+      title="Insomnia"
+      summary="Enhance the power of the app"
+      isBanner
+    />
     <header className="container header--big">
       <div className="row">
         <div className="col-12">
           <h1>Pricing Guide</h1>
           <p className="text-lg">
-            Insomnia is free to use forever, but can be enhanced to
-            meet the needs of you or your team. &#x1f680;
+            Insomnia is free to use forever, but can be enhanced to meet the
+            needs of you or your team. &#x1f680;
           </p>
         </div>
       </div>
@@ -27,11 +31,14 @@ export default () => (
           </header>
           <div className="pricing__column__body">
             <h2>
-              Free<br/>
+              Free
+              <br />
               <span className="subtle small">forever</span>
             </h2>
             <ul>
-              <li>Mac/Windows/Linux App</li>
+              <li>Insomnia Core</li>
+              <li>Insomnia Designer</li>
+              <li>Mac/Windows/Linux Apps</li>
               <li>Unlimited installations</li>
               <li>Free updates forever</li>
             </ul>
@@ -49,13 +56,22 @@ export default () => (
           </header>
           <div className="pricing__column__body">
             <h2>
-              $5 / month<br/>
-              <span className="subtle small">or $50 / year</span><br/>
+              $5 / month
+              <br />
+              <span className="subtle small">or $50 / year</span>
+              <br />
             </h2>
             <ul>
-              <li><strong>All Free features +</strong></li>
-              <li><Link to="https://support.insomnia.rest/article/57-encryption">E2EE</Link> data sync &#128272;</li>
-              <li>Unlimited devices</li>
+              <li>
+                <strong>All Free features +</strong>
+              </li>
+              <li>
+                <Link to="https://support.insomnia.rest/article/57-encryption">
+                  E2EE
+                </Link>{' '}
+                data sync &#128272;*
+              </li>
+              <li>Unlimited devices*</li>
             </ul>
           </div>
           <footer className="pricing__column__footer">
@@ -71,16 +87,24 @@ export default () => (
           </header>
           <div className="pricing__column__body">
             <h2>
-              $8 / user / month<br/>
+              $8 / user / month
+              <br />
               <span className="subtle small">or $80 / user / year</span>
-              <br/>
+              <br />
             </h2>
             <ul>
-              <li><strong>All Plus features +</strong></li>
-              <li><Link to="https://support.insomnia.rest/article/57-encryption">E2EE</Link> team sync &#x1f64c;</li>
-              <li>Workspace collaboration</li>
-              <li>User management</li>
-              <li>Priority support</li>
+              <li>
+                <strong>All Plus features +</strong>
+              </li>
+              <li>
+                <Link to="https://support.insomnia.rest/article/57-encryption">
+                  E2EE
+                </Link>{' '}
+                team sync &#x1f64c;*
+              </li>
+              <li>Workspace collaboration*</li>
+              <li>User management*</li>
+              <li>Priority support*</li>
             </ul>
           </div>
           <footer className="pricing__column__footer">
@@ -91,49 +115,66 @@ export default () => (
         </section>
       </div>
       <div className="padding-top-sm center">
-        <small><em className="subtle">*All prices listed in US dollars</em></small>
+        <small>
+          <em className="subtle">All prices listed in US dollars</em>
+          <br />
+          <em className="subtle">*Insomnia Core only</em>
+        </small>
       </div>
     </section>
     <section className="container padding-top">
       <div className="row">
         <div className="col-6">
           <p>
-            <strong>What payment methods are supported?</strong><br/>
-            Visa, MasterCard, and American Express credit cards are accepted. All payments
-            are processed and secured by <a href="https://stripe.com/">Stripe</a>.
+            <strong>What payment methods are supported?</strong>
+            <br />
+            Visa, MasterCard, and American Express credit cards are accepted.
+            All payments are processed and secured by{' '}
+            <a href="https://stripe.com/">Stripe</a>.
           </p>
         </div>
         <div className="col-6">
           <p>
-            <strong>Can I switch plans after subscribing?</strong><br/>
-            Yes, at any time. Upgrade differences will be billed immediately and downgrades will appear
-            as a credit on the next invoice.
-          </p>
-        </div>
-      </div>
-      <div className="row">
-        <div className="col-6">
-          <p>
-            <strong>Can I add and remove team members?</strong><br/>
-            Yes, at any time you can adjust your plan limits to add or remove team members. Upgrades
-            are billed immediately for the difference and downgrades will be credited on the next
-            invoice.
-          </p>
-        </div>
-        <div className="col-6">
-          <p>
-            <strong>Do team members receive any benefits?</strong><br/>
-            All members of a paying team automatically receive the benefits included in
-            the Plus plan.
+            <strong>Can I switch plans after subscribing?</strong>
+            <br />
+            Yes, at any time. Upgrade differences will be billed immediately and
+            downgrades will appear as a credit on the next invoice.
           </p>
         </div>
       </div>
       <div className="row">
         <div className="col-6">
           <p>
-            <strong>Is there a discount for subscribing annually?</strong><br/>
-            Yes, annual subscriptions include two free months of service per year, which is
-            roughly a 15% discount.
+            <strong>Can I add and remove team members?</strong>
+            <br />
+            Yes, at any time you can adjust your plan limits to add or remove
+            team members. Upgrades are billed immediately for the difference and
+            downgrades will be credited on the next invoice.
+          </p>
+        </div>
+        <div className="col-6">
+          <p>
+            <strong>Do team members receive any benefits?</strong>
+            <br />
+            All members of a paying team automatically receive the benefits
+            included in the Plus plan.
+          </p>
+        </div>
+      </div>
+      <div className="row">
+        <div className="col-6">
+          <p>
+            <strong>Is there a discount for subscribing annually?</strong>
+            <br />
+            Yes, annual subscriptions include two free months of service per
+            year, which is roughly a 15% discount.
+          </p>
+        </div>
+        <div className="col-6">
+          <p>
+            <strong>Do paid plans apply to Insomnia Designer?</strong>
+            <br />
+            No, Insomnia Designer does not contain any paid functionality.
           </p>
         </div>
       </div>
@@ -150,9 +191,9 @@ export default () => (
       <div className="container">
         <div className="row">
           <div className="col-12 center">
-            <h2>More than 400,000 developers trust Insomnia</h2>
+            <h2>More than 800,000 developers trust Insomnia</h2>
             <div className="padding-top">
-              <Companies/>
+              <Companies />
             </div>
           </div>
         </div>
