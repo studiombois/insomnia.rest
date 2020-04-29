@@ -25,10 +25,6 @@ export default class extends React.Component {
     const coreWinLink = `https://updates.insomnia.rest/downloads/windows/latest?ref=${ref}&app=com.insomnia.app`;
     const coreLinuxLink = `https://support.insomnia.rest/article/23-installation#ubuntu`;
 
-    const designerMacLink = `https://updates.insomnia.rest/downloads/mac/latest?ref=${ref}&app=com.insomnia.designer`;
-    const designerWinLink = `https://updates.insomnia.rest/downloads/windows/latest?ref=${ref}&app=com.insomnia.designer`;
-    const designerLinuxLink = `https://support.insomnia.rest/article/90-installation#ubuntu`;
-
     return (
       <React.Fragment>
         <Title>Download</Title>
