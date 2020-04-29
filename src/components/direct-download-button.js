@@ -50,7 +50,7 @@ class DirectDownloadButton extends React.Component {
       href = LINKS[app].mac;
     } else if (platform.indexOf('win') !== -1) {
       platformName = 'Windows';
-      href = LINKS[app].windows;
+      href = LINKS[app].win;
     } else {
       platformName = '';
       href = LINKS[app].other;

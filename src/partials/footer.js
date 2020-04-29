@@ -10,7 +10,7 @@ class Footer extends React.Component {
         <div className="row">
           <div className="col-4">
             <div className="footer__branding">
-              <img className src={iconSrc} alt="Insomnia REST Client logo" />
+              <img src={iconSrc} alt="Insomnia REST Client logo" />
               <span>&copy; {new Date().getUTCFullYear()}&nbsp;</span>
               <Link to={site.copyrightURL} target="_blank">
                 {site.copyright}
