@@ -23,17 +23,25 @@ export default class extends React.Component {
               <div className="row">
                 <div className="col-12">
                   <h1 className="no-wrap">Insomnia Designer</h1>
-                  <p className="text-lg" style={{ height: '2rem', overflow: 'visible' }}>
-                    Collaborative API design with
-                    {' '}
-                    <Link to="https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.2.md">OpenAPI</Link>
+                  <p
+                    className="text-lg"
+                    style={{ height: '2rem', overflow: 'visible' }}>
+                    Collaborative API Design Editor
                   </p>
                 </div>
               </div>
             </header>
             <div className="platform-download center padding-bottom">
-              <Img sizes={data.screenDesigner.childImageSharp.sizes} className="platform-download__img" alt="Insomnia Designer"  style={{marginBottom: '9px'}} />
-              <DirectDownloadButton app="com.insomnia.designer" className="button--big" />
+              <Img
+                sizes={data.screenDesigner.childImageSharp.sizes}
+                className="platform-download__img"
+                alt="Insomnia Designer"
+                style={{ marginBottom: '9px' }}
+              />
+              <DirectDownloadButton
+                app="com.insomnia.designer"
+                className="button--big"
+              />
             </div>
           </article>
           <article className="col-6">
@@ -41,15 +49,24 @@ export default class extends React.Component {
               <div className="row">
                 <div className="col-12">
                   <h1 className="no-wrap">Insomnia Core</h1>
-                  <p className="text-lg" style={{ height: '2rem', overflow: 'visible' }}>
+                  <p
+                    className="text-lg"
+                    style={{ height: '2rem', overflow: 'visible' }}>
                     Explore <code>REST</code> and GraphQL APIs
                   </p>
                 </div>
               </div>
             </header>
             <div className="platform-download center padding-bottom">
-              <Img sizes={data.screenCore.childImageSharp.sizes} className="platform-download__img" alt="Insomnia Core" />
-              <DirectDownloadButton app="com.insomnia.app" className="button--big" />
+              <Img
+                sizes={data.screenCore.childImageSharp.sizes}
+                className="platform-download__img"
+                alt="Insomnia Core"
+              />
+              <DirectDownloadButton
+                app="com.insomnia.app"
+                className="button--big"
+              />
             </div>
           </article>
         </div>
@@ -68,7 +85,9 @@ export const pageQuery = graphql`
         }
       }
     }
-    screenDesigner: file(relativePath: { eq: "screens/big/insomnia-designer.png" }) {
+    screenDesigner: file(
+      relativePath: { eq: "screens/big/insomnia-designer.png" }
+    ) {
       childImageSharp {
         sizes(maxWidth: 880) {
           ...GatsbyImageSharpSizes_withWebp

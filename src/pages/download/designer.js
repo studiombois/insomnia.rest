@@ -9,7 +9,7 @@ export default class extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      ref: '',
+      ref: ''
     };
   }
 
@@ -39,10 +39,7 @@ export default class extends React.Component {
               <div className="row">
                 <div className="col-12">
                   <h1>Download Insomnia Designer</h1>
-                  <p className="text-lg">
-                    So you can finally <code>GET</code> some <code>REST</code>{' '}
-                    😴
-                  </p>
+                  <p className="text-lg">Collaborative API Design Editor</p>
                 </div>
               </div>
             </header>
