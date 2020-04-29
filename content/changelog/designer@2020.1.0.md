@@ -1,7 +1,7 @@
 ---
 app: com.insomnia.designer
 date: 2020-04-29
-slug: 2020.1.0
+slug: 2020.1.1
 major:
 - First release of Insomnia Designer!
 ---

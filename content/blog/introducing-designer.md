@@ -49,7 +49,7 @@ the [Insomnia GitHub Repo](https://github.com/Kong/insomnia), or join our
 - High-level filterable view of all documents
 - Debug and explore APIs (like Insomnia Core)
 - Extend with [Plugins](/plugins/)
-- Kong integration via [`kong-bundle` Plugin](http://npmjs.org/insomnia-plugin-kong-bundle) 
+- Kong integration via [`kong-bundle` Plugin](https://insomnia.rest/plugins/insomnia-plugin-kong-bundle/) 
     - Deploy to Kong Portal
     - Generate Kong Declarative Config
     - Generate Kong for Kubernetes Config
