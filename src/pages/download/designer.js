@@ -23,7 +23,7 @@ export default class extends React.Component {
 
     const coreMacLink = `https://updates.insomnia.rest/downloads/mac/latest?ref=${ref}&app=com.insomnia.designer`;
     const coreWinLink = `https://updates.insomnia.rest/downloads/windows/latest?ref=${ref}&app=com.insomnia.designer`;
-    const coreLinuxLink = `https://support.insomnia.rest/article/23-installation#ubuntu`;
+    const coreLinuxLink = `https://support.insomnia.rest/article/90-installation#linux`;
 
     return (
       <React.Fragment>
