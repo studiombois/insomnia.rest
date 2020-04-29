@@ -32,7 +32,7 @@ Designer builds on top of the existing Insomnia (now Insomnia Core) codebase to 
 place, share them across your organization using Git, and interact with them using the Insomnia
 features you already know and love 💜
 
-![Specifications Home](/images/blog/designer-screens.png)
+[![Specifications Home](/images/blog/designer-screens.png)](/images/blog/designer-screens.png)
 
 This first release contains a core set of features to edit and share OpenAPI specifications, with
 the intention of involving the community as soon as possible to help shape drive the app in the

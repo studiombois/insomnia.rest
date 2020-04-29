@@ -1,16 +1,36 @@
 [
 	{
 		"downloads": {
-			"root": "https://github.com/Kong/insomnia/releases/download/designer@2020.1.0",
-			"mac": "https://github.com/Kong/insomnia/releases/download/designer@2020.1.0/Insomnia.Designer-2020.1.0.dmg",
-			"macZip": "https://github.com/Kong/insomnia/releases/download/designer@2020.1.0/Insomnia.Designer-2020.1.0.zip",
-			"windows": "https://github.com/Kong/insomnia/releases/download/designer@2020.1.0/Insomnia.Designer-2020.1.0.exe",
-			"linux": "https://github.com/Kong/insomnia/releases/download/designer@2020.1.0/Insomnia-2020.1.0.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/designer@2020.1.0/Insomnia-2020.1.0.deb"
+			"root": "https://github.com/Kong/insomnia/releases/download/designer@2020.1.2",
+			"mac": "https://github.com/Kong/insomnia/releases/download/designer@2020.1.2/Insomnia.Designer-2020.1.2.dmg",
+			"macZip": "https://github.com/Kong/insomnia/releases/download/designer@2020.1.2/Insomnia.Designer-2020.1.2.zip",
+			"windows": "https://github.com/Kong/insomnia/releases/download/designer@2020.1.2/Insomnia.Designer-2020.1.2.exe",
+			"linux": "https://github.com/Kong/insomnia/releases/download/designer@2020.1.2/Insomnia-2020.1.2.AppImage",
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/designer@2020.1.2/Insomnia-2020.1.2.deb"
 		},
 		"app": "com.insomnia.designer",
 		"date": "2020-04-29T00:00:00.000Z",
-		"version": "2020.1.0",
+		"version": "2020.1.2",
+		"channel": "stable",
+		"link": null,
+		"major": [],
+		"minor": [],
+		"fixes": [
+			"Fixed Windows installation issues caused by long paths"
+		]
+	},
+	{
+		"downloads": {
+			"root": "https://github.com/Kong/insomnia/releases/download/designer@2020.1.1",
+			"mac": "https://github.com/Kong/insomnia/releases/download/designer@2020.1.1/Insomnia.Designer-2020.1.1.dmg",
+			"macZip": "https://github.com/Kong/insomnia/releases/download/designer@2020.1.1/Insomnia.Designer-2020.1.1.zip",
+			"windows": "https://github.com/Kong/insomnia/releases/download/designer@2020.1.1/Insomnia.Designer-2020.1.1.exe",
+			"linux": "https://github.com/Kong/insomnia/releases/download/designer@2020.1.1/Insomnia-2020.1.1.AppImage",
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/designer@2020.1.1/Insomnia-2020.1.1.deb"
+		},
+		"app": "com.insomnia.designer",
+		"date": "2020-04-28T00:00:00.000Z",
+		"version": "2020.1.1",
 		"channel": "stable",
 		"link": null,
 		"major": [
