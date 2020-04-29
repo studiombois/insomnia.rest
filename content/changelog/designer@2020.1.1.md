@@ -1,6 +1,6 @@
 ---
 app: com.insomnia.designer
-date: 2020-04-29
+date: 2020-04-28
 slug: 2020.1.1
 title: Insomnia Designer v2020.1.1
 major:
