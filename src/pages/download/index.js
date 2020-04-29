@@ -32,7 +32,7 @@ export default class extends React.Component {
               </div>
             </header>
             <div className="platform-download center padding-bottom">
-              <Img sizes={data.screenDesigner.childImageSharp.sizes} className="platform-download__img" alt="Insomnia Designer" />
+              <Img sizes={data.screenDesigner.childImageSharp.sizes} className="platform-download__img" alt="Insomnia Designer"  style={{marginBottom: '9px'}} />
               <DirectDownloadButton app="com.insomnia.designer" className="button--big" />
             </div>
           </article>
