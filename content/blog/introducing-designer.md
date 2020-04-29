@@ -76,7 +76,7 @@ more.
 
 **Why a separate app?** 📦<br>
 Insomnia is an extremely powerful tool, but most users love it for how simple and easy it is to
-use. In order to maintain this core tenant, Designer needs to be simple too, which is why
+use. In order to maintain this core tenet, Designer needs to be simple too, which is why
 we're releasing Insomnia Designer as a separate application, focused specifically on _API design_.
 
 **Does it support Insomnia Plus/Team accounts?** 💼<br>
