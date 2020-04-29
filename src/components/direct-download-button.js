@@ -7,12 +7,12 @@ const LINKS = {
   'com.insomnia.app': {
     mac: 'https://updates.insomnia.rest/downloads/mac/latest?app=com.insomnia.app',
     win: 'https://updates.insomnia.rest/downloads/windows/latest?app=com.insomnia.app',
-    other: '/download/core/',
+    other: '/download/core/?',
   },
   'com.insomnia.designer': {
     mac: 'https://updates.insomnia.rest/downloads/mac/latest?app=com.insomnia.designer',
     win: 'https://updates.insomnia.rest/downloads/windows/latest?app=com.insomnia.designer',
-    other: '/download/designer/',
+    other: '/download/designer/?',
   },
 };
 
@@ -56,8 +56,7 @@ class DirectDownloadButton extends React.Component {
       href = LINKS[app].other;
     }
 
-
-    let message = 'Download';
+    let message = 'Download for Desktop';
     if (children) {
       message = children;
     } else if (platformName) {
@@ -70,9 +69,9 @@ class DirectDownloadButton extends React.Component {
           {message}
         </Link>
         <br />
-        <p className="small pt-2">
+        <div className="small pt-4">
           Not your OS? <Link to={LINKS[app].other}>All Downloads</Link>
-        </p>
+        </div>
       </div>
     );
   }
