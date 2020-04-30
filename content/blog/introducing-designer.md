@@ -66,7 +66,7 @@ review, test API specifications during the API development process.
 
 **Where can I download it?** 🛒<br>
 Designer is a free and open-source desktop application that can be installed on Mac, Windows, or
-Linux. Visit the [Download](/downloads/) page to get started.
+Linux. Visit the [Download](/download/) page to get started.
 
 **Why open source?** 💜<br>
 Insomnia Core would not be where it is today without the help of the open-source community. We're
