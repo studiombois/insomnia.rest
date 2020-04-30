@@ -18,7 +18,7 @@
 		"received_events_url": "https://api.github.com/users/gschier/received_events",
 		"type": "User",
 		"site_admin": false,
-		"contributions": 2037
+		"contributions": 2040
 	},
 	{
 		"login": "develohpanda",
@@ -39,7 +39,7 @@
 		"received_events_url": "https://api.github.com/users/develohpanda/received_events",
 		"type": "User",
 		"site_admin": false,
-		"contributions": 22
+		"contributions": 23
 	},
 	{
 		"login": "BeeeQueue",

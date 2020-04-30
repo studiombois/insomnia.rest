@@ -11,8 +11,9 @@ const Companies = () => (
   <div
     style={{
       display: 'flex',
-      justifyContent: 'space-between',
+      flexWrap: 'wrap',
       alignItems: 'center',
+      justifyContent: 'center',
       maxWidth: '40rem',
       margin: 'auto'
     }}>
@@ -21,7 +22,7 @@ const Companies = () => (
         key={i}
         style={{
           display: 'inline-block',
-          margin: '1rem 0'
+          margin: '1rem 0.8rem'
         }}>
         <img src={svg} />
       </div>
