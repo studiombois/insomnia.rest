@@ -6,7 +6,7 @@ layout: wide
 tags: ["announcement"]
 ---
 
-**_TL;DR: [Insomnia Designer](/download/designer/) a new open-source desktop application that 
+**_TL;DR: [Insomnia Designer](/products/designer/) a new open-source desktop application that 
 provides a modern workflow for teams to design and collaborate on APIs._**
 
 <!--more-->
@@ -17,7 +17,7 @@ possible. Fast-forward to today and Insomnia is the leading open-source tool for
 with REST and GraphQL APIs.
 
 Interaction is only half the story, however, which is why **we're pleased to announce 
-[Insomnia Designer](/download/designer/)**—a new application that focuses on improving the 
+[Insomnia Designer](/products/designer/)**—a new application that focuses on improving the 
 API design workflow that so many companies struggle with.
 
 <div class="center">
