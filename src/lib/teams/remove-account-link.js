@@ -13,7 +13,7 @@ class RemoveAccountLink extends React.Component {
 
     const {teamName, teamId, accountName, accountId, onRemove} = this.props;
 
-    if (!confirm(`Are you sure you want to remove ${accountName} from ${teamName}?`)) {
+    if (!window.confirm(`Are you sure you want to remove ${accountName} from ${teamName}?`)) {
       return;
     }
 

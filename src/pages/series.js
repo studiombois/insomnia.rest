@@ -1,16 +1,17 @@
 import React from 'react';
+import { graphql } from 'gatsby';
 import Link from '../components/link';
 
-export default ({data: {allBlogSeries: {edges}}}) => (
+export default ({data: {allMarkdownRemark: {group}}}) => (
   <React.Fragment>
     <header className="container">
       <h1>Blog Post Series</h1>
     </header>
     <article className="container">
-      {edges
-        .map(({node: {series, count}}) => (
+      {group
+        .map(({series, totalCount}) => (
           <Link key={series} className="button tags__tag" to={`/series/${series}/`}>
-            {series} ({count})
+            {series} ({totalCount})
           </Link>
         ))}
       <footer>
@@ -22,12 +23,10 @@ export default ({data: {allBlogSeries: {edges}}}) => (
 
 export const pageQuery = graphql`
   query SeriesQuery {
-    allBlogSeries {
-      edges {
-        node {
-          series
-          count
-        }
+    allMarkdownRemark {
+      group(field: frontmatter___series) {
+        series: fieldValue
+        totalCount
       }
     }
   }

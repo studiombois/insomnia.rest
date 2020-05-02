@@ -6,16 +6,16 @@ const siteMetadata = {
     'Window, and Linux',
   siteUrl: 'https://insomnia.rest/',
   shortName: 'Insomnia',
-  name: 'Insomnia REST Client',
+  name: 'Insomnia',
   author: 'Gregory Schier',
-  copyright: 'Floating Keyboard Software Inc.',
+  copyright: 'Kong, Inc.',
   copyrightURL: 'https://floatingkeyboard.com'
 };
 
 module.exports = {
   siteMetadata,
   plugins: [
-    'gatsby-plugin-react-next',
+    'gatsby-plugin-layout',
     'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-source-npm-plugin',

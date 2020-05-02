@@ -29,7 +29,7 @@ class DeleteAccount extends React.Component {
       return;
     }
 
-    if (!confirm('Are you sure you want to delete your account and all its associated data? This operation cannot be undone')) {
+    if (!window.confirm('Are you sure you want to delete your account and all its associated data? This operation cannot be undone')) {
       return;
     }
 

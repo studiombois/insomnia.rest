@@ -1,4 +1,5 @@
 import React from 'react';
+import { graphql } from 'gatsby';
 import DownloadLink from '../../components/download-link';
 import DownloadButton from '../../components/download-button';
 import SocialCards from '../../components/social-cards';

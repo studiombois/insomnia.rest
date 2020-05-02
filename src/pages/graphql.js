@@ -1,4 +1,5 @@
 import React from 'react';
+import { graphql } from 'gatsby';
 import Helmet from 'react-helmet';
 import Img from 'gatsby-image';
 import Link from '../components/link';
@@ -78,7 +79,7 @@ export default ({data: {mainImg, errorsImg, autocompleteImg, variablesImg}}) => 
         <div className="row padding-top padding-bottom-lg">
           <div className="col-12 center">
             <div style={{width: '5rem', margin: '0 auto 2rem auto'}}>
-              {graphql}
+              {graphqlSvg}
             </div>
             <h2 className="text-xxl">Get Started Today</h2>
             <p className="text-lg">Insomnia is free, open source, and cross-platform</p>
@@ -101,7 +102,7 @@ export default ({data: {mainImg, errorsImg, autocompleteImg, variablesImg}}) => 
   </React.Fragment>
 );
 
-const graphql = (
+const graphqlSvg = (
   <svg viewBox="0 0 400 400" width="100%" height="100%">
     <rect x="122" y="-0.4" transform="matrix(-0.866 -0.5 0.5 -0.866 163.3196 363.3136)" fill="#E535AB"
           width="16.6" height="320.3"/>

@@ -1,16 +1,17 @@
 import React from 'react';
+import { graphql } from 'gatsby';
 import Link from '../components/link';
 
-export default ({data: {allBlogTag: {edges}}}) => (
+export default ({data: {allMarkdownRemark: {group}}}) => (
   <React.Fragment>
     <header className="container">
       <h1>Blog Post Tags</h1>
     </header>
     <article className="container">
-      {edges
-        .map(({node: {tag, count}}) => (
+      {group
+        .map(({tag, totalCount}) => (
           <Link key={tag} className="button tags__tag" to={`/tags/${tag}/`}>
-            {tag} ({count})
+            {tag} ({totalCount})
           </Link>
         ))}
       <footer>
@@ -22,12 +23,10 @@ export default ({data: {allBlogTag: {edges}}}) => (
 
 export const pageQuery = graphql`
   query TagsQuery {
-    allBlogTag {
-      edges {
-        node {
-          tag
-          count
-        }
+    allMarkdownRemark {
+      group(field: frontmatter___tags) {
+        tag: fieldValue
+        totalCount
       }
     }
   }

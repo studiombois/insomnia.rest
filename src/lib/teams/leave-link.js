@@ -13,7 +13,7 @@ class LeaveTeamLink extends React.Component {
 
     const {teamName, teamId, onLeave} = this.props;
 
-    if (!confirm(`Are you sure you want to leave ${teamName}?`)) {
+    if (!window.confirm(`Are you sure you want to leave ${teamName}?`)) {
       return;
     }
 

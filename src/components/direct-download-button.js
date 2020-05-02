@@ -1,6 +1,5 @@
 import React from 'react';
 import classnames from 'classnames';
-import { links } from '../config';
 import Link from './link';
 
 const LINKS = {

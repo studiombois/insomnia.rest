@@ -1,4 +1,5 @@
 import crypto from 'crypto';
+import { graphql } from 'gatsby';
 import React from 'react';
 import moment from 'moment';
 import { Tab, Tabs } from 'react-tabify';

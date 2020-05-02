@@ -23,7 +23,7 @@ class CreateRunLink extends React.Component {
     const uri = encodeURIComponent(this.state.uri);
     const href = `https://insomnia.rest/run/?label=${label}&uri=${uri}`;
     return (
-      <a href={href} target="_blank">
+      <a href={href} target="_blank" rel="noopener noreferrer">
         <img src={this.state.src} alt="Run in Insomnia" className="no-margin margin-center"/>
       </a>
     );

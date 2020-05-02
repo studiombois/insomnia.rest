@@ -1,4 +1,5 @@
 import React from 'react';
+import { graphql } from 'gatsby';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import SocialCards from '../components/social-cards';
 

@@ -9,7 +9,6 @@ import Title from '../partials/title';
 import { isLoggedIn } from '../lib/session';
 import { site } from '../config';
 import { parse as urlParse } from 'url';
-import Announcement from '../partials/announcement';
 
 export default class extends React.Component {
   state = {
@@ -49,21 +48,10 @@ export default class extends React.Component {
         </Helmet>
         <Navbar loggedIn={isLoggedIn}/>
         <main role="main">
-          {children()}
+          {children}
         </main>
         <Footer/>
       </React.Fragment>
     );
   }
 }
-
-export const pageQuery = graphql`
-  query MetadataQuery {
-    site {
-      siteMetadata {
-        title
-        author
-      }
-    }
-  }
-`;

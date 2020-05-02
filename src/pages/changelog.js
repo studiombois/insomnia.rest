@@ -1,4 +1,5 @@
 import React from 'react';
+import { graphql } from 'gatsby';
 import { links } from '../config';
 import ChangelogLink from '../components/changelog-link';
 import ChangelogListItem from '../components/changelog-list-item';

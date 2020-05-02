@@ -6,7 +6,7 @@ class CancelLink extends React.Component {
   _handleClick = async e => {
     e.preventDefault();
 
-    const confirmed = confirm(
+    const confirmed = window.confirm(
       'Are you sure? Your subscription will remain active ' +
       'until the end of your current billing period'
     );

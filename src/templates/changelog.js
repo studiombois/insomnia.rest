@@ -1,4 +1,5 @@
 import React from 'react';
+import { graphql } from 'gatsby';
 import ChangelogListItem from '../components/changelog-list-item';
 import DownloadButton from '../components/download-button';
 import Link from '../components/link';

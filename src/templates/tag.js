@@ -1,15 +1,11 @@
 import React from 'react';
-import DownloadButton from '../components/download-button';
-import SocialCards from '../components/social-cards';
-import ShareButtons from '../partials/share-buttons';
-import Title from '../partials/title';
-import {links} from '../config';
+import { graphql } from 'gatsby';
 import BlogPostLink from '../components/blog-post-link';
 import Link from '../components/link';
 
 export default class TagTemplate extends React.Component {
   render() {
-    const {data: {allMarkdownRemark: {edges}}, pathContext: {tag, count}} = this.props;
+    const {data: {allMarkdownRemark: {edges}}, pageContext: {tag, count}} = this.props;
     return (
       <React.Fragment>
         <header className="header--big container">

@@ -1,4 +1,5 @@
 import React from 'react';
+import { graphql } from 'gatsby';
 import Link from '../components/link';
 import BlogPostLink from '../components/blog-post-link';
 import {links} from '../config';

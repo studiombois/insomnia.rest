@@ -1,4 +1,5 @@
 import React from 'react';
+import { graphql } from 'gatsby';
 import Title from '../partials/title';
 import Contributors from '../partials/contributors';
 

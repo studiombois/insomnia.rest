@@ -82,7 +82,7 @@ class Subscribe extends React.Component {
       return;
     }
 
-    const cardType = Stripe.card.cardType(value);
+    const cardType = window.Stripe.card.cardType(value);
     const lastChar = value[e.target.value.length - 1];
     const num = value.replace(/[^0-9]*/g, '');
     let newNum = '';
@@ -137,7 +137,7 @@ class Subscribe extends React.Component {
       e.target.value = newNum;
     }
 
-    if (Stripe.card.validateCardNumber(newNum)) {
+    if (window.Stripe.card.validateCardNumber(newNum)) {
       e.target.setCustomValidity('');
     } else {
       e.target.setCustomValidity('Invalid card number');

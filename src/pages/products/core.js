@@ -1,4 +1,5 @@
 import React from 'react';
+import { graphql } from 'gatsby';
 import DownloadLink from '../../components/download-link';
 import DownloadButton from '../../components/download-button';
 import SocialCards from '../../components/social-cards';
@@ -9,10 +10,7 @@ import Helmet from 'react-helmet';
 import { site as config } from '../../config';
 
 import iconDownload from '../../assets/icons/icn-download.svg';
-import logoCore from '../../assets/logos/logo-core-hero-28x.svg';
-import logoDesigner from '../../assets/logos/logo-designer-hero-28x.svg';
 import illustrationCore from '../../assets/illustration-insomnia-client.svg';
-import illustrationDesigner from '../../assets/illustration-insomnia-designer.svg';
 
 export default ({ data }) => (
   <React.Fragment>

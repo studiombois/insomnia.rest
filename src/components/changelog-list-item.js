@@ -1,5 +1,4 @@
 import React from 'react';
-import Link from './link';
 
 const ChangelogListItem = ({text}) => {
   const match = text.match(/\(PR:(\d+)(:([^)]+))?\)/);
