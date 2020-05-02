@@ -31,14 +31,26 @@ export default ({ data: { npmPackage: plugin } }) => (
 );
 
 function Header(plugin) {
+  const isDesignerPlugin = plugin.name.indexOf('insomnia-plugin-kong-') === 0;
+
+  // This is a temporary solution to install Kong plugins in Designer
+  // TODO: Come up with a better way to designate plugins to the respective
+  //   applications.
+  const installUrl = isDesignerPlugin
+    ? `insomniad://plugins/install?name=${plugin.name}`
+    : `insomnia://plugins/install?name=${plugin.name}`;
+  const installLabel = isDesignerPlugin
+    ? 'Install in Designer'
+    : 'Install in Core'
+
   return (
     <header className="container">
       <div className="row">
         <div className="col-12">
           <a
-            href={`insomnia://plugins/install?name=${plugin.name}`}
+            href={installUrl}
             className="button primary w-25 mt-3 mb-4 float-right">
-            Install
+            {installLabel}
           </a>
 
           <h1>{plugin.name}</h1>
@@ -78,36 +90,36 @@ Overview.Sidebar = plugin => (
       {InfoItem('Updated', moment(plugin.npm.date).format('MM/DD/YYYY'))}
 
       {plugin.npm.links &&
-        plugin.npm.links.npm &&
-        InfoItem(
-          'NPM',
-          <a href={plugin.npm.links.npm}>{getNpmDisplay(plugin)}</a>
-        )}
+      plugin.npm.links.npm &&
+      InfoItem(
+        'NPM',
+        <a href={plugin.npm.links.npm}>{getNpmDisplay(plugin)}</a>,
+      )}
 
       {plugin.npm.links &&
-        plugin.npm.links.homepage &&
-        InfoItem(
-          'Site',
-          <a href={plugin.npm.links.homepage}>
-            <i className="las la-globe" /> {plugin.npm.links.homepage}
-          </a>
-        )}
+      plugin.npm.links.homepage &&
+      InfoItem(
+        'Site',
+        <a href={plugin.npm.links.homepage}>
+          <i className="las la-globe" /> {plugin.npm.links.homepage}
+        </a>,
+      )}
 
       {plugin.npm.git.isGithub &&
-        InfoItem(
-          'Git',
-          <a href={plugin.npm.git.url}>
-            <i className="lab la-github" /> {getGitDisplay(plugin)}
-          </a>
-        )}
+      InfoItem(
+        'Git',
+        <a href={plugin.npm.git.url}>
+          <i className="lab la-github" /> {getGitDisplay(plugin)}
+        </a>,
+      )}
 
       {plugin.npm.git.isGitlab &&
-        InfoItem(
-          'Git',
-          <a href={plugin.npm.git.url}>
-            <i className="lab la-gitlab" /> {getGitDisplay(plugin)}
-          </a>
-        )}
+      InfoItem(
+        'Git',
+        <a href={plugin.npm.git.url}>
+          <i className="lab la-gitlab" /> {getGitDisplay(plugin)}
+        </a>,
+      )}
     </ul>
   </aside>
 );
@@ -184,7 +196,7 @@ function getAuthor(plugin) {
     name,
     email,
     avatar,
-    fallbackAvatar
+    fallbackAvatar,
   };
 }
 
