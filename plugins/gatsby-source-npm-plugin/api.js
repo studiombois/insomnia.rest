@@ -3,7 +3,7 @@ const marked = require('marked');
 const gurl = {
   gh: require('parse-github-url'),
   gl: require('gitlab-url-parse'),
-  g: require('giturl').parse
+  g: require('giturl').parse,
 };
 
 const NPM_REG_INFO = name =>
@@ -11,7 +11,7 @@ const NPM_REG_INFO = name =>
 
 const NPM_JS_API_SEARCH = (query, size, offset) =>
   `https://npmjs.com/search?q=${encodeURIComponent(
-    query
+    query,
   )}&page=${offset}&perPage=${size}`;
 
 const NPM_API_DWNINFO = (period, pkg) =>
@@ -44,7 +44,7 @@ async function getDetail(pkg) {
     username: '',
     project: '',
     gh: {},
-    gl: {}
+    gl: {},
   };
 
   // Webify git url
@@ -53,7 +53,10 @@ async function getDetail(pkg) {
   }
 
   // Determine github username / cdn url based off repository url
-  if (npm.data.repository && npm.data.repository.url.indexOf('github') > -1) {
+  const repo = npm.data.repository || {};
+  const repoUrl = typeof repo.url === 'string' ? repo.url : '';
+
+  if (repoUrl.indexOf('github') > -1) {
     const gh = gurl.gh(git.url);
     git.cdn = `https://raw.githubusercontent.com/${gh.repo}/HEAD/`;
     git.username = gh.owner;
@@ -63,8 +66,8 @@ async function getDetail(pkg) {
   }
 
   // Gitlab requires parsing the git url into web format, then parsing for data
-  if (npm.data.repository && npm.data.repository.url.indexOf('gitlab') > -1) {
-    let url = gurl.g(npm.data.repository.url);
+  if (repoUrl.indexOf('gitlab') > -1) {
+    let url = gurl.g(repoUrl);
     let isPackage = url.indexOf('/packages/') > -1;
     if (isPackage) {
       url = url.replace('packages/', '');
@@ -100,8 +103,8 @@ async function getDetail(pkg) {
       description: '',
       unlisted: false,
       core: false,
-      ...currentPkg.insomnia
-    }
+      ...currentPkg.insomnia,
+    },
   };
 }
 
@@ -159,7 +162,7 @@ function buildMarkdownRenderer(pkgDetails) {
 function buildPkg(pkg, detailsMap, downloads) {
   const details = detailsMap[pkg.name];
   const readme = marked(details.readme || '', {
-    renderer: buildMarkdownRenderer(details)
+    renderer: buildMarkdownRenderer(details),
   });
   const readmeRaw = details.readme;
   const meta = details.meta;
@@ -180,7 +183,7 @@ function buildPkg(pkg, detailsMap, downloads) {
       lastDay: lastDay ? lastDay.downloads : 0,
       lastWeek: lastWeek ? lastWeek.downloads : 0,
       lastMonth: lastMonth ? lastMonth.downloads : 0,
-      lastYear: lastYear ? lastYear.downloads : 0
+      lastYear: lastYear ? lastYear.downloads : 0,
     },
     meta,
     npm: {
@@ -190,8 +193,8 @@ function buildPkg(pkg, detailsMap, downloads) {
       released: details.released,
       date,
       readme,
-      readmeRaw
-    }
+      readmeRaw,
+    },
   };
 }
 
@@ -199,8 +202,8 @@ async function fetch(query, allowDeprecated, filter, offset, size) {
   // Fetch packages
   const pkgsResp = await axios(NPM_JS_API_SEARCH(query, size, offset), {
     headers: {
-      'x-spiferack': 1
-    }
+      'x-spiferack': 1,
+    },
   });
 
   const pkgs = pkgsResp.data;
@@ -231,21 +234,21 @@ async function fetch(query, allowDeprecated, filter, offset, size) {
     lastDay: await getDownloads('last-day', results),
     lastWeek: await getDownloads('last-week', results),
     lastMonth: await getDownloads('last-month', results),
-    lastYear: await getDownloads(getLastYearRange(), results)
+    lastYear: await getDownloads(getLastYearRange(), results),
   };
 
   return {
     packages: results.map(obj =>
-      buildPkg(obj.package, detailsMap, downloadMap)
+      buildPkg(obj.package, detailsMap, downloadMap),
     ),
-    totalResults: pkgs.total
+    totalResults: pkgs.total,
   };
 }
 
 module.exports = {
   getPackages: async function(
     query,
-    { filter, allowDeprecated = false, perFetch = 20 }
+    { filter, allowDeprecated = false, perFetch = 20 },
   ) {
     let results = await fetch(query, allowDeprecated, filter, 0, perFetch);
     let pages = Math.ceil(results.totalResults / perFetch);
@@ -259,12 +262,12 @@ module.exports = {
         allowDeprecated,
         filter,
         page,
-        perFetch
+        perFetch,
       );
 
       results.packages = results.packages.concat(nextPage.packages);
     }
 
     return results;
-  }
+  },
 };
