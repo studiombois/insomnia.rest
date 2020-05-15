@@ -87,7 +87,7 @@ export default class extends React.Component {
                     </code>
                     <br />
                     or&nbsp;
-                    <Link to="https://support.insomnia.rest/article/23-installation#linux">
+                    <Link to="https://support.insomnia.rest/article/90-installation#linux">
                       view other methods
                     </Link>
                   </p>
