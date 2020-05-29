@@ -55,13 +55,15 @@ class Navbar extends React.Component {
                     </li>
                   ))}
 
-                <li data-menu-item="download">
-                  <div>
-                    <Link to={'/pricing'} className="button">
-                      Get Started
-                    </Link>
-                  </div>
-                </li>
+                {!this.props.loggedIn && (
+                  <li data-menu-item="download">
+                    <div>
+                      <Link to={'/pricing'} className="button">
+                        Get Started
+                      </Link>
+                    </div>
+                  </li>
+                )}
               </ul>
             </div>
           </div>
