@@ -50,7 +50,7 @@ export default class BlogTemplate extends React.Component {
           <section className="content container">
             <div className="row">
               <div className="col-12">
-                {html && <p dangerouslySetInnerHTML={{ __html: html }} />}
+                {html && <div dangerouslySetInnerHTML={{ __html: html }} />}
                 <p className="center">
                   <DownloadButton />
                   {' '}
