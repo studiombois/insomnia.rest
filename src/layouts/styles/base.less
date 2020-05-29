@@ -888,6 +888,10 @@ body[data-navbar='floating'] .navbar {
   font-weight: 500;
 }
 
+.navbar__items:not(.navbar__items-center) li:last-of-type > * {
+  padding-right: 0;
+}
+
 /* ~~~~~~ */
 /* FOOTER */
 /* ~~~~~~ */
@@ -1498,8 +1502,17 @@ body[data-pathname^='/blog'] article > header {
 /* ~~~~~~~~~~~~~ */
 
 @media only screen and (max-width: 33.75rem) {
+  .navbar__icon {
+    min-width: 2.2rem;
+    width: 2.2rem;
+  }
+
   .navbar__title {
     display: none;
+  }
+
+  .navbar__items li > * {
+    padding: 1rem 0.5rem;
   }
 }
 

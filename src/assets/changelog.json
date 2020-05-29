@@ -1,6 +1,42 @@
 [
 	{
 		"downloads": {
+			"root": "https://github.com/Kong/insomnia/releases/download/core@2020.2.0-beta.1",
+			"mac": "https://github.com/Kong/insomnia/releases/download/core@2020.2.0-beta.1/Insomnia.Core-2020.2.0-beta.1.dmg",
+			"macZip": "https://github.com/Kong/insomnia/releases/download/core@2020.2.0-beta.1/Insomnia.Core-2020.2.0-beta.1.zip",
+			"windows": "https://github.com/Kong/insomnia/releases/download/core@2020.2.0-beta.1/Insomnia.Core-2020.2.0-beta.1.exe",
+			"linux": "https://github.com/Kong/insomnia/releases/download/core@2020.2.0-beta.1/Insomnia.Core-2020.2.0-beta.1.AppImage",
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/core@2020.2.0-beta.1/Insomnia.Core-2020.2.0-beta.1.deb"
+		},
+		"app": "com.insomnia.app",
+		"date": "2020-05-28T00:00:00.000Z",
+		"version": "2020.2.0-beta.1",
+		"channel": "beta",
+		"link": null,
+		"major": [],
+		"minor": [],
+		"fixes": []
+	},
+	{
+		"downloads": {
+			"root": "https://github.com/Kong/insomnia/releases/download/designer@2020.2.0-beta.1",
+			"mac": "https://github.com/Kong/insomnia/releases/download/designer@2020.2.0-beta.1/Insomnia.Designer-2020.2.0-beta.1.dmg",
+			"macZip": "https://github.com/Kong/insomnia/releases/download/designer@2020.2.0-beta.1/Insomnia.Designer-2020.2.0-beta.1.zip",
+			"windows": "https://github.com/Kong/insomnia/releases/download/designer@2020.2.0-beta.1/Insomnia.Designer-2020.2.0-beta.1.exe",
+			"linux": "https://github.com/Kong/insomnia/releases/download/designer@2020.2.0-beta.1/Insomnia-2020.2.0-beta.1.AppImage",
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/designer@2020.2.0-beta.1/Insomnia-2020.2.0-beta.1.deb"
+		},
+		"app": "com.insomnia.designer",
+		"date": "2020-05-28T00:00:00.000Z",
+		"version": "2020.2.0-beta.1",
+		"channel": "beta",
+		"link": null,
+		"major": [],
+		"minor": [],
+		"fixes": []
+	},
+	{
+		"downloads": {
 			"root": "https://github.com/Kong/insomnia/releases/download/designer@2020.1.3",
 			"mac": "https://github.com/Kong/insomnia/releases/download/designer@2020.1.3/Insomnia.Designer-2020.1.3.dmg",
 			"macZip": "https://github.com/Kong/insomnia/releases/download/designer@2020.1.3/Insomnia.Designer-2020.1.3.zip",

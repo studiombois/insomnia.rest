@@ -127,7 +127,7 @@ function PluginSearchInput({ onChange }) {
   return (
     <div class="plugins-search">
       <input
-        className="br-3 d-block w-50 pr-2 pt-2 pb-2"
+        className="br-3 d-block pr-2 pt-2 pb-2"
         placeholder="Search Insomnia plugins..."
         onChange={onChange}
       />

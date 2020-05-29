@@ -33,8 +33,9 @@ body[data-pathname^='/plugins'] {
   }
 
   p {
+    margin-top: 0;
     margin-bottom: 1rem;
-    line-height: 1rem;
+    line-height: 1.7rem;
     font-size: 1.6rem;
     color: rgba(0, 0, 0, 0.5);
   }
@@ -42,6 +43,8 @@ body[data-pathname^='/plugins'] {
 
 /* Search Input */
 .plugins-search {
+  position: relative;
+
   input {
     border: none;
     font-size: 1rem;
@@ -60,13 +63,20 @@ body[data-pathname^='/plugins'] {
   .icon {
     position: absolute;
     top: 50%;
-    left: 30px;
+    left: 10px;
     pointer-events: none;
     transform: translateY(-50%) scaleX(-1);
     font-size: 24px;
     i {
       color: rgba(0, 0, 0, 0.3);
     }
+  }
+}
+
+@media only screen and (max-width: 45em) {
+  .plugins-search input {
+    width: 100% !important;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15);
   }
 }
 
