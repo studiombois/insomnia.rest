@@ -16,7 +16,7 @@
 		"major": [],
 		"minor": [],
 		"fixes": [
-			"Fixed Windows installation issues caused by long paths"
+			"Fixed Windows installation issues caused by long file paths"
 		]
 	},
 	{

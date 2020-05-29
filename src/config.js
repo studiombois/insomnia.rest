@@ -13,35 +13,39 @@ export const links = {
 };
 
 export const menus = {
-  main: [
-    {
-      name: 'Docs',
-      key: 'docs',
-      url: 'https://support.insomnia.rest'
-    },
-    {
-      name: 'Pricing',
-      key: 'pricing',
-      url: '/pricing/'
-    },
-    {
-      name: 'Plugins',
-      key: 'plugins',
-      url: '/plugins/'
-    },
-    {
-      name: 'Account',
-      key: 'account',
-      url: '/app/account/',
-      loggedIn: true
-    },
-    {
-      name: 'Signup',
-      key: 'signup',
-      url: '/app/signup/',
-      loggedIn: false
-    }
-  ],
+  header: {
+    center: [
+      {
+        name: 'Docs',
+        key: 'docs',
+        url: 'https://support.insomnia.rest'
+      },
+      {
+        name: 'Plugins',
+        key: 'plugins',
+        url: '/plugins/'
+      },
+      {
+        name: 'Pricing',
+        key: 'pricing',
+        url: '/pricing/'
+      }
+    ],
+    right: [
+      {
+        name: 'Account',
+        key: 'account',
+        url: '/app/account/',
+        loggedIn: true
+      },
+      {
+        name: 'Login',
+        key: 'login',
+        url: '/app/login/',
+        loggedIn: false
+      }
+    ]
+  },
   footer: {
     center: [
       {
