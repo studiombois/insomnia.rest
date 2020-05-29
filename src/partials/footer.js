@@ -1,5 +1,5 @@
 import React from 'react';
-import { links, menus, site } from '../config';
+import { menus, site } from '../config';
 import Link from '../components/link';
 import iconSrc from '../assets/icon.svg';
 

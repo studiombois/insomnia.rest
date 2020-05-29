@@ -10,9 +10,6 @@ import Helmet from 'react-helmet';
 
 // SVGs
 import iconDownload from '../../assets/icons/icn-download.svg';
-import logoCore from '../../assets/logos/logo-core-hero-28x.svg';
-import logoDesigner from '../../assets/logos/logo-designer-hero-28x.svg';
-import illustrationCore from '../../assets/illustration-insomnia-client.svg';
 import illustrationDesigner from '../../assets/illustration-insomnia-designer.svg';
 
 export default ({ data }) => (
@@ -44,7 +41,7 @@ export default ({ data }) => (
             <div className="col-6 offering">
               <div className="graphic">
                 <DownloadLink>
-                  <img src={illustrationDesigner} />
+                  <img src={illustrationDesigner} alt="Designer Illustration" />
                 </DownloadLink>
               </div>
               <p>

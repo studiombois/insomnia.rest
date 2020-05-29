@@ -44,7 +44,7 @@ export default ({ data }) => (
             <div className="col-6 offering">
               <div className="graphic">
                 <DownloadLink>
-                  <img src={illustrationCore} />
+                  <img src={illustrationCore} alt="Core Illustration" />
                 </DownloadLink>
               </div>
               <p>

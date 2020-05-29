@@ -3,7 +3,7 @@ const marked = require('marked');
 const gurl = {
   gh: require('parse-github-url'),
   gl: require('gitlab-url-parse'),
-  g: require('giturl').parse,
+  g: require('giturl').parse
 };
 
 const NPM_REG_INFO = name =>
@@ -11,7 +11,7 @@ const NPM_REG_INFO = name =>
 
 const NPM_JS_API_SEARCH = (query, size, offset) =>
   `https://npmjs.com/search?q=${encodeURIComponent(
-    query,
+    query
   )}&page=${offset}&perPage=${size}`;
 
 const NPM_API_DWNINFO = (period, pkg) =>
@@ -33,6 +33,40 @@ function getLastYearRange() {
   return `${pastYear}-${pastMonth}-${pastDay}:${nowYear}-${nowMonth}-${nowDay}`;
 }
 
+function getPluginMeta(pkgJson) {
+  let meta = pkgJson.insomnia || {};
+  let publisher = meta.publisher || {};
+  let applications = meta.applications || {};
+  let images = meta.images || {};
+
+  return {
+    name: meta.name || '',
+    displayName: meta.displayName || '',
+    description: meta.description || '',
+    bundle: meta.bundle || false,
+    deprecated: meta.deprecated || false,
+    unlisted: meta.unlisted || false,
+    categories: meta.categories || ['Other'],
+    publisher: {
+      name: publisher.name || '',
+      icon: publisher.icon || ''
+    },
+    applications: {
+      core: applications.core || '',
+      designer: applications.designer || '',
+      cli: applications.cli || ''
+    },
+    images: {
+      icon: images.icon
+        ? `https://unpkg.com/${pkgJson.name}/${images.icon}`
+        : '',
+      cover: images.cover
+        ? `https://unpkg.com/${pkgJson.name}/${images.cover}`
+        : ''
+    }
+  };
+}
+
 async function getDetail(pkg) {
   const npm = await axios(NPM_REG_INFO(pkg.name));
 
@@ -44,7 +78,7 @@ async function getDetail(pkg) {
     username: '',
     project: '',
     gh: {},
-    gl: {},
+    gl: {}
   };
 
   // Webify git url
@@ -100,11 +134,9 @@ async function getDetail(pkg) {
     repository: npm.data.repository,
     git,
     meta: {
-      description: '',
-      unlisted: false,
       core: false,
-      ...currentPkg.insomnia,
-    },
+      ...getPluginMeta(currentPkg)
+    }
   };
 }
 
@@ -162,7 +194,7 @@ function buildMarkdownRenderer(pkgDetails) {
 function buildPkg(pkg, detailsMap, downloads) {
   const details = detailsMap[pkg.name];
   const readme = marked(details.readme || '', {
-    renderer: buildMarkdownRenderer(details),
+    renderer: buildMarkdownRenderer(details)
   });
   const readmeRaw = details.readme;
   const meta = details.meta;
@@ -183,7 +215,7 @@ function buildPkg(pkg, detailsMap, downloads) {
       lastDay: lastDay ? lastDay.downloads : 0,
       lastWeek: lastWeek ? lastWeek.downloads : 0,
       lastMonth: lastMonth ? lastMonth.downloads : 0,
-      lastYear: lastYear ? lastYear.downloads : 0,
+      lastYear: lastYear ? lastYear.downloads : 0
     },
     meta,
     npm: {
@@ -193,8 +225,8 @@ function buildPkg(pkg, detailsMap, downloads) {
       released: details.released,
       date,
       readme,
-      readmeRaw,
-    },
+      readmeRaw
+    }
   };
 }
 
@@ -202,8 +234,8 @@ async function fetch(query, allowDeprecated, filter, offset, size) {
   // Fetch packages
   const pkgsResp = await axios(NPM_JS_API_SEARCH(query, size, offset), {
     headers: {
-      'x-spiferack': 1,
-    },
+      'x-spiferack': 1
+    }
   });
 
   const pkgs = pkgsResp.data;
@@ -234,21 +266,21 @@ async function fetch(query, allowDeprecated, filter, offset, size) {
     lastDay: await getDownloads('last-day', results),
     lastWeek: await getDownloads('last-week', results),
     lastMonth: await getDownloads('last-month', results),
-    lastYear: await getDownloads(getLastYearRange(), results),
+    lastYear: await getDownloads(getLastYearRange(), results)
   };
 
   return {
     packages: results.map(obj =>
-      buildPkg(obj.package, detailsMap, downloadMap),
+      buildPkg(obj.package, detailsMap, downloadMap)
     ),
-    totalResults: pkgs.total,
+    totalResults: pkgs.total
   };
 }
 
 module.exports = {
   getPackages: async function(
     query,
-    { filter, allowDeprecated = false, perFetch = 20 },
+    { filter, allowDeprecated = false, perFetch = 20 }
   ) {
     let results = await fetch(query, allowDeprecated, filter, 0, perFetch);
     let pages = Math.ceil(results.totalResults / perFetch);
@@ -262,12 +294,12 @@ module.exports = {
         allowDeprecated,
         filter,
         page,
-        perFetch,
+        perFetch
       );
 
       results.packages = results.packages.concat(nextPage.packages);
     }
 
     return results;
-  },
+  }
 };

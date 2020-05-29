@@ -1,0 +1,266 @@
+body[data-pathname^='/plugins'] {
+  .container {
+    width: 95%;
+    max-width: 80rem;
+  }
+
+  article > header {
+    margin-bottom: 1rem;
+  }
+
+  article .content img {
+    display: initial;
+    margin: initial;
+  }
+
+  article > header .col-12 {
+    margin-top: 2rem;
+  }
+}
+
+.plugins * {
+  box-sizing: border-box;
+}
+
+/* Header */
+.plugins-header {
+  margin-bottom: 2rem;
+
+  h1 {
+    margin-top: 2rem;
+    font-size: 2rem;
+    font-weight: 600;
+  }
+
+  p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    line-height: 1.7rem;
+    font-size: 1.6rem;
+    color: rgba(0, 0, 0, 0.5);
+  }
+}
+
+/* Search Input */
+.plugins-search {
+  position: relative;
+
+  input {
+    border: none;
+    font-size: 1rem;
+    border-radius: 70px;
+    padding-left: 40px;
+    transition: all 0.2s;
+  }
+
+  input:focus {
+    background: white;
+    outline: none;
+    border-color: rgba(73, 0, 196, 1);
+    box-shadow: 0 0 0 3px rgba(73, 0, 196, 0.15);
+  }
+
+  .icon {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    pointer-events: none;
+    transform: translateY(-50%) scaleX(-1);
+    font-size: 24px;
+    i {
+      color: rgba(0, 0, 0, 0.3);
+    }
+  }
+}
+
+@media only screen and (max-width: 45em) {
+  .plugins-search input {
+    width: 100% !important;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15);
+  }
+}
+
+/* Action Bar */
+.plugins .action-bar label {
+  font-weight: 500;
+}
+
+.plugins .action-bar select {
+  border: 1px solid #d1d5da;
+  border-radius: 3px;
+  padding: 0.2rem 0.5rem;
+}
+
+/* Infinite Scroll */
+.plugins .infinite-scroll-component {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: center;
+  overflow: visible !important;
+}
+
+/* Plugin Box */
+.plugin-wrapper {
+  width: 31%;
+  margin-bottom: 2rem;
+  transition: all 0.1s;
+}
+
+.plugin {
+  display: flex;
+  overflow-wrap: break-word;
+  box-sizing: border-box;
+  background-color: #fff;
+  border: 1px solid #d1d5da;
+  border-radius: 3px;
+  flex-direction: column;
+  padding: 1rem 2rem;
+}
+
+.plugin-wrapper:hover {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.plugin-logo,
+.plugin-name,
+.plugin-footer {
+  padding: 0;
+  margin: 0;
+  padding-top: 0.8rem;
+}
+
+.plugin-logo img {
+  width: 32px;
+  height: 32px;
+}
+
+.plugin-header {
+  flex-direction: column;
+}
+
+.plugin-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.plugin-name a {
+  color: #4000bf;
+}
+
+.plugin-info {
+  line-height: 1.2rem;
+}
+
+.plugin-author {
+  font-size: 0.8rem;
+  color: #888;
+}
+
+.plugin-content {
+  margin: 0;
+  padding: 1rem 0 0.3rem;
+  font-size: 1rem;
+  color: #000;
+}
+
+.plugin-footer {
+  align-items: center;
+  justify-content: center;
+}
+
+.plugin-footer div {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 800px) {
+  .plugin-wrapper {
+    width: 48.5%;
+  }
+}
+
+@media (max-width: 525px) {
+  .plugins .infinite-scroll-component {
+    display: block;
+  }
+
+  .plugin-wrapper {
+    width: 100%;
+  }
+}
+
+/***
+ * PLUGIN PAGE
+ */
+
+.plugin-sidebar dl {
+  padding: 1rem 0 0.2rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.plugin-sidebar dl > div {
+  min-width: 50%;
+}
+
+.plugin-sidebar dd a i {
+  font-size: 24px;
+  color: rgba(0, 0, 0, 0.7) !important;
+  margin-right: 0.5rem;
+  position: relative;
+  top: 0.3rem;
+}
+
+.plugin-page .info-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.plugin-page .info-item strong {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 80%;
+  font-size: 14px;
+}
+
+@media (max-width: 720px) {
+  .plugin-page-header .col-12 > div {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .plugin-page-header .col-12 > div > div {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .plugin-page-header .col-12 > div > div img {
+    margin-bottom: 2rem;
+  }
+}
+
+/* ~~~~~~~~~ */
+/* Emoji Swapper */
+/* ~~~~~~~~~ */
+
+a > .emoji-swap {
+  display: none;
+  margin-left: 5px;
+}
+
+a > .emoji-swap.default {
+  display: inline-block;
+}
+
+a:hover > .emoji-swap.default {
+  display: none;
+}
+
+a:hover > .emoji-swap.on-hover {
+  display: inline-block;
+  text-decoration: none;
+}

@@ -1,8 +1,6 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import './simple-grid.min.css';
-import './base.less';
-import './index.less';
+import './styles/index.less';
 import Navbar from '../partials/navbar';
 import Footer from '../partials/footer';
 import Title from '../partials/title';
@@ -31,7 +29,11 @@ export default class extends React.Component {
 
     // Fallback to referrer but don't track self-referrals. Also don't set referrer
     // if signupSource already exists. We don't want to accidentally overwrite the ref
-    if (!localStorage.signupSource && document.referrer && document.referrer.indexOf('https://insomnia.rest') !== 0) {
+    if (
+      !localStorage.signupSource &&
+      document.referrer &&
+      document.referrer.indexOf('https://insomnia.rest') !== 0
+    ) {
       localStorage.signupSource = document.referrer;
     }
   }
@@ -41,16 +43,14 @@ export default class extends React.Component {
     const { isLoggedIn } = this.state;
     return (
       <React.Fragment>
-        <Title/>
+        <Title />
         <Helmet>
-          <meta name="description" content={site && site.description}/>
-          <body data-pathname={location.pathname}/>
+          <meta name="description" content={site && site.description} />
+          <body data-pathname={location.pathname} />
         </Helmet>
-        <Navbar loggedIn={isLoggedIn}/>
-        <main role="main">
-          {children}
-        </main>
-        <Footer/>
+        <Navbar loggedIn={isLoggedIn} />
+        <main role="main">{children}</main>
+        <Footer />
       </React.Fragment>
     );
   }

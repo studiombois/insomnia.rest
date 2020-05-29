@@ -24,7 +24,7 @@ const Companies = () => (
           display: 'inline-block',
           margin: '1rem 0.8rem'
         }}>
-        <img src={svg} />
+        <img src={svg} alt="company logo" />
       </div>
     ))}
   </div>
