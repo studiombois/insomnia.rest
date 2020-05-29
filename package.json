@@ -9,7 +9,6 @@
     "start": "npm run build:data && gatsby develop --port 8001",
     "build:data": "node ./scripts/fetch-metrics.js",
     "build": "npm run build:data && gatsby build",
-    "netlify": "npm run build:data && GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build --log-pages",
     "format-code": "prettier --write \"**/*.js\""
   },
   "husky": {
