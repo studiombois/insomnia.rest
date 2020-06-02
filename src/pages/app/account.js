@@ -189,7 +189,7 @@ class Home extends React.Component {
             </button>
           )}
           <button className="button mt-3">
-            <Link to="/app/teams/">Manage Teams</Link>
+            <Link to="/app/teams/">Manage Team</Link>
           </button>
           <button className="button mt-3">
             <Link to="/app/change-password/">Change Password</Link>
