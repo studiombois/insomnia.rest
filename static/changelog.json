@@ -1,6 +1,102 @@
 [
 	{
 		"downloads": {
+			"root": "https://github.com/Kong/insomnia/releases/download/core@2020.2.1",
+			"mac": "https://github.com/Kong/insomnia/releases/download/core@2020.2.1/Insomnia.Core-2020.2.1.dmg",
+			"macZip": "https://github.com/Kong/insomnia/releases/download/core@2020.2.1/Insomnia.Core-2020.2.1.zip",
+			"windows": "https://github.com/Kong/insomnia/releases/download/core@2020.2.1/Insomnia.Core-2020.2.1.exe",
+			"linux": "https://github.com/Kong/insomnia/releases/download/core@2020.2.1/Insomnia.Core-2020.2.1.AppImage",
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/core@2020.2.1/Insomnia.Core-2020.2.1.deb"
+		},
+		"app": "com.insomnia.app",
+		"date": "2020-06-02T00:00:00.000Z",
+		"version": "2020.2.1",
+		"channel": "stable",
+		"link": null,
+		"major": [],
+		"minor": [],
+		"fixes": [
+			"Fix legacy sync for Insomnia Core (PR:2243:develohpanda)"
+		]
+	},
+	{
+		"downloads": {
+			"root": "https://github.com/Kong/insomnia/releases/download/core@2020.2.0",
+			"mac": "https://github.com/Kong/insomnia/releases/download/core@2020.2.0/Insomnia.Core-2020.2.0.dmg",
+			"macZip": "https://github.com/Kong/insomnia/releases/download/core@2020.2.0/Insomnia.Core-2020.2.0.zip",
+			"windows": "https://github.com/Kong/insomnia/releases/download/core@2020.2.0/Insomnia.Core-2020.2.0.exe",
+			"linux": "https://github.com/Kong/insomnia/releases/download/core@2020.2.0/Insomnia.Core-2020.2.0.AppImage",
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/core@2020.2.0/Insomnia.Core-2020.2.0.deb"
+		},
+		"app": "com.insomnia.app",
+		"date": "2020-05-31T00:00:00.000Z",
+		"version": "2020.2.0",
+		"channel": "stable",
+		"link": null,
+		"major": [
+			"Update node-libcurl dependency (PR:2223:JCMais)"
+		],
+		"minor": [
+			"Display release date in preferences (PR:2031:imrishabh18)",
+			"Show documentation for GraphQL interfaces (PR:1984:barthez)",
+			"Add ability to generate a skeleton plugin (PR:2107:gschier)",
+			"Mask template tag tooltip when preview is disabled (PR:1995:superruzafa)",
+			"Show default values in GraphQL documentation (PR:2001:eMerzh)",
+			"Support Bearer auth in OpenAPI imports (PR:1953:ymhuang0808)",
+			"Show subscription type in GraphQL documentation (pr:2008:cameronr-nulogy)",
+			"More specific variable names when importing OpenAPI (PR:1978:pocket7878)",
+			"Link to plugin from plugins section (PR:2109:develohpanda)",
+			"New plugin API for showing custom UI in dialog (PR:2026:gschier)",
+			"Add liveDisplayName to template tag plugin API (PR:1936:superruzafa)",
+			"Update solorized theme colors (PR:1992:reynolek)",
+			"Allow checkbox input type in prompt API (PR:1980:superruzafa)",
+			"Expose request body in plugin API (PR:2003:yittg)"
+		],
+		"fixes": [
+			"Invalid environment warning shows again (PR:2212:Vorashil)",
+			"Code folds properly restored in code editor (PR:2114:develohpanda)",
+			"Handle empty security object for OpenAPI import (PR:2170:develohpanda)",
+			"Selecting empty file no longer breaks (PR:2129:gschier)",
+			"Prevent race condition when deleting last workspace (PR:1997:reynolek)",
+			"Pressing escape inside dialog text field no longer closes (PR:2039:baleeds)"
+		]
+	},
+	{
+		"downloads": {
+			"root": "https://github.com/Kong/insomnia/releases/download/designer@2020.2.0",
+			"mac": "https://github.com/Kong/insomnia/releases/download/designer@2020.2.0/Insomnia.Designer-2020.2.0.dmg",
+			"macZip": "https://github.com/Kong/insomnia/releases/download/designer@2020.2.0/Insomnia.Designer-2020.2.0.zip",
+			"windows": "https://github.com/Kong/insomnia/releases/download/designer@2020.2.0/Insomnia.Designer-2020.2.0.exe",
+			"linux": "https://github.com/Kong/insomnia/releases/download/designer@2020.2.0/Insomnia-2020.2.0.AppImage",
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/designer@2020.2.0/Insomnia-2020.2.0.deb"
+		},
+		"app": "com.insomnia.designer",
+		"date": "2020-05-29T00:00:00.000Z",
+		"version": "2020.2.0",
+		"channel": "stable",
+		"link": null,
+		"major": [
+			"Update node-libcurl dependency (PR:2223:JCMais)"
+		],
+		"minor": [
+			"Display release date in preferences (PR:2031:imrishabh18)",
+			"Improvements to Kubernetes config generation (PR:2136:develohpanda)",
+			"Add ability to generate a skeleton plugin (PR:2107:gschier)",
+			"Link to plugin from plugins section (PR:2109:develohpanda)",
+			"Improved theme support for document preview (PR:2156:sonicyeti)"
+		],
+		"fixes": [
+			"Various Git sync fixes for Windows (PR:2194:develohpanda)",
+			"Invalid environment warning shows again (PR:2212:Vorashil)",
+			"Properly handle document preview errors (PR:2131:develohpanda)",
+			"Folds are now properly restored in code editor (PR:2114:develohpanda)",
+			"Handle empty security object for OpenAPI import (PR:2170:develohpanda)",
+			"Add username prompt for GitLab authentication (PR:2162:develohpanda)",
+			"Selecting empty file no longer breaks (PR:2129:gschier)"
+		]
+	},
+	{
+		"downloads": {
 			"root": "https://github.com/Kong/insomnia/releases/download/core@2020.2.0-beta.1",
 			"mac": "https://github.com/Kong/insomnia/releases/download/core@2020.2.0-beta.1/Insomnia.Core-2020.2.0-beta.1.dmg",
 			"macZip": "https://github.com/Kong/insomnia/releases/download/core@2020.2.0-beta.1/Insomnia.Core-2020.2.0-beta.1.zip",
