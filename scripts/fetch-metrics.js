@@ -107,8 +107,8 @@ function generateChangelog() {
         mac: `${root}/Insomnia.Designer-${version}.dmg`,
         macZip: `${root}/Insomnia.Designer-${version}.zip`,
         windows: `${root}/Insomnia.Designer-${version}.exe`,
-        linux: `${root}/Insomnia-${version}.AppImage`,
-        ubuntu: `${root}/Insomnia-${version}.deb`,
+        linux: `${root}/Insomnia.Designer-${version}.AppImage`,
+        ubuntu: `${root}/Insomnia.Designer-${version}.deb`,
         release: `https://github.com/Kong/insomnia/releases/tag/designer@${version}`,
       };
     }
