@@ -23,7 +23,7 @@ export default class extends React.Component {
 
     const coreMacLink = `https://updates.insomnia.rest/downloads/mac/latest?ref=${ref}&app=com.insomnia.app`;
     const coreWinLink = `https://updates.insomnia.rest/downloads/windows/latest?ref=${ref}&app=com.insomnia.app`;
-    const coreLinuxLink = `https://support.insomnia.rest/article/23-installation#ubuntu`;
+    const coreLinuxLink = `https://updates.insomnia.rest/downloads/ubuntu/latest?ref=${ref}&app=com.insomnia.app`;
 
     return (
       <React.Fragment>
@@ -84,14 +84,9 @@ export default class extends React.Component {
                   <p
                     className="subtle small"
                     style={{ maxWidth: '12rem', margin: 'auto' }}>
-                    or&nbsp;
-                    <code style={{ lineBreak: 'no-wrap' }}>
-                      sudo snap install insomnia
-                    </code>
-                    <br />
-                    or&nbsp;
+                    or view&nbsp;
                     <Link to="https://support.insomnia.rest/article/23-installation#linux">
-                      view other methods
+                      other methods
                     </Link>
                   </p>
                 </div>
