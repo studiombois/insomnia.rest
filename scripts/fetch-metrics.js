@@ -87,6 +87,7 @@ function generateChangelog() {
         windows: `${root}/Insomnia.Setup.${version}.exe`,
         linux: `${root}/Insomnia-${version}.AppImage`,
         ubuntu: `${root}/insomnia_${version}_amd64.deb`,
+        release: `https://github.com/Kong/insomnia/releases/tag/v${version}`,
       };
     } else if (frontmatter.app === 'com.insomnia.app') {
       const root = `https://github.com/Kong/insomnia/releases/download/core@${version}`;
@@ -97,6 +98,7 @@ function generateChangelog() {
         windows: `${root}/Insomnia.Core-${version}.exe`,
         linux: `${root}/Insomnia.Core-${version}.AppImage`,
         ubuntu: `${root}/Insomnia.Core-${version}.deb`,
+        release: `https://github.com/Kong/insomnia/releases/tag/core@${version}`,
       };
     } else {
       const root = `https://github.com/Kong/insomnia/releases/download/designer@${version}`;
@@ -107,6 +109,7 @@ function generateChangelog() {
         windows: `${root}/Insomnia.Designer-${version}.exe`,
         linux: `${root}/Insomnia-${version}.AppImage`,
         ubuntu: `${root}/Insomnia-${version}.deb`,
+        release: `https://github.com/Kong/insomnia/releases/tag/designer@${version}`,
       };
     }
 
