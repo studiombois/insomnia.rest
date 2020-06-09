@@ -81,6 +81,7 @@ export default class extends React.Component {
                   <p
                     className="subtle small"
                     style={{ maxWidth: '12rem', margin: 'auto' }}>
+                    or <code>sudo snap install insomnia-designer</code>
                     or view&nbsp;
                     <Link to="https://support.insomnia.rest/article/90-installation#linux">
                       other methods
