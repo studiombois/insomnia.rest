@@ -1,12 +1,70 @@
 [
 	{
 		"downloads": {
+			"root": "https://github.com/Kong/insomnia/releases/download/core@2020.2.2",
+			"mac": "https://github.com/Kong/insomnia/releases/download/core@2020.2.2/Insomnia.Core-2020.2.2.dmg",
+			"macZip": "https://github.com/Kong/insomnia/releases/download/core@2020.2.2/Insomnia.Core-2020.2.2.zip",
+			"windows": "https://github.com/Kong/insomnia/releases/download/core@2020.2.2/Insomnia.Core-2020.2.2.exe",
+			"linux": "https://github.com/Kong/insomnia/releases/download/core@2020.2.2/Insomnia.Core-2020.2.2.AppImage",
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/core@2020.2.2/Insomnia.Core-2020.2.2.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/core@2020.2.2"
+		},
+		"app": "com.insomnia.app",
+		"date": "2020-06-08T00:00:00.000Z",
+		"version": "2020.2.2",
+		"channel": "stable",
+		"link": null,
+		"major": [
+			"Add support for OAuth2 to OpenAPI3 importer (PR:2184:sebastianjonasson)"
+		],
+		"minor": [
+			"Improve error message on failure to install plugin (PR:2238:nicholasraphael)"
+		],
+		"fixes": [
+			"Fix template tag enums not being quoted (PR:2239:gschier)",
+			"No responses shown after deleting active environment (PR:2265:gschier)",
+			"Prevent linting from breaking code-editor persistence (PR:2267:gschier)"
+		]
+	},
+	{
+		"downloads": {
+			"root": "https://github.com/Kong/insomnia/releases/download/designer@2020.2.2",
+			"mac": "https://github.com/Kong/insomnia/releases/download/designer@2020.2.2/Insomnia.Designer-2020.2.2.dmg",
+			"macZip": "https://github.com/Kong/insomnia/releases/download/designer@2020.2.2/Insomnia.Designer-2020.2.2.zip",
+			"windows": "https://github.com/Kong/insomnia/releases/download/designer@2020.2.2/Insomnia.Designer-2020.2.2.exe",
+			"linux": "https://github.com/Kong/insomnia/releases/download/designer@2020.2.2/Insomnia.Designer-2020.2.2.AppImage",
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/designer@2020.2.2/Insomnia.Designer-2020.2.2.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/designer@2020.2.2"
+		},
+		"app": "com.insomnia.designer",
+		"date": "2020-06-08T00:00:00.000Z",
+		"version": "2020.2.2",
+		"channel": "stable",
+		"link": null,
+		"major": [
+			"Support for OAuth2 in OpenAPI3 importer (PR:2184:sebastianjonasson)",
+			"Git Sync - rollback pending changes (PR:2226:develohpanda)"
+		],
+		"minor": [
+			"Improve error message on failure to install plugin (PR:2238:nicholasraphael)"
+		],
+		"fixes": [
+			"Document tab selection is persisted (PR:2231:develohpanda)",
+			"Changing branches now updates editor contents (PR:2233:develohpanda)",
+			"Fix template tag enums not being quoted (PR:2239:gschier)",
+			"No responses shown after deleting active environment (PR:2265:gschier)",
+			"Prevent linting from breaking code-editor persistence (PR:2267:gschier)"
+		]
+	},
+	{
+		"downloads": {
 			"root": "https://github.com/Kong/insomnia/releases/download/core@2020.2.1",
 			"mac": "https://github.com/Kong/insomnia/releases/download/core@2020.2.1/Insomnia.Core-2020.2.1.dmg",
 			"macZip": "https://github.com/Kong/insomnia/releases/download/core@2020.2.1/Insomnia.Core-2020.2.1.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/core@2020.2.1/Insomnia.Core-2020.2.1.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/core@2020.2.1/Insomnia.Core-2020.2.1.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/core@2020.2.1/Insomnia.Core-2020.2.1.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/core@2020.2.1/Insomnia.Core-2020.2.1.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/core@2020.2.1"
 		},
 		"app": "com.insomnia.app",
 		"date": "2020-06-02T00:00:00.000Z",
@@ -26,7 +84,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/core@2020.2.0/Insomnia.Core-2020.2.0.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/core@2020.2.0/Insomnia.Core-2020.2.0.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/core@2020.2.0/Insomnia.Core-2020.2.0.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/core@2020.2.0/Insomnia.Core-2020.2.0.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/core@2020.2.0/Insomnia.Core-2020.2.0.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/core@2020.2.0"
 		},
 		"app": "com.insomnia.app",
 		"date": "2020-05-31T00:00:00.000Z",
@@ -67,8 +126,9 @@
 			"mac": "https://github.com/Kong/insomnia/releases/download/designer@2020.2.0/Insomnia.Designer-2020.2.0.dmg",
 			"macZip": "https://github.com/Kong/insomnia/releases/download/designer@2020.2.0/Insomnia.Designer-2020.2.0.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/designer@2020.2.0/Insomnia.Designer-2020.2.0.exe",
-			"linux": "https://github.com/Kong/insomnia/releases/download/designer@2020.2.0/Insomnia-2020.2.0.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/designer@2020.2.0/Insomnia-2020.2.0.deb"
+			"linux": "https://github.com/Kong/insomnia/releases/download/designer@2020.2.0/Insomnia.Designer-2020.2.0.AppImage",
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/designer@2020.2.0/Insomnia.Designer-2020.2.0.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/designer@2020.2.0"
 		},
 		"app": "com.insomnia.designer",
 		"date": "2020-05-29T00:00:00.000Z",
@@ -102,7 +162,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/core@2020.2.0-beta.1/Insomnia.Core-2020.2.0-beta.1.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/core@2020.2.0-beta.1/Insomnia.Core-2020.2.0-beta.1.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/core@2020.2.0-beta.1/Insomnia.Core-2020.2.0-beta.1.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/core@2020.2.0-beta.1/Insomnia.Core-2020.2.0-beta.1.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/core@2020.2.0-beta.1/Insomnia.Core-2020.2.0-beta.1.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/core@2020.2.0-beta.1"
 		},
 		"app": "com.insomnia.app",
 		"date": "2020-05-28T00:00:00.000Z",
@@ -119,8 +180,9 @@
 			"mac": "https://github.com/Kong/insomnia/releases/download/designer@2020.2.0-beta.1/Insomnia.Designer-2020.2.0-beta.1.dmg",
 			"macZip": "https://github.com/Kong/insomnia/releases/download/designer@2020.2.0-beta.1/Insomnia.Designer-2020.2.0-beta.1.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/designer@2020.2.0-beta.1/Insomnia.Designer-2020.2.0-beta.1.exe",
-			"linux": "https://github.com/Kong/insomnia/releases/download/designer@2020.2.0-beta.1/Insomnia-2020.2.0-beta.1.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/designer@2020.2.0-beta.1/Insomnia-2020.2.0-beta.1.deb"
+			"linux": "https://github.com/Kong/insomnia/releases/download/designer@2020.2.0-beta.1/Insomnia.Designer-2020.2.0-beta.1.AppImage",
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/designer@2020.2.0-beta.1/Insomnia.Designer-2020.2.0-beta.1.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/designer@2020.2.0-beta.1"
 		},
 		"app": "com.insomnia.designer",
 		"date": "2020-05-28T00:00:00.000Z",
@@ -137,8 +199,9 @@
 			"mac": "https://github.com/Kong/insomnia/releases/download/designer@2020.1.3/Insomnia.Designer-2020.1.3.dmg",
 			"macZip": "https://github.com/Kong/insomnia/releases/download/designer@2020.1.3/Insomnia.Designer-2020.1.3.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/designer@2020.1.3/Insomnia.Designer-2020.1.3.exe",
-			"linux": "https://github.com/Kong/insomnia/releases/download/designer@2020.1.3/Insomnia-2020.1.3.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/designer@2020.1.3/Insomnia-2020.1.3.deb"
+			"linux": "https://github.com/Kong/insomnia/releases/download/designer@2020.1.3/Insomnia.Designer-2020.1.3.AppImage",
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/designer@2020.1.3/Insomnia.Designer-2020.1.3.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/designer@2020.1.3"
 		},
 		"app": "com.insomnia.designer",
 		"date": "2020-04-29T00:00:00.000Z",
@@ -157,8 +220,9 @@
 			"mac": "https://github.com/Kong/insomnia/releases/download/designer@2020.1.1/Insomnia.Designer-2020.1.1.dmg",
 			"macZip": "https://github.com/Kong/insomnia/releases/download/designer@2020.1.1/Insomnia.Designer-2020.1.1.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/designer@2020.1.1/Insomnia.Designer-2020.1.1.exe",
-			"linux": "https://github.com/Kong/insomnia/releases/download/designer@2020.1.1/Insomnia-2020.1.1.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/designer@2020.1.1/Insomnia-2020.1.1.deb"
+			"linux": "https://github.com/Kong/insomnia/releases/download/designer@2020.1.1/Insomnia.Designer-2020.1.1.AppImage",
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/designer@2020.1.1/Insomnia.Designer-2020.1.1.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/designer@2020.1.1"
 		},
 		"app": "com.insomnia.designer",
 		"date": "2020-04-28T00:00:00.000Z",
@@ -177,8 +241,9 @@
 			"mac": "https://github.com/Kong/insomnia/releases/download/designer@2020.1.0-beta.3/Insomnia.Designer-2020.1.0-beta.3.dmg",
 			"macZip": "https://github.com/Kong/insomnia/releases/download/designer@2020.1.0-beta.3/Insomnia.Designer-2020.1.0-beta.3.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/designer@2020.1.0-beta.3/Insomnia.Designer-2020.1.0-beta.3.exe",
-			"linux": "https://github.com/Kong/insomnia/releases/download/designer@2020.1.0-beta.3/Insomnia-2020.1.0-beta.3.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/designer@2020.1.0-beta.3/Insomnia-2020.1.0-beta.3.deb"
+			"linux": "https://github.com/Kong/insomnia/releases/download/designer@2020.1.0-beta.3/Insomnia.Designer-2020.1.0-beta.3.AppImage",
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/designer@2020.1.0-beta.3/Insomnia.Designer-2020.1.0-beta.3.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/designer@2020.1.0-beta.3"
 		},
 		"app": "com.insomnia.designer",
 		"date": "2020-04-27T00:00:00.000Z",
@@ -197,8 +262,9 @@
 			"mac": "https://github.com/Kong/insomnia/releases/download/designer@2020.1.0-beta.2/Insomnia.Designer-2020.1.0-beta.2.dmg",
 			"macZip": "https://github.com/Kong/insomnia/releases/download/designer@2020.1.0-beta.2/Insomnia.Designer-2020.1.0-beta.2.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/designer@2020.1.0-beta.2/Insomnia.Designer-2020.1.0-beta.2.exe",
-			"linux": "https://github.com/Kong/insomnia/releases/download/designer@2020.1.0-beta.2/Insomnia-2020.1.0-beta.2.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/designer@2020.1.0-beta.2/Insomnia-2020.1.0-beta.2.deb"
+			"linux": "https://github.com/Kong/insomnia/releases/download/designer@2020.1.0-beta.2/Insomnia.Designer-2020.1.0-beta.2.AppImage",
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/designer@2020.1.0-beta.2/Insomnia.Designer-2020.1.0-beta.2.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/designer@2020.1.0-beta.2"
 		},
 		"app": "com.insomnia.designer",
 		"date": "2020-04-26T00:00:00.000Z",
@@ -218,7 +284,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v7.1.1/Insomnia-7.1.1-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v7.1.1/Insomnia.Setup.7.1.1.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v7.1.1/Insomnia-7.1.1.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v7.1.1/insomnia_7.1.1_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v7.1.1/insomnia_7.1.1_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v7.1.1"
 		},
 		"app": "com.insomnia.app",
 		"date": "2020-02-18T00:00:00.000Z",
@@ -238,7 +305,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v7.1.0/Insomnia-7.1.0-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v7.1.0/Insomnia.Setup.7.1.0.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v7.1.0/Insomnia-7.1.0.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v7.1.0/insomnia_7.1.0_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v7.1.0/insomnia_7.1.0_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v7.1.0"
 		},
 		"app": "com.insomnia.app",
 		"date": "2020-02-12T00:00:00.000Z",
@@ -274,7 +342,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v7.0.6/Insomnia-7.0.6-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v7.0.6/Insomnia.Setup.7.0.6.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v7.0.6/Insomnia-7.0.6.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v7.0.6/insomnia_7.0.6_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v7.0.6/insomnia_7.0.6_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v7.0.6"
 		},
 		"app": "com.insomnia.app",
 		"date": "2019-12-17T00:00:00.000Z",
@@ -314,7 +383,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v7.0.5/Insomnia-7.0.5-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v7.0.5/Insomnia.Setup.7.0.5.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v7.0.5/Insomnia-7.0.5.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v7.0.5/insomnia_7.0.5_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v7.0.5/insomnia_7.0.5_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v7.0.5"
 		},
 		"app": "com.insomnia.app",
 		"date": "2019-11-28T00:00:00.000Z",
@@ -356,7 +426,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v7.0.3/Insomnia-7.0.3-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v7.0.3/Insomnia.Setup.7.0.3.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v7.0.3/Insomnia-7.0.3.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v7.0.3/insomnia_7.0.3_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v7.0.3/insomnia_7.0.3_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v7.0.3"
 		},
 		"app": "com.insomnia.app",
 		"date": "2019-10-17T00:00:00.000Z",
@@ -376,7 +447,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v7.0.1/Insomnia-7.0.1-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v7.0.1/Insomnia.Setup.7.0.1.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v7.0.1/Insomnia-7.0.1.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v7.0.1/insomnia_7.0.1_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v7.0.1/insomnia_7.0.1_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v7.0.1"
 		},
 		"app": "com.insomnia.app",
 		"date": "2019-10-08T00:00:00.000Z",
@@ -406,7 +478,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v7.0.0/Insomnia-7.0.0-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v7.0.0/Insomnia.Setup.7.0.0.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v7.0.0/Insomnia-7.0.0.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v7.0.0/insomnia_7.0.0_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v7.0.0/insomnia_7.0.0_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v7.0.0"
 		},
 		"app": "com.insomnia.app",
 		"date": "2019-10-02T00:00:00.000Z",
@@ -436,7 +509,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v6.6.2/Insomnia-6.6.2-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v6.6.2/Insomnia.Setup.6.6.2.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v6.6.2/Insomnia-6.6.2.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v6.6.2/insomnia_6.6.2_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v6.6.2/insomnia_6.6.2_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v6.6.2"
 		},
 		"app": "com.insomnia.app",
 		"date": "2019-08-06T00:00:00.000Z",
@@ -468,7 +542,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v6.5.4/Insomnia-6.5.4-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v6.5.4/Insomnia.Setup.6.5.4.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v6.5.4/Insomnia-6.5.4.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v6.5.4/insomnia_6.5.4_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v6.5.4/insomnia_6.5.4_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v6.5.4"
 		},
 		"app": "com.insomnia.app",
 		"date": "2019-05-30T00:00:00.000Z",
@@ -499,7 +574,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v6.5.3/Insomnia-6.5.3-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v6.5.3/Insomnia.Setup.6.5.3.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v6.5.3/Insomnia-6.5.3.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v6.5.3/insomnia_6.5.3_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v6.5.3/insomnia_6.5.3_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v6.5.3"
 		},
 		"app": "com.insomnia.app",
 		"date": "2019-05-15T00:00:00.000Z",
@@ -537,7 +613,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v6.5.1/Insomnia-6.5.1-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v6.5.1/Insomnia.Setup.6.5.1.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v6.5.1/Insomnia-6.5.1.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v6.5.1/insomnia_6.5.1_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v6.5.1/insomnia_6.5.1_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v6.5.1"
 		},
 		"app": "com.insomnia.app",
 		"date": "2019-05-07T00:00:00.000Z",
@@ -566,7 +643,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v6.4.2/Insomnia-6.4.2-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v6.4.2/Insomnia.Setup.6.4.2.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v6.4.2/Insomnia-6.4.2.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v6.4.2/insomnia_6.4.2_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v6.4.2/insomnia_6.4.2_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v6.4.2"
 		},
 		"app": "com.insomnia.app",
 		"date": "2019-04-29T00:00:00.000Z",
@@ -601,7 +679,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v6.4.1/Insomnia-6.4.1-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v6.4.1/Insomnia.Setup.6.4.1.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v6.4.1/Insomnia-6.4.1.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v6.4.1/insomnia_6.4.1_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v6.4.1/insomnia_6.4.1_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v6.4.1"
 		},
 		"app": "com.insomnia.app",
 		"date": "2019-04-23T00:00:00.000Z",
@@ -627,7 +706,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v6.4.0/Insomnia-6.4.0-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v6.4.0/Insomnia.Setup.6.4.0.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v6.4.0/Insomnia-6.4.0.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v6.4.0/insomnia_6.4.0_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v6.4.0/insomnia_6.4.0_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v6.4.0"
 		},
 		"app": "com.insomnia.app",
 		"date": "2019-04-22T00:00:00.000Z",
@@ -666,7 +746,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v6.3.2/Insomnia-6.3.2-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v6.3.2/Insomnia.Setup.6.3.2.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v6.3.2/Insomnia-6.3.2.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v6.3.2/insomnia_6.3.2_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v6.3.2/insomnia_6.3.2_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v6.3.2"
 		},
 		"app": "com.insomnia.app",
 		"date": "2018-12-19T00:00:00.000Z",
@@ -686,7 +767,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v6.3.1/Insomnia-6.3.1-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v6.3.1/Insomnia.Setup.6.3.1.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v6.3.1/Insomnia-6.3.1.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v6.3.1/insomnia_6.3.1_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v6.3.1/insomnia_6.3.1_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v6.3.1"
 		},
 		"app": "com.insomnia.app",
 		"date": "2018-12-16T00:00:00.000Z",
@@ -721,7 +803,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v6.2.3/Insomnia-6.2.3-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v6.2.3/Insomnia.Setup.6.2.3.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v6.2.3/Insomnia-6.2.3.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v6.2.3/insomnia_6.2.3_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v6.2.3/insomnia_6.2.3_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v6.2.3"
 		},
 		"app": "com.insomnia.app",
 		"date": "2018-11-30T00:00:00.000Z",
@@ -749,7 +832,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v6.2.0/Insomnia-6.2.0-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v6.2.0/Insomnia.Setup.6.2.0.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v6.2.0/Insomnia-6.2.0.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v6.2.0/insomnia_6.2.0_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v6.2.0/insomnia_6.2.0_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v6.2.0"
 		},
 		"app": "com.insomnia.app",
 		"date": "2018-11-08T00:00:00.000Z",
@@ -799,7 +883,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v6.0.3-beta.1/Insomnia-6.0.3-beta.1-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v6.0.3-beta.1/Insomnia.Setup.6.0.3-beta.1.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v6.0.3-beta.1/Insomnia-6.0.3-beta.1.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v6.0.3-beta.1/insomnia_6.0.3-beta.1_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v6.0.3-beta.1/insomnia_6.0.3-beta.1_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v6.0.3-beta.1"
 		},
 		"app": "com.insomnia.app",
 		"date": "2018-08-16T00:00:00.000Z",
@@ -819,7 +904,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v6.0.2/Insomnia-6.0.2-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v6.0.2/Insomnia.Setup.6.0.2.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v6.0.2/Insomnia-6.0.2.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v6.0.2/insomnia_6.0.2_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v6.0.2/insomnia_6.0.2_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v6.0.2"
 		},
 		"app": "com.insomnia.app",
 		"date": "2018-08-01T00:00:00.000Z",
@@ -845,7 +931,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v6.0.1/Insomnia-6.0.1-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v6.0.1/Insomnia.Setup.6.0.1.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v6.0.1/Insomnia-6.0.1.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v6.0.1/insomnia_6.0.1_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v6.0.1/insomnia_6.0.1_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v6.0.1"
 		},
 		"app": "com.insomnia.app",
 		"date": "2018-07-25T00:00:00.000Z",
@@ -869,7 +956,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v6.0.0/Insomnia-6.0.0-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v6.0.0/Insomnia.Setup.6.0.0.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v6.0.0/Insomnia-6.0.0.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v6.0.0/insomnia_6.0.0_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v6.0.0/insomnia_6.0.0_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v6.0.0"
 		},
 		"app": "com.insomnia.app",
 		"date": "2018-07-24T00:00:00.000Z",
@@ -926,7 +1014,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v6.0.0-beta.2/Insomnia-6.0.0-beta.2-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v6.0.0-beta.2/Insomnia.Setup.6.0.0-beta.2.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v6.0.0-beta.2/Insomnia-6.0.0-beta.2.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v6.0.0-beta.2/insomnia_6.0.0-beta.2_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v6.0.0-beta.2/insomnia_6.0.0-beta.2_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v6.0.0-beta.2"
 		},
 		"app": "com.insomnia.app",
 		"date": "2018-07-21T00:00:00.000Z",
@@ -958,7 +1047,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v6.0.0-beta.1/Insomnia-6.0.0-beta.1-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v6.0.0-beta.1/Insomnia.Setup.6.0.0-beta.1.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v6.0.0-beta.1/Insomnia-6.0.0-beta.1.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v6.0.0-beta.1/insomnia_6.0.0-beta.1_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v6.0.0-beta.1/insomnia_6.0.0-beta.1_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v6.0.0-beta.1"
 		},
 		"app": "com.insomnia.app",
 		"date": "2018-06-29T00:00:00.000Z",
@@ -1004,7 +1094,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v5.16.6/Insomnia-5.16.6-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v5.16.6/Insomnia.Setup.5.16.6.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v5.16.6/Insomnia-5.16.6.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v5.16.6/insomnia_5.16.6_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v5.16.6/insomnia_5.16.6_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v5.16.6"
 		},
 		"app": "com.insomnia.app",
 		"date": "2018-05-25T00:00:00.000Z",
@@ -1027,7 +1118,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v5.16.5/Insomnia-5.16.5-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v5.16.5/Insomnia.Setup.5.16.5.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v5.16.5/Insomnia-5.16.5.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v5.16.5/insomnia_5.16.5_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v5.16.5/insomnia_5.16.5_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v5.16.5"
 		},
 		"app": "com.insomnia.app",
 		"date": "2018-05-24T00:00:00.000Z",
@@ -1049,7 +1141,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v5.16.4/Insomnia-5.16.4-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v5.16.4/Insomnia.Setup.5.16.4.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v5.16.4/Insomnia-5.16.4.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v5.16.4/insomnia_5.16.4_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v5.16.4/insomnia_5.16.4_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v5.16.4"
 		},
 		"app": "com.insomnia.app",
 		"date": "2018-05-23T00:00:00.000Z",
@@ -1075,7 +1168,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v5.16.2/Insomnia-5.16.2-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v5.16.2/Insomnia.Setup.5.16.2.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v5.16.2/Insomnia-5.16.2.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v5.16.2/insomnia_5.16.2_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v5.16.2/insomnia_5.16.2_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v5.16.2"
 		},
 		"app": "com.insomnia.app",
 		"date": "2018-05-04T00:00:00.000Z",
@@ -1099,7 +1193,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v5.16.1/Insomnia-5.16.1-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v5.16.1/Insomnia.Setup.5.16.1.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v5.16.1/Insomnia-5.16.1.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v5.16.1/insomnia_5.16.1_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v5.16.1/insomnia_5.16.1_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v5.16.1"
 		},
 		"app": "com.insomnia.app",
 		"date": "2018-04-26T00:00:00.000Z",
@@ -1119,7 +1214,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v5.16.0/Insomnia-5.16.0-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v5.16.0/Insomnia.Setup.5.16.0.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v5.16.0/Insomnia-5.16.0.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v5.16.0/insomnia_5.16.0_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v5.16.0/insomnia_5.16.0_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v5.16.0"
 		},
 		"app": "com.insomnia.app",
 		"date": "2018-04-25T00:00:00.000Z",
@@ -1159,7 +1255,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v5.15.0/Insomnia-5.15.0-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v5.15.0/Insomnia.Setup.5.15.0.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v5.15.0/Insomnia-5.15.0.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v5.15.0/insomnia_5.15.0_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v5.15.0/insomnia_5.15.0_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v5.15.0"
 		},
 		"app": "com.insomnia.app",
 		"date": "2018-04-02T00:00:00.000Z",
@@ -1212,7 +1309,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v5.14.9/Insomnia-5.14.9-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v5.14.9/Insomnia.Setup.5.14.9.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v5.14.9/Insomnia-5.14.9.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v5.14.9/insomnia_5.14.9_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v5.14.9/insomnia_5.14.9_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v5.14.9"
 		},
 		"app": "com.insomnia.app",
 		"date": "2018-03-03T00:00:00.000Z",
@@ -1232,7 +1330,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v5.14.8/Insomnia-5.14.8-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v5.14.8/Insomnia.Setup.5.14.8.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v5.14.8/Insomnia-5.14.8.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v5.14.8/insomnia_5.14.8_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v5.14.8/insomnia_5.14.8_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v5.14.8"
 		},
 		"app": "com.insomnia.app",
 		"date": "2018-03-02T00:00:00.000Z",
@@ -1256,7 +1355,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v5.14.7/Insomnia-5.14.7-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v5.14.7/Insomnia.Setup.5.14.7.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v5.14.7/Insomnia-5.14.7.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v5.14.7/insomnia_5.14.7_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v5.14.7/insomnia_5.14.7_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v5.14.7"
 		},
 		"app": "com.insomnia.app",
 		"date": "2018-02-14T00:00:00.000Z",
@@ -1276,7 +1376,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v5.14.6/Insomnia-5.14.6-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v5.14.6/Insomnia.Setup.5.14.6.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v5.14.6/Insomnia-5.14.6.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v5.14.6/insomnia_5.14.6_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v5.14.6/insomnia_5.14.6_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v5.14.6"
 		},
 		"app": "com.insomnia.app",
 		"date": "2018-02-07T00:00:00.000Z",
@@ -1318,7 +1419,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v5.12.4/Insomnia-5.12.4-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v5.12.4/Insomnia.Setup.5.12.4.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v5.12.4/Insomnia-5.12.4.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v5.12.4/insomnia_5.12.4_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v5.12.4/insomnia_5.12.4_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v5.12.4"
 		},
 		"app": "com.insomnia.app",
 		"date": "2017-12-01T00:00:00.000Z",
@@ -1342,7 +1444,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v5.12.4-beta.2/Insomnia-5.12.4-beta.2-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v5.12.4-beta.2/Insomnia.Setup.5.12.4-beta.2.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v5.12.4-beta.2/Insomnia-5.12.4-beta.2.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v5.12.4-beta.2/insomnia_5.12.4-beta.2_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v5.12.4-beta.2/insomnia_5.12.4-beta.2_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v5.12.4-beta.2"
 		},
 		"app": "com.insomnia.app",
 		"date": "2017-11-30T00:00:00.000Z",
@@ -1366,7 +1469,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v5.12.3/Insomnia-5.12.3-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v5.12.3/Insomnia.Setup.5.12.3.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v5.12.3/Insomnia-5.12.3.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v5.12.3/insomnia_5.12.3_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v5.12.3/insomnia_5.12.3_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v5.12.3"
 		},
 		"app": "com.insomnia.app",
 		"date": "2017-11-28T00:00:00.000Z",
@@ -1386,7 +1490,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v5.12.1/Insomnia-5.12.1-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v5.12.1/Insomnia.Setup.5.12.1.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v5.12.1/Insomnia-5.12.1.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v5.12.1/insomnia_5.12.1_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v5.12.1/insomnia_5.12.1_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v5.12.1"
 		},
 		"app": "com.insomnia.app",
 		"date": "2017-11-27T00:00:00.000Z",
@@ -1422,7 +1527,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v5.12.0-beta.3/Insomnia-5.12.0-beta.3-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v5.12.0-beta.3/Insomnia.Setup.5.12.0-beta.3.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v5.12.0-beta.3/Insomnia-5.12.0-beta.3.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v5.12.0-beta.3/insomnia_5.12.0-beta.3_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v5.12.0-beta.3/insomnia_5.12.0-beta.3_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v5.12.0-beta.3"
 		},
 		"app": "com.insomnia.app",
 		"date": "2017-11-23T00:00:00.000Z",
@@ -1446,7 +1552,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v5.12.0-beta.2/Insomnia-5.12.0-beta.2-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v5.12.0-beta.2/Insomnia.Setup.5.12.0-beta.2.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v5.12.0-beta.2/Insomnia-5.12.0-beta.2.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v5.12.0-beta.2/insomnia_5.12.0-beta.2_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v5.12.0-beta.2/insomnia_5.12.0-beta.2_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v5.12.0-beta.2"
 		},
 		"app": "com.insomnia.app",
 		"date": "2017-11-21T00:00:00.000Z",
@@ -1475,7 +1582,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v5.11.7/Insomnia-5.11.7-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v5.11.7/Insomnia.Setup.5.11.7.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v5.11.7/Insomnia-5.11.7.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v5.11.7/insomnia_5.11.7_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v5.11.7/insomnia_5.11.7_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v5.11.7"
 		},
 		"app": "com.insomnia.app",
 		"date": "2017-11-14T00:00:00.000Z",
@@ -1498,7 +1606,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v5.11.5/Insomnia-5.11.5-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v5.11.5/Insomnia.Setup.5.11.5.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v5.11.5/Insomnia-5.11.5.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v5.11.5/insomnia_5.11.5_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v5.11.5/insomnia_5.11.5_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v5.11.5"
 		},
 		"app": "com.insomnia.app",
 		"date": "2017-11-10T00:00:00.000Z",
@@ -1526,7 +1635,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v5.11.0/Insomnia-5.11.0-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v5.11.0/Insomnia.Setup.5.11.0.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v5.11.0/Insomnia-5.11.0.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v5.11.0/insomnia_5.11.0_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v5.11.0/insomnia_5.11.0_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v5.11.0"
 		},
 		"app": "com.insomnia.app",
 		"date": "2017-11-08T00:00:00.000Z",
@@ -1560,7 +1670,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v5.10.1/Insomnia-5.10.1-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v5.10.1/Insomnia.Setup.5.10.1.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v5.10.1/Insomnia-5.10.1.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v5.10.1/insomnia_5.10.1_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v5.10.1/insomnia_5.10.1_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v5.10.1"
 		},
 		"app": "com.insomnia.app",
 		"date": "2017-11-01T00:00:00.000Z",
@@ -1593,7 +1704,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v5.9.6/Insomnia-5.9.6-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v5.9.6/Insomnia.Setup.5.9.6.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v5.9.6/Insomnia-5.9.6.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v5.9.6/insomnia_5.9.6_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v5.9.6/insomnia_5.9.6_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v5.9.6"
 		},
 		"app": "com.insomnia.app",
 		"date": "2017-10-13T00:00:00.000Z",
@@ -1622,7 +1734,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v5.9.2/Insomnia-5.9.2-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v5.9.2/Insomnia.Setup.5.9.2.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v5.9.2/Insomnia-5.9.2.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v5.9.2/insomnia_5.9.2_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v5.9.2/insomnia_5.9.2_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v5.9.2"
 		},
 		"app": "com.insomnia.app",
 		"date": "2017-10-12T00:00:00.000Z",
@@ -1655,7 +1768,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v5.8.4/Insomnia-5.8.4-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v5.8.4/Insomnia.Setup.5.8.4.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v5.8.4/Insomnia-5.8.4.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v5.8.4/insomnia_5.8.4_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v5.8.4/insomnia_5.8.4_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v5.8.4"
 		},
 		"app": "com.insomnia.app",
 		"date": "2017-09-18T00:00:00.000Z",
@@ -1680,7 +1794,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v5.8.3/Insomnia-5.8.3-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v5.8.3/Insomnia.Setup.5.8.3.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v5.8.3/Insomnia-5.8.3.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v5.8.3/insomnia_5.8.3_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v5.8.3/insomnia_5.8.3_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v5.8.3"
 		},
 		"app": "com.insomnia.app",
 		"date": "2017-09-13T00:00:00.000Z",
@@ -1702,7 +1817,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v5.8.2/Insomnia-5.8.2-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v5.8.2/Insomnia.Setup.5.8.2.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v5.8.2/Insomnia-5.8.2.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v5.8.2/insomnia_5.8.2_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v5.8.2/insomnia_5.8.2_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v5.8.2"
 		},
 		"app": "com.insomnia.app",
 		"date": "2017-09-11T00:00:00.000Z",
@@ -1734,7 +1850,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v5.7.14/Insomnia-5.7.14-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v5.7.14/Insomnia.Setup.5.7.14.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v5.7.14/Insomnia-5.7.14.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v5.7.14/insomnia_5.7.14_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v5.7.14/insomnia_5.7.14_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v5.7.14"
 		},
 		"app": "com.insomnia.app",
 		"date": "2017-08-16T00:00:00.000Z",
@@ -1756,7 +1873,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v5.7.12/Insomnia-5.7.12-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v5.7.12/Insomnia.Setup.5.7.12.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v5.7.12/Insomnia-5.7.12.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v5.7.12/insomnia_5.7.12_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v5.7.12/insomnia_5.7.12_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v5.7.12"
 		},
 		"app": "com.insomnia.app",
 		"date": "2017-08-14T00:00:00.000Z",
@@ -1779,7 +1897,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v5.7.11/Insomnia-5.7.11-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v5.7.11/Insomnia.Setup.5.7.11.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v5.7.11/Insomnia-5.7.11.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v5.7.11/insomnia_5.7.11_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v5.7.11/insomnia_5.7.11_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v5.7.11"
 		},
 		"app": "com.insomnia.app",
 		"date": "2017-08-12T22:00:00.000Z",
@@ -1799,7 +1918,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v5.7.10/Insomnia-5.7.10-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v5.7.10/Insomnia.Setup.5.7.10.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v5.7.10/Insomnia-5.7.10.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v5.7.10/insomnia_5.7.10_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v5.7.10/insomnia_5.7.10_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v5.7.10"
 		},
 		"app": "com.insomnia.app",
 		"date": "2017-08-12T17:00:00.000Z",
@@ -1823,7 +1943,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v5.7.9/Insomnia-5.7.9-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v5.7.9/Insomnia.Setup.5.7.9.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v5.7.9/Insomnia-5.7.9.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v5.7.9/insomnia_5.7.9_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v5.7.9/insomnia_5.7.9_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v5.7.9"
 		},
 		"app": "com.insomnia.app",
 		"date": "2017-08-11T00:00:00.000Z",
@@ -1852,7 +1973,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v5.7.4/Insomnia-5.7.4-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v5.7.4/Insomnia.Setup.5.7.4.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v5.7.4/Insomnia-5.7.4.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v5.7.4/insomnia_5.7.4_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v5.7.4/insomnia_5.7.4_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v5.7.4"
 		},
 		"app": "com.insomnia.app",
 		"date": "2017-08-04T00:00:00.000Z",
@@ -1879,7 +2001,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v5.7.0/Insomnia-5.7.0-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v5.7.0/Insomnia.Setup.5.7.0.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v5.7.0/Insomnia-5.7.0.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v5.7.0/insomnia_5.7.0_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v5.7.0/insomnia_5.7.0_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v5.7.0"
 		},
 		"app": "com.insomnia.app",
 		"date": "2017-08-02T00:00:00.000Z",
@@ -1913,7 +2036,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v5.6.3/Insomnia-5.6.3-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v5.6.3/Insomnia.Setup.5.6.3.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v5.6.3/Insomnia-5.6.3.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v5.6.3/insomnia_5.6.3_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v5.6.3/insomnia_5.6.3_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v5.6.3"
 		},
 		"app": "com.insomnia.app",
 		"date": "2017-07-18T00:00:00.000Z",
@@ -1933,7 +2057,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v5.6.1/Insomnia-5.6.1-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v5.6.1/Insomnia.Setup.5.6.1.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v5.6.1/Insomnia-5.6.1.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v5.6.1/insomnia_5.6.1_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v5.6.1/insomnia_5.6.1_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v5.6.1"
 		},
 		"app": "com.insomnia.app",
 		"date": "2017-07-17T00:00:00.000Z",
@@ -1962,7 +2087,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v5.5.2/Insomnia-5.5.2-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v5.5.2/Insomnia.Setup.5.5.2.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v5.5.2/Insomnia-5.5.2.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v5.5.2/insomnia_5.5.2_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v5.5.2/insomnia_5.5.2_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v5.5.2"
 		},
 		"app": "com.insomnia.app",
 		"date": "2017-06-30T00:00:00.000Z",
@@ -1990,7 +2116,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v5.4.0/Insomnia-5.4.0-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v5.4.0/Insomnia.Setup.5.4.0.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v5.4.0/Insomnia-5.4.0.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v5.4.0/insomnia_5.4.0_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v5.4.0/insomnia_5.4.0_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v5.4.0"
 		},
 		"app": "com.insomnia.app",
 		"date": "2017-06-22T00:00:00.000Z",
@@ -2022,7 +2149,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v5.3.6/Insomnia-5.3.6-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v5.3.6/Insomnia.Setup.5.3.6.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v5.3.6/Insomnia-5.3.6.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v5.3.6/insomnia_5.3.6_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v5.3.6/insomnia_5.3.6_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v5.3.6"
 		},
 		"app": "com.insomnia.app",
 		"date": "2017-06-15T00:00:00.000Z",
@@ -2047,7 +2175,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v5.3.3/Insomnia-5.3.3-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v5.3.3/Insomnia.Setup.5.3.3.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v5.3.3/Insomnia-5.3.3.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v5.3.3/insomnia_5.3.3_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v5.3.3/insomnia_5.3.3_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v5.3.3"
 		},
 		"app": "com.insomnia.app",
 		"date": "2017-06-13T00:00:00.000Z",
@@ -2070,7 +2199,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v5.3.0/Insomnia-5.3.0-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v5.3.0/Insomnia.Setup.5.3.0.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v5.3.0/Insomnia-5.3.0.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v5.3.0/insomnia_5.3.0_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v5.3.0/insomnia_5.3.0_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v5.3.0"
 		},
 		"app": "com.insomnia.app",
 		"date": "2017-06-12T00:00:00.000Z",
@@ -2104,7 +2234,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v5.2.0/Insomnia-5.2.0-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v5.2.0/Insomnia.Setup.5.2.0.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v5.2.0/Insomnia-5.2.0.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v5.2.0/insomnia_5.2.0_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v5.2.0/insomnia_5.2.0_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v5.2.0"
 		},
 		"app": "com.insomnia.app",
 		"date": "2017-06-06T00:00:00.000Z",
@@ -2134,7 +2265,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v5.1.1/Insomnia-5.1.1-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v5.1.1/Insomnia.Setup.5.1.1.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v5.1.1/Insomnia-5.1.1.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v5.1.1/insomnia_5.1.1_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v5.1.1/insomnia_5.1.1_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v5.1.1"
 		},
 		"app": "com.insomnia.app",
 		"date": "2017-05-29T00:00:00.000Z",
@@ -2163,7 +2295,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v5.1.0/Insomnia-5.1.0-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v5.1.0/Insomnia.Setup.5.1.0.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v5.1.0/Insomnia-5.1.0.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v5.1.0/insomnia_5.1.0_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v5.1.0/insomnia_5.1.0_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v5.1.0"
 		},
 		"app": "com.insomnia.app",
 		"date": "2017-05-24T00:00:00.000Z",
@@ -2194,7 +2327,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v5.0.20/Insomnia-5.0.20-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v5.0.20/Insomnia.Setup.5.0.20.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v5.0.20/Insomnia-5.0.20.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v5.0.20/insomnia_5.0.20_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v5.0.20/insomnia_5.0.20_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v5.0.20"
 		},
 		"app": "com.insomnia.app",
 		"date": "2017-05-05T00:00:00.000Z",
@@ -2214,7 +2348,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v5.0.12/Insomnia-5.0.12-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v5.0.12/Insomnia.Setup.5.0.12.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v5.0.12/Insomnia-5.0.12.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v5.0.12/insomnia_5.0.12_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v5.0.12/insomnia_5.0.12_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v5.0.12"
 		},
 		"app": "com.insomnia.app",
 		"date": "2017-05-03T00:00:00.000Z",
@@ -2240,7 +2375,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v5.0.10/Insomnia-5.0.10-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v5.0.10/Insomnia.Setup.5.0.10.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v5.0.10/Insomnia-5.0.10.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v5.0.10/insomnia_5.0.10_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v5.0.10/insomnia_5.0.10_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v5.0.10"
 		},
 		"app": "com.insomnia.app",
 		"date": "2017-04-20T00:00:00.000Z",
@@ -2269,7 +2405,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v5.0.5/Insomnia-5.0.5-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v5.0.5/Insomnia.Setup.5.0.5.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v5.0.5/Insomnia-5.0.5.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v5.0.5/insomnia_5.0.5_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v5.0.5/insomnia_5.0.5_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v5.0.5"
 		},
 		"app": "com.insomnia.app",
 		"date": "2017-04-14T00:00:00.000Z",
@@ -2291,7 +2428,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v5.0.4/Insomnia-5.0.4-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v5.0.4/Insomnia.Setup.5.0.4.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v5.0.4/Insomnia-5.0.4.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v5.0.4/insomnia_5.0.4_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v5.0.4/insomnia_5.0.4_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v5.0.4"
 		},
 		"app": "com.insomnia.app",
 		"date": "2017-04-11T00:00:00.000Z",
@@ -2317,7 +2455,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v5.0.3/Insomnia-5.0.3-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v5.0.3/Insomnia.Setup.5.0.3.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v5.0.3/Insomnia-5.0.3.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v5.0.3/insomnia_5.0.3_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v5.0.3/insomnia_5.0.3_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v5.0.3"
 		},
 		"app": "com.insomnia.app",
 		"date": "2017-04-09T00:00:00.000Z",
@@ -2339,7 +2478,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v5.0.2/Insomnia-5.0.2-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v5.0.2/Insomnia.Setup.5.0.2.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v5.0.2/Insomnia-5.0.2.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v5.0.2/insomnia_5.0.2_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v5.0.2/insomnia_5.0.2_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v5.0.2"
 		},
 		"app": "com.insomnia.app",
 		"date": "2017-04-07T00:00:00.000Z",
@@ -2366,7 +2506,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v5.0.1/Insomnia-5.0.1-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v5.0.1/Insomnia.Setup.5.0.1.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v5.0.1/Insomnia-5.0.1.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v5.0.1/insomnia_5.0.1_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v5.0.1/insomnia_5.0.1_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v5.0.1"
 		},
 		"app": "com.insomnia.app",
 		"date": "2017-04-05T00:00:00.000Z",
@@ -2419,7 +2560,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v4.2.14/Insomnia-4.2.14-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v4.2.14/Insomnia.Setup.4.2.14.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v4.2.14/Insomnia-4.2.14.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v4.2.14/insomnia_4.2.14_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v4.2.14/insomnia_4.2.14_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v4.2.14"
 		},
 		"app": "com.insomnia.app",
 		"date": "2017-02-15T00:00:00.000Z",
@@ -2446,7 +2588,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v4.2.11/Insomnia-4.2.11-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v4.2.11/Insomnia.Setup.4.2.11.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v4.2.11/Insomnia-4.2.11.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v4.2.11/insomnia_4.2.11_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v4.2.11/insomnia_4.2.11_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v4.2.11"
 		},
 		"app": "com.insomnia.app",
 		"date": "2017-02-07T00:00:00.000Z",
@@ -2471,7 +2614,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v4.2.9/Insomnia-4.2.9-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v4.2.9/Insomnia.Setup.4.2.9.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v4.2.9/Insomnia-4.2.9.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v4.2.9/insomnia_4.2.9_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v4.2.9/insomnia_4.2.9_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v4.2.9"
 		},
 		"app": "com.insomnia.app",
 		"date": "2017-02-02T00:00:00.000Z",
@@ -2492,7 +2636,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v4.2.8/Insomnia-4.2.8-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v4.2.8/Insomnia.Setup.4.2.8.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v4.2.8/Insomnia-4.2.8.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v4.2.8/insomnia_4.2.8_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v4.2.8/insomnia_4.2.8_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v4.2.8"
 		},
 		"app": "com.insomnia.app",
 		"date": "2017-02-01T00:00:00.000Z",
@@ -2512,7 +2657,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v4.2.7/Insomnia-4.2.7-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v4.2.7/Insomnia.Setup.4.2.7.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v4.2.7/Insomnia-4.2.7.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v4.2.7/insomnia_4.2.7_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v4.2.7/insomnia_4.2.7_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v4.2.7"
 		},
 		"app": "com.insomnia.app",
 		"date": "2017-01-31T00:00:00.000Z",
@@ -2539,7 +2685,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v4.2.5/Insomnia-4.2.5-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v4.2.5/Insomnia.Setup.4.2.5.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v4.2.5/Insomnia-4.2.5.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v4.2.5/insomnia_4.2.5_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v4.2.5/insomnia_4.2.5_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v4.2.5"
 		},
 		"app": "com.insomnia.app",
 		"date": "2017-01-30T00:00:00.000Z",
@@ -2559,7 +2706,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v4.2.4/Insomnia-4.2.4-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v4.2.4/Insomnia.Setup.4.2.4.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v4.2.4/Insomnia-4.2.4.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v4.2.4/insomnia_4.2.4_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v4.2.4/insomnia_4.2.4_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v4.2.4"
 		},
 		"app": "com.insomnia.app",
 		"date": "2017-01-29T00:00:00.000Z",
@@ -2580,7 +2728,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v4.2.3/Insomnia-4.2.3-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v4.2.3/Insomnia.Setup.4.2.3.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v4.2.3/Insomnia-4.2.3.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v4.2.3/insomnia_4.2.3_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v4.2.3/insomnia_4.2.3_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v4.2.3"
 		},
 		"app": "com.insomnia.app",
 		"date": "2017-01-26T00:00:00.000Z",
@@ -2605,7 +2754,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v4.2.2/Insomnia-4.2.2-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v4.2.2/Insomnia.Setup.4.2.2.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v4.2.2/Insomnia-4.2.2.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v4.2.2/insomnia_4.2.2_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v4.2.2/insomnia_4.2.2_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v4.2.2"
 		},
 		"app": "com.insomnia.app",
 		"date": "2017-01-25T00:00:00.000Z",
@@ -2631,7 +2781,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v4.2.0/Insomnia-4.2.0-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v4.2.0/Insomnia.Setup.4.2.0.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v4.2.0/Insomnia-4.2.0.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v4.2.0/insomnia_4.2.0_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v4.2.0/insomnia_4.2.0_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v4.2.0"
 		},
 		"app": "com.insomnia.app",
 		"date": "2017-01-23T00:00:00.000Z",
@@ -2655,7 +2806,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v4.1.1/Insomnia-4.1.1-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v4.1.1/Insomnia.Setup.4.1.1.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v4.1.1/Insomnia-4.1.1.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v4.1.1/insomnia_4.1.1_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v4.1.1/insomnia_4.1.1_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v4.1.1"
 		},
 		"app": "com.insomnia.app",
 		"date": "2017-01-11T00:00:00.000Z",
@@ -2681,7 +2833,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v4.0.13/Insomnia-4.0.13-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v4.0.13/Insomnia.Setup.4.0.13.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v4.0.13/Insomnia-4.0.13.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v4.0.13/insomnia_4.0.13_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v4.0.13/insomnia_4.0.13_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v4.0.13"
 		},
 		"app": "com.insomnia.app",
 		"date": "2016-12-30T00:00:00.000Z",
@@ -2706,7 +2859,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v4.0.12/Insomnia-4.0.12-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v4.0.12/Insomnia.Setup.4.0.12.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v4.0.12/Insomnia-4.0.12.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v4.0.12/insomnia_4.0.12_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v4.0.12/insomnia_4.0.12_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v4.0.12"
 		},
 		"app": "com.insomnia.app",
 		"date": "2016-12-23T00:00:00.000Z",
@@ -2731,7 +2885,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v4.0.9/Insomnia-4.0.9-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v4.0.9/Insomnia.Setup.4.0.9.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v4.0.9/Insomnia-4.0.9.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v4.0.9/insomnia_4.0.9_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v4.0.9/insomnia_4.0.9_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v4.0.9"
 		},
 		"app": "com.insomnia.app",
 		"date": "2016-12-08T00:00:00.000Z",
@@ -2759,7 +2914,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v4.0.5/Insomnia-4.0.5-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v4.0.5/Insomnia.Setup.4.0.5.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v4.0.5/Insomnia-4.0.5.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v4.0.5/insomnia_4.0.5_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v4.0.5/insomnia_4.0.5_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v4.0.5"
 		},
 		"app": "com.insomnia.app",
 		"date": "2016-12-05T00:00:00.000Z",
@@ -2784,7 +2940,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v4.0.2/Insomnia-4.0.2-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v4.0.2/Insomnia.Setup.4.0.2.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v4.0.2/Insomnia-4.0.2.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v4.0.2/insomnia_4.0.2_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v4.0.2/insomnia_4.0.2_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v4.0.2"
 		},
 		"app": "com.insomnia.app",
 		"date": "2016-12-01T00:00:00.000Z",
@@ -2826,7 +2983,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v3.7.3/Insomnia-3.7.3-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v3.7.3/Insomnia.Setup.3.7.3.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v3.7.3/Insomnia-3.7.3.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v3.7.3/insomnia_3.7.3_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v3.7.3/insomnia_3.7.3_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v3.7.3"
 		},
 		"app": "com.insomnia.app",
 		"date": "2016-11-18T00:00:00.000Z",
@@ -2850,7 +3008,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v3.7.1/Insomnia-3.7.1-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v3.7.1/Insomnia.Setup.3.7.1.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v3.7.1/Insomnia-3.7.1.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v3.7.1/insomnia_3.7.1_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v3.7.1/insomnia_3.7.1_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v3.7.1"
 		},
 		"app": "com.insomnia.app",
 		"date": "2016-11-17T00:00:00.000Z",
@@ -2874,7 +3033,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v3.7.0/Insomnia-3.7.0-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v3.7.0/Insomnia.Setup.3.7.0.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v3.7.0/Insomnia-3.7.0.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v3.7.0/insomnia_3.7.0_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v3.7.0/insomnia_3.7.0_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v3.7.0"
 		},
 		"app": "com.insomnia.app",
 		"date": "2016-11-15T00:00:00.000Z",
@@ -2901,7 +3061,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v3.6.8/Insomnia-3.6.8-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v3.6.8/Insomnia.Setup.3.6.8.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v3.6.8/Insomnia-3.6.8.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v3.6.8/insomnia_3.6.8_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v3.6.8/insomnia_3.6.8_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v3.6.8"
 		},
 		"app": "com.insomnia.app",
 		"date": "2016-11-07T20:22:03.000Z",
@@ -2921,7 +3082,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v3.6.7/Insomnia-3.6.7-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v3.6.7/Insomnia.Setup.3.6.7.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v3.6.7/Insomnia-3.6.7.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v3.6.7/insomnia_3.6.7_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v3.6.7/insomnia_3.6.7_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v3.6.7"
 		},
 		"app": "com.insomnia.app",
 		"date": "2016-11-01T17:53:38.000Z",
@@ -2946,7 +3108,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v3.6.6/Insomnia-3.6.6-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v3.6.6/Insomnia.Setup.3.6.6.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v3.6.6/Insomnia-3.6.6.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v3.6.6/insomnia_3.6.6_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v3.6.6/insomnia_3.6.6_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v3.6.6"
 		},
 		"app": "com.insomnia.app",
 		"date": "2016-10-27T10:58:48.000Z",
@@ -2968,7 +3131,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v3.6.4/Insomnia-3.6.4-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v3.6.4/Insomnia.Setup.3.6.4.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v3.6.4/Insomnia-3.6.4.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v3.6.4/insomnia_3.6.4_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v3.6.4/insomnia_3.6.4_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v3.6.4"
 		},
 		"app": "com.insomnia.app",
 		"date": "2016-10-27T03:35:02.000Z",
@@ -2992,7 +3156,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v3.6.2/Insomnia-3.6.2-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v3.6.2/Insomnia.Setup.3.6.2.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v3.6.2/Insomnia-3.6.2.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v3.6.2/insomnia_3.6.2_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v3.6.2/insomnia_3.6.2_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v3.6.2"
 		},
 		"app": "com.insomnia.app",
 		"date": "2016-10-25T02:01:10-07:00",
@@ -3014,7 +3179,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v3.6.0/Insomnia-3.6.0-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v3.6.0/Insomnia.Setup.3.6.0.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v3.6.0/Insomnia-3.6.0.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v3.6.0/insomnia_3.6.0_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v3.6.0/insomnia_3.6.0_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v3.6.0"
 		},
 		"app": "com.insomnia.app",
 		"date": "2016-10-21T17:33:58-07:00",
@@ -3036,7 +3202,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v3.5.13/Insomnia-3.5.13-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v3.5.13/Insomnia.Setup.3.5.13.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v3.5.13/Insomnia-3.5.13.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v3.5.13/insomnia_3.5.13_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v3.5.13/insomnia_3.5.13_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v3.5.13"
 		},
 		"app": "com.insomnia.app",
 		"date": "2016-10-11T17:21:26-07:00",
@@ -3061,7 +3228,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v3.5.12/Insomnia-3.5.12-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v3.5.12/Insomnia.Setup.3.5.12.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v3.5.12/Insomnia-3.5.12.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v3.5.12/insomnia_3.5.12_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v3.5.12/insomnia_3.5.12_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v3.5.12"
 		},
 		"app": "com.insomnia.app",
 		"date": "2016-10-10T18:27:02-07:00",
@@ -3081,7 +3249,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v3.5.11/Insomnia-3.5.11-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v3.5.11/Insomnia.Setup.3.5.11.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v3.5.11/Insomnia-3.5.11.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v3.5.11/insomnia_3.5.11_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v3.5.11/insomnia_3.5.11_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v3.5.11"
 		},
 		"app": "com.insomnia.app",
 		"date": "2016-10-06T17:39:13-07:00",
@@ -3102,7 +3271,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v3.5.10/Insomnia-3.5.10-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v3.5.10/Insomnia.Setup.3.5.10.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v3.5.10/Insomnia-3.5.10.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v3.5.10/insomnia_3.5.10_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v3.5.10/insomnia_3.5.10_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v3.5.10"
 		},
 		"app": "com.insomnia.app",
 		"date": "2016-10-05T16:52:28-07:00",
@@ -3124,7 +3294,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v3.5.7/Insomnia-3.5.7-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v3.5.7/Insomnia.Setup.3.5.7.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v3.5.7/Insomnia-3.5.7.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v3.5.7/insomnia_3.5.7_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v3.5.7/insomnia_3.5.7_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v3.5.7"
 		},
 		"app": "com.insomnia.app",
 		"date": "2016-10-05T05:13:09-07:00",
@@ -3145,7 +3316,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v3.5.6/Insomnia-3.5.6-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v3.5.6/Insomnia.Setup.3.5.6.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v3.5.6/Insomnia-3.5.6.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v3.5.6/insomnia_3.5.6_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v3.5.6/insomnia_3.5.6_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v3.5.6"
 		},
 		"app": "com.insomnia.app",
 		"date": "2016-10-02T22:46:37-07:00",
@@ -3168,7 +3340,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v3.5.3/Insomnia-3.5.3-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v3.5.3/Insomnia.Setup.3.5.3.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v3.5.3/Insomnia-3.5.3.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v3.5.3/insomnia_3.5.3_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v3.5.3/insomnia_3.5.3_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v3.5.3"
 		},
 		"app": "com.insomnia.app",
 		"date": "2016-09-28T22:24:05-07:00",
@@ -3191,7 +3364,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v3.5.2/Insomnia-3.5.2-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v3.5.2/Insomnia.Setup.3.5.2.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v3.5.2/Insomnia-3.5.2.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v3.5.2/insomnia_3.5.2_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v3.5.2/insomnia_3.5.2_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v3.5.2"
 		},
 		"app": "com.insomnia.app",
 		"date": "2016-09-24T03:00:39-07:00",
@@ -3213,7 +3387,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v3.5.1/Insomnia-3.5.1-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v3.5.1/Insomnia.Setup.3.5.1.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v3.5.1/Insomnia-3.5.1.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v3.5.1/insomnia_3.5.1_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v3.5.1/insomnia_3.5.1_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v3.5.1"
 		},
 		"app": "com.insomnia.app",
 		"date": "2016-09-22T19:27:39-07:00",
@@ -3240,7 +3415,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v3.4.4/Insomnia-3.4.4-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v3.4.4/Insomnia.Setup.3.4.4.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v3.4.4/Insomnia-3.4.4.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v3.4.4/insomnia_3.4.4_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v3.4.4/insomnia_3.4.4_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v3.4.4"
 		},
 		"app": "com.insomnia.app",
 		"date": "2016-09-21T01:58:49-07:00",
@@ -3265,7 +3441,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v3.4.1/Insomnia-3.4.1-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v3.4.1/Insomnia.Setup.3.4.1.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v3.4.1/Insomnia-3.4.1.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v3.4.1/insomnia_3.4.1_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v3.4.1/insomnia_3.4.1_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v3.4.1"
 		},
 		"app": "com.insomnia.app",
 		"date": "2016-09-13T17:56:50-07:00",
@@ -3306,7 +3483,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v3.3.2/Insomnia-3.3.2-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v3.3.2/Insomnia.Setup.3.3.2.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v3.3.2/Insomnia-3.3.2.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v3.3.2/insomnia_3.3.2_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v3.3.2/insomnia_3.3.2_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v3.3.2"
 		},
 		"app": "com.insomnia.app",
 		"date": "2016-09-10T17:56:50-07:00",
@@ -3327,7 +3505,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v3.3.1/Insomnia-3.3.1-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v3.3.1/Insomnia.Setup.3.3.1.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v3.3.1/Insomnia-3.3.1.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v3.3.1/insomnia_3.3.1_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v3.3.1/insomnia_3.3.1_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v3.3.1"
 		},
 		"app": "com.insomnia.app",
 		"date": "2016-09-05T17:56:50-07:00",
@@ -3352,7 +3531,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v3.2.9/Insomnia-3.2.9-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v3.2.9/Insomnia.Setup.3.2.9.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v3.2.9/Insomnia-3.2.9.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v3.2.9/insomnia_3.2.9_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v3.2.9/insomnia_3.2.9_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v3.2.9"
 		},
 		"app": "com.insomnia.app",
 		"date": "2016-09-03T17:56:50-07:00",
@@ -3376,7 +3556,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v3.2.6/Insomnia-3.2.6-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v3.2.6/Insomnia.Setup.3.2.6.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v3.2.6/Insomnia-3.2.6.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v3.2.6/insomnia_3.2.6_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v3.2.6/insomnia_3.2.6_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v3.2.6"
 		},
 		"app": "com.insomnia.app",
 		"date": "2016-09-01T17:56:50-07:00",
@@ -3399,7 +3580,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v3.2.3/Insomnia-3.2.3-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v3.2.3/Insomnia.Setup.3.2.3.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v3.2.3/Insomnia-3.2.3.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v3.2.3/insomnia_3.2.3_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v3.2.3/insomnia_3.2.3_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v3.2.3"
 		},
 		"app": "com.insomnia.app",
 		"date": "2016-08-28T17:56:50-07:00",
@@ -3424,7 +3606,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v3.2.2/Insomnia-3.2.2-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v3.2.2/Insomnia.Setup.3.2.2.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v3.2.2/Insomnia-3.2.2.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v3.2.2/insomnia_3.2.2_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v3.2.2/insomnia_3.2.2_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v3.2.2"
 		},
 		"app": "com.insomnia.app",
 		"date": "2016-08-23T17:56:50-07:00",
@@ -3446,7 +3629,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v3.2.1/Insomnia-3.2.1-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v3.2.1/Insomnia.Setup.3.2.1.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v3.2.1/Insomnia-3.2.1.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v3.2.1/insomnia_3.2.1_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v3.2.1/insomnia_3.2.1_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v3.2.1"
 		},
 		"app": "com.insomnia.app",
 		"date": "2016-08-17T17:49:00-07:00",
@@ -3471,7 +3655,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v3.2.0/Insomnia-3.2.0-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v3.2.0/Insomnia.Setup.3.2.0.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v3.2.0/Insomnia-3.2.0.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v3.2.0/insomnia_3.2.0_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v3.2.0/insomnia_3.2.0_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v3.2.0"
 		},
 		"app": "com.insomnia.app",
 		"date": "2016-08-09T22:13:16-07:00",
@@ -3506,7 +3691,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v3.0.16/Insomnia-3.0.16-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v3.0.16/Insomnia.Setup.3.0.16.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v3.0.16/Insomnia-3.0.16.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v3.0.16/insomnia_3.0.16_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v3.0.16/insomnia_3.0.16_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v3.0.16"
 		},
 		"app": "com.insomnia.app",
 		"date": "2016-08-03T16:57:51-07:00",
@@ -3526,7 +3712,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v3.0.15/Insomnia-3.0.15-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v3.0.15/Insomnia.Setup.3.0.15.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v3.0.15/Insomnia-3.0.15.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v3.0.15/insomnia_3.0.15_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v3.0.15/insomnia_3.0.15_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v3.0.15"
 		},
 		"app": "com.insomnia.app",
 		"date": "2016-07-29T20:31:19-07:00",
@@ -3547,7 +3734,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v3.0.14/Insomnia-3.0.14-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v3.0.14/Insomnia.Setup.3.0.14.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v3.0.14/Insomnia-3.0.14.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v3.0.14/insomnia_3.0.14_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v3.0.14/insomnia_3.0.14_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v3.0.14"
 		},
 		"app": "com.insomnia.app",
 		"date": "2016-07-29T16:31:40-07:00",
@@ -3570,7 +3758,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v3.0.13/Insomnia-3.0.13-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v3.0.13/Insomnia.Setup.3.0.13.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v3.0.13/Insomnia-3.0.13.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v3.0.13/insomnia_3.0.13_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v3.0.13/insomnia_3.0.13_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v3.0.13"
 		},
 		"app": "com.insomnia.app",
 		"date": "2016-07-28T18:19:47-07:00",
@@ -3597,7 +3786,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v3.0.11/Insomnia-3.0.11-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v3.0.11/Insomnia.Setup.3.0.11.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v3.0.11/Insomnia-3.0.11.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v3.0.11/insomnia_3.0.11_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v3.0.11/insomnia_3.0.11_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v3.0.11"
 		},
 		"app": "com.insomnia.app",
 		"date": "2016-07-27T19:33:15-07:00",
@@ -3624,7 +3814,8 @@
 			"macZip": "https://github.com/Kong/insomnia/releases/download/v3.0.10/Insomnia-3.0.10-mac.zip",
 			"windows": "https://github.com/Kong/insomnia/releases/download/v3.0.10/Insomnia.Setup.3.0.10.exe",
 			"linux": "https://github.com/Kong/insomnia/releases/download/v3.0.10/Insomnia-3.0.10.AppImage",
-			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v3.0.10/insomnia_3.0.10_amd64.deb"
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/v3.0.10/insomnia_3.0.10_amd64.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/v3.0.10"
 		},
 		"app": "com.insomnia.app",
 		"date": "2016-07-25T20:31:28-07:00",

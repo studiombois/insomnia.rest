@@ -101,6 +101,7 @@ module.exports.createPages = async function(data) {
       context: {
         // So we can use the $slug variable in GraphQL queries
         slug: frontmatter.slug || '',
+        app: frontmatter.app || '',
       },
     });
   }

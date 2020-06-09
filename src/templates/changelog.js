@@ -110,8 +110,8 @@ export default class BlogTemplate extends React.Component {
 }
 
 export const pageQuery = graphql`
-  query ChangelogBySlug($slug: String!) {
-    markdownRemark(frontmatter: {slug: {eq: $slug}}) {
+  query ChangelogBySlug($slug: String!, $app: String!) {
+    markdownRemark(frontmatter: {slug: {eq: $slug}, app: {eq: $app}}) {
       html
       frontmatter {
         app
