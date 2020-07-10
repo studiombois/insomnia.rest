@@ -2,7 +2,8 @@
 app: com.insomnia.designer
 channel: stable
 date: 2020-07-10
-slug: 2020.3.2
+slug: 2020.3.3
 fixes:
 - Fix text inputs not persisting on paste
+- Fix autocompletion of variables resolving to wrong value
 ---
