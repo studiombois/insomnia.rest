@@ -1,6 +1,151 @@
 [
 	{
 		"downloads": {
+			"root": "https://github.com/Kong/insomnia/releases/download/core@2020.3.3",
+			"mac": "https://github.com/Kong/insomnia/releases/download/core@2020.3.3/Insomnia.Core-2020.3.3.dmg",
+			"macZip": "https://github.com/Kong/insomnia/releases/download/core@2020.3.3/Insomnia.Core-2020.3.3.zip",
+			"windows": "https://github.com/Kong/insomnia/releases/download/core@2020.3.3/Insomnia.Core-2020.3.3.exe",
+			"linux": "https://github.com/Kong/insomnia/releases/download/core@2020.3.3/Insomnia.Core-2020.3.3.AppImage",
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/core@2020.3.3/Insomnia.Core-2020.3.3.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/core@2020.3.3"
+		},
+		"app": "com.insomnia.app",
+		"date": "2020-07-10T00:00:00.000Z",
+		"version": "2020.3.3",
+		"channel": "stable",
+		"link": null,
+		"major": [],
+		"minor": [],
+		"fixes": [
+			"Fix text inputs not persisting on paste",
+			"Fix autocompletion of variables resolving to wrong value"
+		]
+	},
+	{
+		"downloads": {
+			"root": "https://github.com/Kong/insomnia/releases/download/designer@2020.3.3",
+			"mac": "https://github.com/Kong/insomnia/releases/download/designer@2020.3.3/Insomnia.Designer-2020.3.3.dmg",
+			"macZip": "https://github.com/Kong/insomnia/releases/download/designer@2020.3.3/Insomnia.Designer-2020.3.3.zip",
+			"windows": "https://github.com/Kong/insomnia/releases/download/designer@2020.3.3/Insomnia.Designer-2020.3.3.exe",
+			"linux": "https://github.com/Kong/insomnia/releases/download/designer@2020.3.3/Insomnia.Designer-2020.3.3.AppImage",
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/designer@2020.3.3/Insomnia.Designer-2020.3.3.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/designer@2020.3.3"
+		},
+		"app": "com.insomnia.designer",
+		"date": "2020-07-10T00:00:00.000Z",
+		"version": "2020.3.3",
+		"channel": "stable",
+		"link": null,
+		"major": [],
+		"minor": [],
+		"fixes": [
+			"Fix text inputs not persisting on paste",
+			"Fix autocompletion of variables resolving to wrong value"
+		]
+	},
+	{
+		"downloads": {
+			"root": "https://github.com/Kong/insomnia/releases/download/core@2020.3.0",
+			"mac": "https://github.com/Kong/insomnia/releases/download/core@2020.3.0/Insomnia.Core-2020.3.0.dmg",
+			"macZip": "https://github.com/Kong/insomnia/releases/download/core@2020.3.0/Insomnia.Core-2020.3.0.zip",
+			"windows": "https://github.com/Kong/insomnia/releases/download/core@2020.3.0/Insomnia.Core-2020.3.0.exe",
+			"linux": "https://github.com/Kong/insomnia/releases/download/core@2020.3.0/Insomnia.Core-2020.3.0.AppImage",
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/core@2020.3.0/Insomnia.Core-2020.3.0.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/core@2020.3.0"
+		},
+		"app": "com.insomnia.app",
+		"date": "2020-07-09T00:00:00.000Z",
+		"version": "2020.3.0",
+		"channel": "stable",
+		"link": null,
+		"major": [
+			"Setting to specify default HTTP version for requests (PR:2276:gschier)"
+		],
+		"minor": [
+			"Add option to enable auto-beatify for request body editor (PR:2305:l0lcat)",
+			"Sort environment variables in Edit Variable dialog (PR:2295:anyxem)",
+			"Fallback to request URL as request name in sidebar if empty (PR:2230:jodyheavener)",
+			"Ability to re-send after expiration for request chaining (PR:2284:augustoroman)",
+			"Show status messages for HTTP/2 that don't return one (PR:2275:gschier)",
+			"Ability to show DevTools with a hotkey (PR:2309:nicholasraphael)"
+		],
+		"fixes": [
+			"Fix usage of nested objects in environments (PR:2249:gschier)"
+		]
+	},
+	{
+		"downloads": {
+			"root": "https://github.com/Kong/insomnia/releases/download/designer@2020.3.0",
+			"mac": "https://github.com/Kong/insomnia/releases/download/designer@2020.3.0/Insomnia.Designer-2020.3.0.dmg",
+			"macZip": "https://github.com/Kong/insomnia/releases/download/designer@2020.3.0/Insomnia.Designer-2020.3.0.zip",
+			"windows": "https://github.com/Kong/insomnia/releases/download/designer@2020.3.0/Insomnia.Designer-2020.3.0.exe",
+			"linux": "https://github.com/Kong/insomnia/releases/download/designer@2020.3.0/Insomnia.Designer-2020.3.0.AppImage",
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/designer@2020.3.0/Insomnia.Designer-2020.3.0.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/designer@2020.3.0"
+		},
+		"app": "com.insomnia.designer",
+		"date": "2020-07-09T00:00:00.000Z",
+		"version": "2020.3.0",
+		"channel": "stable",
+		"link": null,
+		"major": [
+			"Ability write and run unit tests for requests! (PR:2315:gschier)",
+			"Setting to specify default HTTP version for requests (PR:2276:gschier)"
+		],
+		"minor": [
+			"Add option to enable auto-beatify for Debug request body editor (PR:2305:l0lcat)",
+			"Sort environment variables in Edit Variable dialog (PR:2295:anyxem)",
+			"Fallback to request URL as request name in sidebar if empty (PR:2230:jodyheavener)",
+			"Ability to re-send after expiration for request chaining (PR:2284:augustoroman)",
+			"Show status messages for HTTP/2 that don't return one (PR:2275:gschier)",
+			"Ability to show DevTools with a hotkey (PR:2309:nicholasraphael)"
+		],
+		"fixes": [
+			"Fix usage of nested objects in environments (PR:2249:gschier)",
+			"Improve contrast ratio in Spec Preview headings (PR:2287:anyxem)",
+			"Enable text selection in Spec Preview (PR:2296:sonicyeti)"
+		]
+	},
+	{
+		"downloads": {
+			"root": "https://github.com/Kong/insomnia/releases/download/core@2020.3.0-beta.1",
+			"mac": "https://github.com/Kong/insomnia/releases/download/core@2020.3.0-beta.1/Insomnia.Core-2020.3.0-beta.1.dmg",
+			"macZip": "https://github.com/Kong/insomnia/releases/download/core@2020.3.0-beta.1/Insomnia.Core-2020.3.0-beta.1.zip",
+			"windows": "https://github.com/Kong/insomnia/releases/download/core@2020.3.0-beta.1/Insomnia.Core-2020.3.0-beta.1.exe",
+			"linux": "https://github.com/Kong/insomnia/releases/download/core@2020.3.0-beta.1/Insomnia.Core-2020.3.0-beta.1.AppImage",
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/core@2020.3.0-beta.1/Insomnia.Core-2020.3.0-beta.1.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/core@2020.3.0-beta.1"
+		},
+		"app": "com.insomnia.app",
+		"date": "2020-07-07T00:00:00.000Z",
+		"version": "2020.3.0-beta.1",
+		"channel": "beta",
+		"link": null,
+		"major": [],
+		"minor": [],
+		"fixes": []
+	},
+	{
+		"downloads": {
+			"root": "https://github.com/Kong/insomnia/releases/download/designer@2020.3.0-beta.1",
+			"mac": "https://github.com/Kong/insomnia/releases/download/designer@2020.3.0-beta.1/Insomnia.Designer-2020.3.0-beta.1.dmg",
+			"macZip": "https://github.com/Kong/insomnia/releases/download/designer@2020.3.0-beta.1/Insomnia.Designer-2020.3.0-beta.1.zip",
+			"windows": "https://github.com/Kong/insomnia/releases/download/designer@2020.3.0-beta.1/Insomnia.Designer-2020.3.0-beta.1.exe",
+			"linux": "https://github.com/Kong/insomnia/releases/download/designer@2020.3.0-beta.1/Insomnia.Designer-2020.3.0-beta.1.AppImage",
+			"ubuntu": "https://github.com/Kong/insomnia/releases/download/designer@2020.3.0-beta.1/Insomnia.Designer-2020.3.0-beta.1.deb",
+			"release": "https://github.com/Kong/insomnia/releases/tag/designer@2020.3.0-beta.1"
+		},
+		"app": "com.insomnia.designer",
+		"date": "2020-07-07T00:00:00.000Z",
+		"version": "2020.3.0-beta.1",
+		"channel": "beta",
+		"link": null,
+		"major": [],
+		"minor": [],
+		"fixes": []
+	},
+	{
+		"downloads": {
 			"root": "https://github.com/Kong/insomnia/releases/download/core@2020.2.2",
 			"mac": "https://github.com/Kong/insomnia/releases/download/core@2020.2.2/Insomnia.Core-2020.2.2.dmg",
 			"macZip": "https://github.com/Kong/insomnia/releases/download/core@2020.2.2/Insomnia.Core-2020.2.2.zip",
