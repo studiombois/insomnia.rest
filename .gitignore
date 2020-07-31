@@ -63,3 +63,8 @@ yarn-error.log
 .idea
 .vscode
 .DS_Store
+
+static/changelog.json
+src/assets/changelog.json
+
+src/assets/contributors.json
