@@ -1,6 +1,7 @@
 import {parse as urlParse} from 'url';
 import * as session from './session';
 import {version} from '../../package.json';
+import {isLocalhost} from './util';
 
 let commandListeners = [];
 
@@ -79,7 +80,7 @@ async function _fetch(method, path, json, sessionId = null) {
 export function _getUrl(path) {
   if (window.location.hostname === 'staging.insomnia.rest') {
     return `https://api.staging.insomnia.rest${path}`;
-  } else if (window.location.hostname === 'localhost') {
+  } else if (isLocalhost()) {
     return `http://localhost:8000${path}`;
   } else {
     return `https://api.insomnia.rest${path}`;

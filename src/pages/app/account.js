@@ -1,10 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import CancelLink from '../../lib/common/cancel';
 import SignOutLink from '../../lib/common/sign-out';
 import App from '../../lib/app-wrapper';
 import Link from '../../components/link';
 import VerifyButton from '../../lib/common/reverify';
+
+import loadable from "@loadable/component"
+const CancelLink = loadable(() => import('../../lib/common/cancel'))
 
 class Home extends React.Component {
   renderNotice() {
@@ -200,9 +202,9 @@ class Home extends React.Component {
           <button className="button mt-3">
             <Link to="/app/invoices/">Invoice History</Link>
           </button>
-          {billingDetails && billingDetails.isBillingAdmin ? (
+          {billingDetails && billingDetails.isBillingAdmin && !billingDetails.subCancelled ? (
             <button className="button mt-3">
-              <CancelLink />
+              <CancelLink {...this.props} />
             </button>
           ) : null}
         </div>
@@ -238,6 +240,7 @@ Home.propTypes = {
     subCancelled: PropTypes.bool.isRequired,
     subPeriodEnd: PropTypes.string.isRequired,
     subPercentOff: PropTypes.number.isRequired,
+    subId: PropTypes.string.isRequired,
   }),
 };
 
