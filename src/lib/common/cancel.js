@@ -30,6 +30,8 @@ class CancelLink extends React.Component {
       case 'saved':
         // The customer accepted an offer and didn't cancel. Churn prevented!
         // For most offers, no further action is needed.
+
+        window.location.reload();
         break;
 
       case 'incomplete':
