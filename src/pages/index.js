@@ -17,7 +17,7 @@ import illustrationDesigner from '../assets/illustration-insomnia-designer.svg';
 export default () => (
   <React.Fragment>
     <Helmet>
-      <title>{config.name} | API Design Platform and REST Client</title>
+      <title>{config.name} | The API Design Platform and REST Client</title>
       <body data-navbar="floating" />
     </Helmet>
 
@@ -33,7 +33,7 @@ export default () => (
           <div className="row">
             <div className="col-12">
               <h1 className="font-regular">
-                Design and debug APIs like a <u>human</u>, not a robot.
+                Design, debug, and test APIs like a <u>human</u>, not a robot.
               </h1>
               <h2 className="font-light">Finally, a workflow you'll love.</h2>
             </div>
@@ -53,8 +53,8 @@ export default () => (
                 <span>Insomnia Designer</span>
               </h3>
               <p>
-                The Collaborative API Design Tool for designing and managing
-                OpenAPI specs.
+                The Collaborative API Design Tool for designing, testing and
+                managing OpenAPI specifications.
               </p>
               <DownloadButton>
                 <img src={iconDownload} className="icon" alt="Download" />{' '}
@@ -102,7 +102,7 @@ export default () => (
         <div className="container">
           <div className="row">
             <div className="col-12 center">
-              <h2 className="text-xl">Design, Debug, and Deploy APIs</h2>
+              <h2 className="text-xl">Design, Test, and Deploy APIs</h2>
               <p>Workflows and Tools to make API Development Easier</p>
             </div>
           </div>
@@ -176,6 +176,19 @@ export default () => (
                 Sync your API designs with source control such as Github /
                 Gitlab, and deploy directly to API Gateways such as Kong with
                 one click.
+              </p>
+              <p>
+                <Link to={`/products/designer`}>Insomnia Designer &rarr;</Link>
+              </p>
+            </div>
+          </div>
+          <div className="row row-center-y">
+            <div className="col-4">
+              <img src={logoDesigner} className="icon icon-bg" />
+              <h3 className="text-md">Test APIs</h3>
+              <p>
+                Write unit tests for your Insomnia debug requests using
+                JavaScript, to be ran in app or terminal using Inso.
               </p>
               <p>
                 <Link to={`/products/designer`}>Insomnia Designer &rarr;</Link>
