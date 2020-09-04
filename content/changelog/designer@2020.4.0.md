@@ -3,6 +3,7 @@ app: com.insomnia.designer
 channel: stable
 date: 2020-09-08
 slug: 2020.4.0
+diffFrom: 2020.3.3
 major:
 - Brand new design sidebar! (PR:2328:sonicyeti)
 - Upgrade Electron 3 > 9 (PR:2403:gschier)
@@ -13,7 +14,7 @@ minor:
 - Handle silent failures for git operations (PR:2432:develohpanda)
 - Deterministic importing of Swagger 2 (PR:2474:gschier)
 - Improve performance of raw response viewer (PR:2475:aszx87410)
-- Honor variable defaults from servers declaration for OpenAPI3 import (PR:2151:develohpanda)
+- Honor servers variable defaults for OpenAPI3 import (PR:2151:develohpanda)
 - Add tooltip with docs for git sync (PR:2517:bartolomej)
 - Add Kotlin and Axios code generation support (PR:2526:seanghay)
 - Unit testing styling updates (PR:2533:sonicyeti) (PR:2534:sonicyeti)
@@ -27,6 +28,4 @@ fixes:
 - Fix case where incorrect tab is selected (PR:2499:rbarbazz)
 - Improve version check script output (PR:2559:yashshah1)
 ---
-
-See [all](https://github.com/Kong/insomnia/compare/designer@2020.3.3...designer@2020.4.0) 
-changes.
+This release is a pivot release, with no major functional changes. It includes several UX improvements, as well as a major update of Electron.
