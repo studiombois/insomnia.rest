@@ -8,9 +8,6 @@ import ShareButtons from '../partials/share-buttons';
 import Title from '../partials/title';
 import Contributors from '../partials/contributors';
 
-const getTag = (app, version) => app === 'com.insomnia.app'
-  ? `core@${version}`
-  : `designer@${version}`;
 
 export default class BlogTemplate extends React.Component {
   render() {
@@ -21,11 +18,10 @@ export default class BlogTemplate extends React.Component {
     const summary = `Release notes for version ${frontmatter.slug}`;
 
     let githubTag = `v${frontmatter.slug}`;
-    let diffSlug;
     if (frontmatter.slug.match(/^\d{4}\./)) {
-      const { slug, app, diffFrom } = frontmatter;
-      githubTag = getTag(app, slug);
-      diffSlug = diffFrom && `${getTag(app, diffFrom)}...${githubTag}`;
+      githubTag = frontmatter.app === 'com.insomnia.app'
+        ? `core@${frontmatter.slug}`
+        : `designer@${frontmatter.slug}`;
     }
 
     return (
@@ -59,15 +55,10 @@ export default class BlogTemplate extends React.Component {
                   <DownloadButton />
                   {' '}
                   <Link to={`https://github.com/Kong/insomnia/releases/${githubTag}`}
-                    className="button button--no-outline"
-                    target="_blank">
-                    View release
+                        className="button button--no-outline"
+                        target="_blank">
+                    View on GitHub
                   </Link>
-                  {diffSlug && <Link to={`https://github.com/Kong/insomnia/compare/${diffSlug}`}
-                    className="button button--no-outline"
-                    target="_blank">
-                    View all commits
-                  </Link>}
                 </p>
                 {frontmatter.major && (
                   <React.Fragment>
@@ -81,24 +72,24 @@ export default class BlogTemplate extends React.Component {
                     </ul>
                   </React.Fragment>
                 )}
-                {frontmatter.minor && (
-                  <React.Fragment>
-                    <p><strong>Minor Tweaks</strong></p>
-                    <ul className="ul--decorated">
-                      {frontmatter.minor.map(c => (
-                        <li key={c} className="li--minor">
-                          <ChangelogListItem text={c} />
-                        </li>
-                      ))}
-                    </ul>
-                  </React.Fragment>
-                )}
                 {frontmatter.fixes && (
                   <React.Fragment>
                     <p><strong>Bug Fixes</strong></p>
                     <ul className="ul--decorated">
                       {frontmatter.fixes.map(c => (
                         <li key={c} className="li--fix">
+                          <ChangelogListItem text={c} />
+                        </li>
+                      ))}
+                    </ul>
+                  </React.Fragment>
+                )}
+                {frontmatter.minor && (
+                  <React.Fragment>
+                    <p><strong>Minor Tweaks</strong></p>
+                    <ul className="ul--decorated">
+                      {frontmatter.minor.map(c => (
+                        <li key={c} className="li--minor">
                           <ChangelogListItem text={c} />
                         </li>
                       ))}
@@ -126,7 +117,6 @@ export const pageQuery = graphql`
         app
         date(formatString: "MMMM DD, YYYY")
         slug
-        diffFrom
         major
         minor
         fixes
