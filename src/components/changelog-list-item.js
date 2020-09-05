@@ -11,15 +11,16 @@ const findTagReplacements = (text) => {
 
   let match;
   while (match = PR_LINK_SEGMENTED_REGEX.exec(text)) {
+    const tag = match[0];
     const prNumber = match[1];
     const user = match[3] || '';
     const userString = (user ? ' by ' + user : '');
     const replacement = (
-      <a key={`${prNumber}${userString}`} href={`https://github.com/Kong/insomnia/pull/${prNumber}`} target="_blank">
+      <a key={tag} href={`https://github.com/Kong/insomnia/pull/${prNumber}`} target="_blank">
         (#{prNumber}{userString})
       </a>
     );
-    replacements[match[0]] = replacement;
+    replacements[tag] = replacement;
   }
 
   return replacements;
